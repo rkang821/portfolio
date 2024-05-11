@@ -50,7 +50,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         color: 'var(--tw-prose-body)',
         lineHeight: theme('lineHeight.7'),
         '> *': {
-          margin: theme('spacing.0'),
+          margin: theme('spacing.3'),
         },
         p: {
           fontSize: theme('fontSize.sm'),
@@ -96,7 +96,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
           fontWeight: theme('fontWeight.bold'),
           fontSize: theme('fontSize.xl'),
           lineHeight: theme('lineHeight.7'),
-          marginTop: theme('spacing.5'),
+          marginTop: theme('spacing.3'),
           marginBottom: theme('spacing.3'),
           '@screen sm': {
             fontSize: theme('fontSize.lg'),
@@ -158,6 +158,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
           listStyleType: 'decimal',
         },
         'ul, ol': {
+          marginTop: theme('spacing.3'),
+          marginBottom: theme('spacing.3'),
           paddingLeft: theme('spacing.6'),
         },
         li: {

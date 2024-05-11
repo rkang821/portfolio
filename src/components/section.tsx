@@ -20,7 +20,7 @@ export default function Section({
         <h2 id={id} className={titleClass}>
           {title}
         </h2>
-        <div className="">{children}</div>
+        {children}
       </div>
     </section>
   )

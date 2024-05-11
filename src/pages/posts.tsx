@@ -1,3 +1,7 @@
+import dfirdark from '/public/images/DFIRPost-SANS_dark.png'
+import dfirlight from '/public/images/DFIRPost-SANS_light.png'
+import Image from 'next/image'
+
 //DFIR Overview
 export function DFIRPost() {
   return (
@@ -5,21 +9,20 @@ export function DFIRPost() {
       <h4>{'DF vs IR'}</h4>
       <p>
         Digital Forensics and Incident Response is a highly specialized branch
-        of cybersecurity that involves identifying, remediating and
-        investigating security incidents breaches. Combined together, DFIR
-        services two major components that work together to achieve the desired
-        outcome:{' '}
+        of cybersecurity involves identifying, investigating, and remediating 
+        security incidents and breaches. Combined together, DFIR services two 
+        major components that work together to achieve the desired
+        outcome:
       </p>
       <ul>
         <li>
-          Digital forensics or DF entails uncovering facts about what occurred
+         <strong>Digital Forensics</strong> (DF) entails uncovering facts about what occurred
           on a computer system, network device, or phone/tablet, often involved
           in litigation, regulatory investigations, internal company
-          investigations, or criminal charges against cybercriminals.{' '}
+          investigations against cybercriminals.
         </li>
         <li>
-          {' '}
-          Incident response or IR is a complementary process to that of DF, but
+          <strong>Incident Response</strong> (IR) is a complementary process to that of DF, but
           specifically occurs in the context of a cyber intrusion. Experts
           gather and investigate vasts amount of data to fill in gaps of
           information about a cyber attack, including how the attacker broke in,
@@ -30,29 +33,28 @@ export function DFIRPost() {
         </li>
       </ul>
       <p>
-        {' '}
         Although they might be referred to as separate practices, DF and IR work
         together to help answer the following questions after a security
-        incident:{' '}
+        incident:
       </p>
       <ol>
-        <li> Who caused this incident? </li>
-        <li> What is the full scope and impact of the compromise? </li>
-        <li> How did the attacker get in? </li>
+        <li> Who <strong>caused</strong> this incident? </li>
+        <li> What is the <strong>full scope</strong> and <strong>impact</strong> of the compromise? </li>
+        <li> How did the attacker <strong>get in</strong>? </li>
         <li>
           {' '}
-          How did the attacker escalate their operation? (ex. Credential theft,
+          How did the attacker <strong>escalate</strong> their operation? (ex. Credential theft,
           lateral movement, etc.){' '}
         </li>
         <li>
           {' '}
-          Did the attacker obtain access to any sensitive data/PII/PHI? (ex.
+          Did the attacker obtain access to any <strong>sensitive data/PII/PHI</strong>? (ex.
           Data exfiltration){' '}
         </li>
-        <li> How do we ensure a similar incident won’t happen again? </li>
+        <li> How do we ensure a <strong>similar incident</strong> won’t happen again? </li>
         <li>
           {' '}
-          How do we remediate and restore the business back to operation?{' '}
+          How do we <strong>remediate</strong> and <strong>restore</strong> the business back to operation?{' '}
         </li>
       </ol>
       <div className="grid grid-cols-1 gap-4">
@@ -62,14 +64,16 @@ export function DFIRPost() {
           <p>
             On a day-to-day basis, I lead the response to a security incident or
             data breach, coordinating and overseeing all facets of the incident
-            response effort. But, of course, no two responses will be the same.
+            response effort. But of course, no two responses will be the same.
             Each investigation entails a unique and tailored approach in the IR
             plan, depending on the scope and severity of the incident. Below is
             a popular 6-step IR framework developed by{' '}
-            <a href="https://www.sans.org/white-papers/33901/">SANS</a> that I
-            use often in my investigations:{' '}
+            <a href="https://www.sans.org/white-papers/33901/" target="_blank" rel="noreferrer noopener">SANS</a> that I
+            use often in my investigations:
           </p>
-          <ol>
+          <Image src={dfirlight} alt="" className="-my-12 -mb-20 dark:hidden" unoptimized />
+          <Image src={dfirdark} alt="" className="-my-12 -mb-20 hidden dark:block" unoptimized />
+          {/* <ol>
             <li>
               <strong>Step #1: Preparation</strong> – Codify an organizational
               security policy that include detailed actions accounting for a
@@ -118,18 +122,18 @@ export function DFIRPost() {
               new learnings to improve incident response processes and enhance
               overall security.
             </li>
-          </ol>
-          <p>
+          </ol> */}
+          <p className="">
             {' '}
             Another popular framework is offered by{' '}
-            <a href="https://www.nist.gov/cyberframework">
+            <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noreferrer noopener">
               National Institute of Standards and Technology (NIST)
             </a>
             , which entails a shorter, but nearly identical process.
-            Additionally, huge shoutout to MITRE ATT&CK, a curated knowledge
+            Additionally, huge shoutout to <a href="https://attack.mitre.org/" target="_blank" rel="noreferrer noopener">MITRE ATT&CK</a>, a curated knowledge
             base and model for cyber adversary behavior, reflecting the various
             phases of an adversary&apos;s lifecycle and the platforms they are
-            known to target
+            known to target.
           </p>
         </div>
       </div>

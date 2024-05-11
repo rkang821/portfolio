@@ -73,17 +73,18 @@ export default function AboutSection() {
   const ssbubblesData: BubbleProps[] = [
     { text: 'High-Stress Adaptability' },
     { text: 'Cross-Functional Collaboration' },
-    { text: 'Conflict Resolution' },
+    { text: 'Creativity + Innovation' },
     { text: 'Continuous Learning + Training' },
     { text: 'Problem-Solving + Analytics' },
   ]
 
   const interestbubblesData: BubbleProps[] = [
+    { text: 'Microsoft Azure Investigations' },
     { text: 'Cloud Platform Forensics' },
     { text: 'Identify + Access Management' },
     { text: 'Operating System Security' },
     { text: 'Vulnerability Assessment' },
-    { text: 'Automation Scripting' },
+    { text: 'Data Privacy + Compliance' },
   ]
 
   const BulletList: React.FC<BulletListProps> = ({ title, data }) => (
@@ -139,7 +140,12 @@ export default function AboutSection() {
                 I&apos;ve advanced to the role of a DFIR manager.
               </p>
               <p className="border-b border-dashed border-blue-500 border-opacity-50 pb-3 dark:border-blue-300">
-                I graduated from Middlebury College in 2019 with a B.A. in{' '}
+                I graduated from {' '}
+                <a
+                  href="https://www.middlebury.edu/#"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >Middlebury College</a> in 2019 with a B.A. in{' '}
                 <strong>Computer Science</strong> and{' '}
                 <strong>Political Science</strong>. This interdisciplinary
                 background laid the foundation for my career, providing me with
@@ -183,7 +189,7 @@ export default function AboutSection() {
             </div>
             {/* Timeline */}
             <ol className="prose relative mt-5 border-l border-blue-500 border-opacity-20 dark:prose-invert dark:border-blue-300 max-lg:mx-auto max-lg:flex max-lg:flex-col max-lg:items-center max-sm:mb-5 max-sm:justify-center lg:basis-1/3">
-              <BulletList title="Stats" data={statsbubblesData} />
+              <BulletList title="Profile" data={statsbubblesData} />
               <BulletList
                 title="Soft Skills"
                 data={ssbubblesData.map(({ text }) => ({ text }))}

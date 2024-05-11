@@ -68,7 +68,7 @@ export default function HomePage() {
               className="opacity-60 hover:opacity-100"
             >
               Resume
-              <ArrowDownTray className="h-4 w-4 stroke-zinc-400  transition-transform group-hover:translate-y-0.5 group-active:stroke-zinc-600 motion-reduce:transform-none dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+              <ArrowDownTray className="h-4 w-4 stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
 
             <Button
@@ -77,7 +77,7 @@ export default function HomePage() {
               className="opacity-60 hover:opacity-100"
             >
               Get In Touch
-              <MailIcon className="h-4 w-4 stroke-zinc-400  transition-transform group-hover:translate-y-0.5 group-active:stroke-zinc-600 motion-reduce:transform-none dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+              <MailIcon className="h-4 w-4 stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
           </div>
           <div className="flex space-x-3 pl-5 max-sm:justify-center max-sm:pl-0">
@@ -97,16 +97,16 @@ export default function HomePage() {
         <div className="prose space-y-4 text-base dark:prose-invert max-sm:text-center max-sm:text-lg">
           <p>
             Based out of Chicago, IL, I lead teams in response to cybersecurity
-            incidents, from{' '}
+            incidents, ranging from{' '}
             <span className="font-semibold"> minor anomalies </span> to{' '}
             <span className="font-semibold">significant data breaches</span> and{' '}
-            <span className="font-semibold">privacy concerns</span>.
+            <span className="font-semibold">privacy incidents</span>.
           </p>
           <p>
             Specializing in cloud incident response, particularly within the{' '}
             <span className="font-semibold">Microsoft Azure </span>environment,
-            I&apos;m fascinated by the intricacies and complexities across cloud
-            platforms. and how it&apos;s a game changer for incident responders.
+            I&apos;m fascinated by the intricacies and complexities emerging within cloud
+            forensics. And it&apos;s a game changer for incident responders.
           </p>
         </div>
       </div>
