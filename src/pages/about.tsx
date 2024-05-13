@@ -140,13 +140,15 @@ export default function AboutSection() {
                 I&apos;ve advanced to the role of a DFIR manager.
               </p>
               <p className="border-b border-dashed border-blue-500 border-opacity-50 pb-3 dark:border-blue-300">
-                I graduated from {' '}
+                I graduated from{' '}
                 <a
                   href="https://www.middlebury.edu/#"
                   target="_blank"
                   rel="noreferrer noopener"
-                >Middlebury College</a> in 2019 with a B.A. in{' '}
-                <strong>Computer Science</strong> and{' '}
+                >
+                  Middlebury College
+                </a>{' '}
+                in 2019 with a B.A. in <strong>Computer Science</strong> and{' '}
                 <strong>Political Science</strong>. This interdisciplinary
                 background laid the foundation for my career, providing me with
                 a deep understanding of both{' '}

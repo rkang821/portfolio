@@ -104,8 +104,8 @@ export default function HomePage() {
           </p>
           <p>
             With a keen interest in cloud forensics, particularly within the{' '}
-            <span className="font-semibold">Microsoft </span>ecosystem,
-            I&apos;m fascinated by the intricacies and complexities emerging within cloud
+            <span className="font-semibold">Microsoft </span>ecosystem, I&apos;m
+            fascinated by the intricacies and complexities emerging within cloud
             forensics and the evolving challenges posed by cloud-based threats.
           </p>
         </div>

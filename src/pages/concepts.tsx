@@ -48,15 +48,16 @@ export default function ConceptsSection() {
       {/* Top Level Heading */}
       <header className="prose dark:prose-invert">
         <h2>
-          <span className="text-blue-500 dark:text-blue-300">{'>'}</span> Concepts
+          <span className="text-blue-500 dark:text-blue-300">{'>'}</span>{' '}
+          Concepts
         </h2>
         <h3>
           {' '}
           I frequently get asked what it takes to get into incident response, or
           what I do on a day-to-day basis. I&apos;ve compiled a comprehensive
-          overview of DFIR, various incident types I've investigated, including my steps to
-          approaching each types of compromises, tools leveraged, and the
-          players in the game.{' '}
+          overview of DFIR, various incident types I&apos;ve investigated,
+          including my steps to approaching each types of compromises, tools
+          leveraged, and the players in the game.{' '}
         </h3>
       </header>
 
