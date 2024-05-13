@@ -3,14 +3,14 @@
 import { type Metadata } from 'next'
 import { Container } from '@/components/container'
 import { useState } from 'react'
-import { DFIRPost, ITPost, TKPost, SCPost } from './posts'
+import { DFIRPost, CloudIRPost, ITPost, TKPost } from './posts'
 
 export const metadata: Metadata = {
-  title: 'My Skills',
-  description: 'Things I use daily',
+  title: 'Concepts',
+  description: 'DFIR Concepts, Incident Types, Toolkit',
 }
 
-export default function SkillsSection() {
+export default function ConceptsSection() {
   interface Tab {
     id: string
     label: string
@@ -21,6 +21,11 @@ export default function SkillsSection() {
       id: 'styled-DFIR',
       label: 'DFIR Overview',
       content: <DFIRPost />,
+    },
+    {
+      id: 'styled-Cloud',
+      label: 'Cloud IR',
+      content: <CloudIRPost />,
     },
     {
       id: 'styled-IT',
@@ -43,20 +48,18 @@ export default function SkillsSection() {
       {/* Top Level Heading */}
       <header className="prose dark:prose-invert">
         <h2>
-          <span className="text-blue-500 dark:text-blue-300">{'>'}</span> My
-          Skillsets
+          <span className="text-blue-500 dark:text-blue-300">{'>'}</span> Concepts
         </h2>
         <h3>
           {' '}
           I frequently get asked what it takes to get into incident response, or
           what I do on a day-to-day basis. I&apos;ve compiled a comprehensive
-          overview of the different areas of DFIR, including my steps to
+          overview of DFIR, various incident types I've investigated, including my steps to
           approaching each types of compromises, tools leveraged, and the
           players in the game.{' '}
         </h3>
       </header>
 
-      {/* Skills Section */}
       <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
         <ul
           className="-mb-px flex flex-wrap text-center text-sm font-medium"
@@ -102,15 +105,6 @@ export default function SkillsSection() {
           </div>
         ))}
       </div>
-      {/* Site Credits */}
-      {/* <div className="flex w-full justify-end">
-        <div className="text-right prose dark:prose-invert justify-end w-full text-sm tracking-tighter opacity-70 sm:m-0 sm:w-1/3">
-        <p>
-        This website was built with <Link href="https://nextjs.org/" target="_blank" rel="noreferrer noopener"> Next.js</Link> + <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer noopener">Tailwind CSS</a>.  
-        </p>
-        Open source + available on GitHub.
-        </div>
-      </div> */}
     </Container>
   )
 }

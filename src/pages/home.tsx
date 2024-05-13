@@ -103,10 +103,10 @@ export default function HomePage() {
             <span className="font-semibold">privacy incidents</span>.
           </p>
           <p>
-            Specializing in cloud incident response, particularly within the{' '}
-            <span className="font-semibold">Microsoft Azure </span>environment,
+            With a keen interest in cloud forensics, particularly within the{' '}
+            <span className="font-semibold">Microsoft </span>ecosystem,
             I&apos;m fascinated by the intricacies and complexities emerging within cloud
-            forensics. And it&apos;s a game changer for incident responders.
+            forensics and the evolving challenges posed by cloud-based threats.
           </p>
         </div>
       </div>

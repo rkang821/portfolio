@@ -262,7 +262,7 @@ export default function ExperienceSection() {
       </Container>
       <Container>
         <div className="flex max-lg:flex-col">
-          <div className="flex-auto sm:pr-5">
+          <div className="flex-auto pl-5 pr-3">
             <EventSection />
           </div>
           <div className="w-[25rem] shrink-0 max-lg:w-full ">

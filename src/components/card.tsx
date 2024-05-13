@@ -41,7 +41,7 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
 }) {
   let Component = as ?? 'h2'
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-lg">
+    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 max-sm:text-lg">
       {children}
     </Component>
   )

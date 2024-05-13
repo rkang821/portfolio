@@ -22,7 +22,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
       css: {
         '--tw-prose-body': theme('colors.zinc.500'),
         '--tw-prose-headings': theme('colors.zinc.600'),
-        '--tw-prose-subheadings': theme('colors.zinc.500'),
+        '--tw-prose-subheadings': theme('colors.zinc.600'),
         '--tw-prose-colorheadings': theme('colors.blue.500'),
         '--tw-prose-links': theme('colors.zinc.500'),
         '--tw-prose-links-hover': theme('colors.blue.500'),
@@ -94,12 +94,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
         h4: {
           color: 'var(--tw-prose-colorheadings)',
           fontWeight: theme('fontWeight.bold'),
-          fontSize: theme('fontSize.xl'),
+          fontSize: theme('fontSize.lg'),
           lineHeight: theme('lineHeight.7'),
-          marginTop: theme('spacing.3'),
+          marginTop: theme('spacing.5'),
           marginBottom: theme('spacing.3'),
           '@screen sm': {
-            fontSize: theme('fontSize.lg'),
+            fontSize: theme('fontSize.xl'),
           },
         },
 
@@ -158,8 +158,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
           listStyleType: 'decimal',
         },
         'ul, ol': {
-          marginTop: theme('spacing.3'),
-          marginBottom: theme('spacing.3'),
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.2'),
           paddingLeft: theme('spacing.6'),
         },
         li: {

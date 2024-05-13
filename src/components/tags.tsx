@@ -40,7 +40,7 @@ export function AITag(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function BECTag(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <span className="me-2 rounded border border-purple-400 bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800 dark:bg-gray-700 dark:text-purple-400">
+    <span className="me-2 rounded border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-gray-700 dark:text-yellow-300">
       BEC
     </span>
   )
@@ -48,8 +48,24 @@ export function BECTag(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function RWTag(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <span className="me-2 rounded border border-orange-400 bg-orange-100 px-2.5 py-0.5 text-xs font-medium text-orange-800 dark:bg-gray-700 dark:text-orange-400">
+    <span className="bg-rose-100 text-rose-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-rose-400 border border-rose-400">
       RW
+    </span>
+  )
+}
+
+export function APTTag(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <span className="me-2 rounded border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400">
+      APT
+    </span>
+  )
+}
+
+export function ITTag(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <span className="bg-purple-100 text-purple-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-purple-400 border border-purple-400">
+      Insider Threat
     </span>
   )
 }

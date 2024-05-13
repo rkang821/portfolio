@@ -69,7 +69,7 @@ function MobileNavigation(
                 <MobileNavItem href="/#home">Home</MobileNavItem>
                 <MobileNavItem href="/#about">About</MobileNavItem>
                 <MobileNavItem href="/#experience">Experience</MobileNavItem>
-                <MobileNavItem href="/#skills">Skillsets</MobileNavItem>
+                <MobileNavItem href="/#concepts">Concepts</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -107,8 +107,8 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
       <ul className="flex rounded-full bg-opacity-100 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-opacity-100 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/#home">Home</NavItem>
         <NavItem href="/#about">About</NavItem>
-        <NavItem href="/#experience">Experiences</NavItem>
-        <NavItem href="/#skills">Skillsets</NavItem>
+        <NavItem href="/#experience">Experience</NavItem>
+        <NavItem href="/#concepts">Concepts</NavItem>
       </ul>
     </nav>
   )
