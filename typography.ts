@@ -160,7 +160,10 @@ export default function typographyStyles({ theme }: PluginUtils) {
         'ul, ol': {
           marginTop: theme('spacing.2'),
           marginBottom: theme('spacing.2'),
-          paddingLeft: theme('spacing.6'),
+          paddingLeft: theme('spacing.4'),
+          '@screen sm': {
+            paddingLeft: theme('spacing.6'),
+          },
         },
         li: {
           paddingLeft: theme('spacing[3.5]'),

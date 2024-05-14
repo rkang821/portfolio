@@ -11,6 +11,7 @@ import {
   RWTag,
   ITTag,
 } from '@/components/tags'
+import { StarIcon } from '@/components/icons'
 
 //DFIR Overview
 export function DFIRPost() {
@@ -470,7 +471,575 @@ export function TKPost() {
         needs change and evolve. While there are many out there, here’s some
         that I use regularly through my investigations.
       </p>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3"></div>
+      <h5>{'Forensic Preservation Tools'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.logicube.com/knowledgebase/forensic-falcon/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Logicube Forensic Falcon{' '}
+          </a>{' '}
+          <StarIcon /> – A standalone forensics device used for various
+          functions such as data acquisition, encryption/verification, and hard
+          drive formatting.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.exterro.com/digital-forensics-software/ftk-imager"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            AccessData FTK Imager{' '}
+          </a>{' '}
+          <StarIcon /> – A free forensic tool used for collecting live content
+          on machines and network shares, as well as forensic imaging of files,
+          folders, partitions, and physical devices. FTK Imager can also acquire
+          live memory and paging file on 32bit and 64bit systems.{' '}
+        </li>
+        <li>
+          <a
+            href="https://guymager.sourceforge.io/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Guymager{' '}
+          </a>{' '}
+          – Free forensic imager for media acquisition on Linux. Cannot be used
+          for targeted collections (network shares, single profile on hard
+          drive, etc.)
+        </li>
+        <li>
+          <a
+            href="https://www.magnetforensics.com/magnet-acquire/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Magnet ACQUIRE{' '}
+          </a>{' '}
+          – ACQUIRE by Magnet Forensics allows various types of disk
+          acquisitions to be performed on Windows, Linux, and OS X as well as
+          mobile operating systems.
+        </li>
+        <li>
+          <a
+            href="https://cellebrite.com/en/home/ "
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Cellebrite{' '}
+          </a>{' '}
+          <StarIcon /> – Cellebrite&apos;s Digital Collector (MacQuisition)
+          supports imaging of Intel + Apple Silicon (M1, M2) as well as Ventura
+          OSes (as of mid-2023). Cellebrite&apos;s UFED is a tool used to
+          extract data from mobile devices, SIM cards, removable media (USBs),
+          and even drones!{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.brimorlabs.com/tools/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Live Response Collection{' '}
+          </a>{' '}
+          – Automated tool that collects volatile data from Windows, OSX, and
+          *nix based operating systems.
+        </li>
+        <li>
+          <a
+            href="https://github.com/simsong/bulk_extractor"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            bulk_extractor{' '}
+          </a>{' '}
+          – Computer forensics tool that scans a disk image, a file, or a
+          directory of files and extracts useful information without parsing the
+          file system or file system structures. Because of ignoring the file
+          system structure, the program distinguishes itself in terms of speed
+          and thoroughness.
+        </li>
+        <li>
+          <a
+            href="https://www.f-response.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            F-Response{' '}
+          </a>{' '}
+          – Software platform allows for performing remote acquisition of
+          evidence over a network (no SSH or RDS to remote system needed){' '}
+        </li>
+        <li>
+          <a
+            href="https://www.pagefreezer.com/x1-social-discovery/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            X1 Social Discovery{' '}
+          </a>{' '}
+          – Data collection for social media and websites.{' '}
+        </li>
+      </ul>
+      <h5>{'All-In-One Tools'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.x-ways.net/forensics/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            X-Ways Forensics{' '}
+          </a>{' '}
+          <StarIcon /> - A forensics tool for disk cloning, imaging, file
+          carving, and disk analysis.{' '}
+        </li>
+        <li>
+          <a
+            href="https://osquery.io/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            OSquery{' '}
+          </a>{' '}
+          - Open-source endpoint visibility tool developed by Meta, allowing for
+          querying of Windows, Mac, and Linux devices as a database, enabling
+          real-time analysis of the state of your infrastructure.{' '}
+        </li>
+        <li>
+          <a
+            href="https://github.com/Velocidex/velociraptor"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Velociraptor{' '}
+          </a>{' '}
+          <StarIcon /> - Endpoint visibility tool{' '}
+        </li>
+      </ul>
+      <h5>{'Host-Based Analysis'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/Yamato-Security/hayabusa/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Hayabusa{' '}
+          </a>{' '}
+          - A Windows event log parser and timeline generator for forensic
+          analysis.{' '}
+        </li>
+        <li>
+          <a
+            href="https://github.com/Neo23x0/Loki"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Loki{' '}
+          </a>{' '}
+          - Open-source IOC and YARA Python Scanner{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.nextron-systems.com/thor-lite/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Thor Lite <StarIcon />
+          </a>{' '}
+          - Full IOC and YARA Scanner, including modules and signature sets.
+        </li>
+        <li>
+          <a
+            href="https://github.com/volatilityfoundation/volatility3"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Volatility 3 <StarIcon />
+          </a>{' '}
+          - Extracting digital artifacts from volatile memory (RAM) samples.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.vound-software.com/pro"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Intella Pro{' '}
+          </a>{' '}
+          - email investigation and ediscovery software for processing,
+          searching and filtering across email data.{' '}
+        </li>
+        <li>
+          <a
+            href="https://ericzimmerman.github.io/#!index.md"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Eric Zimmerman Tools{' '}
+          </a>{' '}
+          - open source digital forensics tools can be used in a wide variety of
+          investigations including cross validation of tools, providing insight
+          into technical details not exposed by other tools, and more.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.magnetforensics.com/products/magnet-axiom/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Magnet AXIOM{' '}
+          </a>{' '}
+          - Examine digital evidence from mobile, cloud, computer, and vehicle
+          sources, alongside third-party extractions all in one case file.{' '}
+        </li>
+        <li>
+          <a
+            href="https://github.com/keydet89/RegRipper3.0"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Regripper{' '}
+          </a>{' '}
+          - Tool that can be used to quickly extract values of interest from
+          within the registry.{' '}
+        </li>
+        <li>
+          <a
+            href="https://exiftool.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Exiftool{' '}
+          </a>{' '}
+          - Reading, writing and editing meta information in a wide variety of
+          files.{' '}
+        </li>
+      </ul>
+      <h5>{'Log Analysis Platforms + Tools'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.splunk.com/en_us/products/splunk-enterprise.html"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Splunk Enterprise{' '}
+          </a>{' '}
+          -{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.elastic.co/elastic-stack"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Elastic’s ELK Stack{' '}
+          </a>{' '}
+          <StarIcon /> - ElasticSearch, LogStash + Kibana tools{' '}
+        </li>
+        <li>Other great tools for loose log analysis</li>
+        <ul>
+          <li>
+            <a
+              href="https://www.metabase.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {' '}
+              Metabase{' '}
+            </a>{' '}
+            -{' '}
+          </li>
+          <li>
+            <a
+              href="https://jupyter.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {' '}
+              Jupyter Notebook{' '}
+            </a>{' '}
+            -{' '}
+          </li>
+          <li>
+            <a
+              href="https://www.pgadmin.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {' '}
+              PostgreSQL’s pgAdmin{' '}
+            </a>{' '}
+            -{' '}
+          </li>
+          <li>
+            <a
+              href="https://www.cygwin.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {' '}
+              Cygwin{' '}
+            </a>
+            <StarIcon /> - run native Linux on Windows systems!
+          </li>
+        </ul>
+      </ul>
+      <p>
+        {' '}
+        Shoutout to{' '}
+        <a
+          href="https://www.microsoft.com/en-us/microsoft-365/excel"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Microsoft&apos;s Excel
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://notepad-plus-plus.org/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Notepad++
+        </a>{' '}
+        for all the support through my journey here.{' '}
+      </p>
+      <h5>{'Endpoint Detection + Response'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.crowdstrike.com/cybersecurity-101/what-is-xdr/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            CrowdStrike Falcon Insight XDR{' '}
+          </a>{' '}
+          <StarIcon /> -{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.vmware.com/products/endpoint-detection-and-response.html"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            VMWare Carbon Black EDR{' '}
+          </a>{' '}
+          -{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.sentinelone.com/platform/singularity-complete/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            SentinelOne Singularity{' '}
+          </a>{' '}
+          <StarIcon /> -{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.sophos.com/en-us/products/endpoint-antivirus"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Sophos Intercept X{' '}
+          </a>{' '}
+          -{' '}
+        </li>
+      </ul>
+      <h5>{'Network Analysis'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.netwitness.com/solutions/netwitness-platform/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            NetWitness Investigator{' '}
+          </a>{' '}
+          -{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.netresec.com/?page=NetworkMiner"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            NetworkMiner{' '}
+          </a>{' '}
+          - An open-source network forensics tool for extracting artifacts from
+          captured network traffic.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.wireshark.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            WireShark{' '}
+          </a>
+          <StarIcon /> - network protocol analyzer for deep inspection of
+          network protocols.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.tcpdump.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            TCPDump{' '}
+          </a>
+          <StarIcon /> - powerful, command-line packet analyzer{' '}
+        </li>
+      </ul>
+
+      <h5>{'Open Source Intelligence (OSINT) Tools'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.shodan.io/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Shodan.io{' '}
+          </a>{' '}
+          <StarIcon /> - A search engine for discovering IoT or
+          internet-connected devices.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.maxmind.com/en/home"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            MaxMind{' '}
+          </a>{' '}
+          - Provides geolocation services.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.domaintools.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            DomainTools{' '}
+          </a>{' '}
+          - decoding and encoding{' '}
+        </li>
+        <li>
+          <a
+            href="https://gchq.github.io/CyberChef/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            CyberChef{' '}
+          </a>{' '}
+          <StarIcon /> - web app for encryption, encoding, compression, and data
+          analysis{' '}
+        </li>
+        <li>
+          <a
+            href="https://openphish.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            OpenPhish{' '}
+          </a>{' '}
+          - Repo of active phishing sites, offering free phishing intelligence
+          feeds{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.virustotal.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            VirusTotal{' '}
+          </a>{' '}
+          - Analyzes suspicious files, URLs, and hashes. Facilitates the quick
+          detection of viruses, worms, trojans and other malware.{' '}
+        </li>
+        <li>
+          <a
+            href="https://www.joesecurity.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            JOE Security{' '}
+          </a>{' '}
+          - Sandbox for malware analysis{' '}
+        </li>
+      </ul>
+
+      <h5>{'Visualization Software'}</h5>
+      <ul>
+        <li>
+          <a
+            href="https://www.maltego.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Maltego by Paterva{' '}
+          </a>{' '}
+          <StarIcon /> - A visualization platform for analyzing relationships
+          and links between entities
+        </li>
+        <li>
+          <a
+            href="https://xmind.app/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            XMind{' '}
+          </a>{' '}
+          - Mind-mapping and brainstorming tool{' '}
+        </li>
+      </ul>
     </div>
   )
 }

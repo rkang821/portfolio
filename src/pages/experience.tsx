@@ -236,7 +236,7 @@ function CertSection() {
 
 export const metadata: Metadata = {
   title: 'My Experience',
-  description: 'My experience in the industry',
+  description: 'Certifications, Blog Posts, Speaking Engagements',
 }
 
 export default function ExperienceSection() {

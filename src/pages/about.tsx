@@ -44,7 +44,7 @@ export function Photos() {
 
 export const metadata: Metadata = {
   title: 'About Me',
-  description: 'About Me',
+  description: 'Background on my journey to DFIR',
 }
 
 export default function AboutSection() {
@@ -137,7 +137,7 @@ export default function AboutSection() {
               <p>
                 My journey in cybersecurity began as a junior cyber associate,
                 and through dedication and passion over the last five years,
-                I&apos;ve advanced to the role of a DFIR manager.
+                I&apos;ve advanced to a DFIR manager.
               </p>
               <p className="border-b border-dashed border-blue-500 border-opacity-50 pb-3 dark:border-blue-300">
                 I graduated from{' '}

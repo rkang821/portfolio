@@ -7,7 +7,7 @@ import { DFIRPost, CloudIRPost, ITPost, TKPost } from './posts'
 
 export const metadata: Metadata = {
   title: 'Concepts',
-  description: 'DFIR Concepts, Incident Types, Toolkit',
+  description: 'DFIR + Cloud Concepts, Incident Types, Toolkit',
 }
 
 export default function ConceptsSection() {
@@ -55,9 +55,9 @@ export default function ConceptsSection() {
           {' '}
           I frequently get asked what it takes to get into incident response, or
           what I do on a day-to-day basis. I&apos;ve compiled a comprehensive
-          overview of DFIR, various incident types I&apos;ve investigated,
-          including my steps to approaching each types of compromises, tools
-          leveraged, and the players in the game.{' '}
+          overview of DFIR, various incidents I&apos;ve investigated, including
+          my steps to approaching each types of compromises, tools leveraged,
+          and the players in the game.{' '}
         </h3>
       </header>
 
