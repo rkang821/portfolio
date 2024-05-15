@@ -2,7 +2,7 @@ import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { siteConfig } from '@/lib/config'
 import { Inter } from 'next/font/google'
-import Layout from '@/components/layout'
+import { Layout } from '@/components/layout'
 import { ThemeProvider } from '@/components/themeprovider'
 
 const inter = Inter({ subsets: ['latin'] })

@@ -1,7 +1,7 @@
-import HomePage from '@/pages/home'
-import AboutSection from '@/pages/about'
-import ExperienceSection from '@/pages/experience'
-import ConceptsSection from '@/pages/concepts'
+import HomePage from '@/app/pages/home'
+import AboutSection from '@/app/pages/about'
+import ExperienceSection from '@/app/pages/experience'
+import ConceptsSection from '@/app/pages/concepts/concepts'
 
 export default function Page() {
   return (

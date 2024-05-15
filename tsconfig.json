@@ -23,6 +23,15 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/pages/articles/DFIR_overview/page.mdx",
+    "src/app/pages/articles/Cloud_IR/page.tsx",
+    "src/app/pages/articles/Cloud_IR/index.mdx",
+    "src/app/pages/articles/DFIR_overview/index.mdx"
+  ],
   "exclude": ["node_modules"]
 }

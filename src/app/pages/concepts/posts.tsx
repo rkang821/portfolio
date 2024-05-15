@@ -914,7 +914,7 @@ export function TKPost() {
             WireShark{' '}
           </a>
           <StarIcon /> - network protocol analyzer for deep inspection of
-          network protocols.{' '}
+          network protocols and payload content.{' '}
         </li>
         <li>
           <a
@@ -925,7 +925,8 @@ export function TKPost() {
             {' '}
             TCPDump{' '}
           </a>
-          <StarIcon /> - powerful, command-line packet analyzer{' '}
+          <StarIcon /> - powerful, command-line packet analyzer. Isolate
+          packets, sessions, and events of interest.{' '}
         </li>
       </ul>
 

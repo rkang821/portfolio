@@ -2,9 +2,10 @@
 
 import Footer from './footer'
 import Header from './header'
-import ScrollButton from './scrollbutton'
+import { ScrollButton } from './buttons'
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+//Primary layout
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="content"

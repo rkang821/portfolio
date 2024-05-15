@@ -1,4 +1,4 @@
-import Button from '@/components/buttons'
+import { Button } from '@/components/buttons'
 import { Container } from '@/components/container'
 
 export default function NotFound() {

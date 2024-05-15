@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Container } from '@/components/container'
 import { ReactTyped } from 'react-typed'
-import Button from '@/components/buttons'
+import { Button } from '@/components/buttons'
 import {
   LinkedInIcon,
   GitHubIcon,

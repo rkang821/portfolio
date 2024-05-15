@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import { SunIcon, MoonIcon } from '@/components/icons'
 import { useTheme } from 'next-themes'
