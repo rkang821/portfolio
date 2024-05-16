@@ -114,10 +114,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
           fontWeight: theme('fontWeight.semibold'),
           fontSize: theme('fontSize.base'),
           lineHeight: theme('lineHeight.7'),
+          textAlign: 'center',
           marginTop: theme('spacing.3'),
           marginBottom: theme('spacing.3'),
           '@screen sm': {
             fontSize: theme('fontSize.lg'),
+            textAlign: 'left',
           },
         },
 
@@ -177,6 +179,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         li: {
           paddingLeft: theme('spacing[3.5]'),
+          marginBottom: theme('spacing.0'),
           fontSize: theme('fontSize.sm'),
           '@screen sm': {
             fontSize: theme('fontSize.base'),

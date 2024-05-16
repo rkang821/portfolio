@@ -543,7 +543,7 @@ export function ITPost() {
           practices, and access controls implemented by CSPs. Traditional DFIR
           methodologies may need to be modified or supplemented with
           cloud-specific approaches to effectively investigate incidents in
-          cloud environments (i.e., lateral movement across cloud resources, data exfiltration from cloud storage)
+          cloud environments (i.e., lateral movement across cloud resources, data exfiltration from cloud storage, etc.)
         </li>
         <li>
           <strong>Integration with Cloud Security Tools</strong>: Cloud-based
@@ -552,7 +552,7 @@ export function ITPost() {
           leveraging CSP-provided security services, such as cloud monitoring,
           threat detection, and incident response automation. Integrating these
           tools into DFIR workflows enables faster detection, analysis, and
-          response to cloud-based threats and security incidents.
+          response to cloud-based threats and security incidents. See <a href="#fundamentals">DFIR Toolkit</a> tab for several cloud-native tools across major cloud providers.
         </li>
       </ol>
       <p>
@@ -1240,7 +1240,7 @@ export function TKPost() {
             - Interface for creating visualizations and dashboards from various databases without requiring extensive technical knowledge{' '}
           </li>
       </ul>
-      <h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
+      <h4 id="cloudtools" className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
         {'Cloud Platform tools'}
       </h4>
       <p> Unlike traditional DFIR tools, which focus on on-premises infrastructure, cloud-native tools are tailored for the scalable, dynamic nature of cloud environments. The tools range from real-time monitoring to automated security for cloud architectures like serverless and containers. </p>

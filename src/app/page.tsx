@@ -1,7 +1,8 @@
 import HomePage from '@/app/pages/home'
 import AboutSection from '@/app/pages/about'
 import ExperienceSection from '@/app/pages/experience'
-import ConceptsSection from '@/app/pages/concepts/concepts'
+import FundamentalsSection from '@/app/pages/fundamentals/fundamentals'
+import BlogSection from '@/app/pages/blog'
 
 export default function Page() {
   return (
@@ -20,9 +21,13 @@ export default function Page() {
       <div id="experience">
         <ExperienceSection />
       </div>
-      {/*  --- Concepts Section -- */}
-      <div id="concepts">
-        <ConceptsSection />
+      {/*  --- Fundamentals Section -- */}
+      <div id="fundamentals">
+        <FundamentalsSection />
+      </div>
+      {/*  --- Blog Section -- */}
+      <div id="blog">
+        <BlogSection />
       </div>
     </>
   )

@@ -6,11 +6,11 @@ import { useState } from 'react'
 import { DFIRPost, CloudIRPost, ITPost, TKPost } from './posts'
 
 export const metadata: Metadata = {
-  title: 'Concepts',
+  title: 'Fundamentals',
   description: 'DFIR + Cloud Concepts, Incident Types, Toolkit',
 }
 
-export default function ConceptsSection() {
+export default function FundamentalsSection() {
   interface Tab {
     id: string
     label: string
@@ -39,20 +39,16 @@ export default function ConceptsSection() {
   }
 
   return (
-    <Container className="pb-14 pt-14 max-sm:pt-24">
+    <Container className="pt-14 max-sm:pt-24 ">
       {/* Top Level Heading */}
       <header className="prose dark:prose-invert">
         <h2>
           <span className="text-blue-500 dark:text-blue-300">{'>'}</span>{' '}
-          Concepts
+          Fundamentals
         </h2>
         <h3>
           {' '}
-          I frequently get asked what it takes to get into incident response, or
-          what I do on a day-to-day basis. I&apos;ve compiled a comprehensive
-          overview of DFIR, various incidents I&apos;ve investigated, including
-          my steps to approaching each types of compromises, tools leveraged,
-          and the players in the game.{' '}
+          I frequently get asked what it takes to get into incident response, or the typical activities involved in this role. I&apos;ve compiled a thorough introduction to DFIR, highlighting the types of incidents typically encountered, the strategic approaches to managing these incidents, the essential tools utilized by professionals.{' '}
         </h3>
       </header>
 

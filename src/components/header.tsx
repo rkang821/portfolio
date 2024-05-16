@@ -4,7 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { ThemeSwitcherButton } from './themeswitcherbutton'
 import { Container } from '@/components/container'
-import { ChevronDownIcon, CloseIcon } from '@/components/icons'
+import { ChevronDownIcon, CloseIcon, HomeIcon, AboutIcon, ExperienceIcon, FundamentalsIcon, BlogIcon } from '@/components/icons'
 
 function MobileNavItem({
   href,
@@ -69,7 +69,7 @@ function MobileNavigation(
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/#about">About</MobileNavItem>
                 <MobileNavItem href="/#experience">Experience</MobileNavItem>
-                <MobileNavItem href="/#concepts">Concepts</MobileNavItem>
+                <MobileNavItem href="/#fundamentals">Fundamentals</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -105,10 +105,11 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-opacity-100 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-opacity-100 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/#about">About</NavItem>
-        <NavItem href="/#experience">Experience</NavItem>
-        <NavItem href="/#concepts">Concepts</NavItem>
+        <NavItem href="/"><HomeIcon /></NavItem>
+        <NavItem href="/#about"><AboutIcon /> </NavItem>
+        <NavItem href="/#experience"><ExperienceIcon /></NavItem>
+        <NavItem href="/#fundamentals"><FundamentalsIcon /></NavItem>
+        <NavItem href="/#blog"><BlogIcon /></NavItem>
       </ul>
     </nav>
   )
