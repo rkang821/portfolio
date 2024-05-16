@@ -50,13 +50,19 @@ export default function typographyStyles({ theme }: PluginUtils) {
         color: 'var(--tw-prose-body)',
         lineHeight: theme('lineHeight.7'),
         '> *': {
-          margin: theme('spacing.3'),
+          margin: `${theme('spacing.1')} ${theme('spacing.2')}`,
+          '@screen sm': {
+            margin: `${theme('spacing.0')} ${theme('spacing.3')}`,
+          },
         },
         p: {
           fontSize: theme('fontSize.sm'),
-          lineHeight: 2,
+          letterSpacing: theme('letterSpacing.tighter'),
+          lineHeight: 1.7,
           '@screen sm': {
             fontSize: theme('fontSize.base'),
+            lineHeight: 1.9,
+            letterSpacing: theme('letterSpacing.tight'),
           },
           overflowWrap: 'break-word',
         },
@@ -106,12 +112,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
         h5: {
           color: 'var(--tw-prose-subheadings)',
           fontWeight: theme('fontWeight.semibold'),
-          fontSize: theme('fontSize.lg'),
+          fontSize: theme('fontSize.base'),
           lineHeight: theme('lineHeight.7'),
           marginTop: theme('spacing.3'),
           marginBottom: theme('spacing.3'),
           '@screen sm': {
-            fontSize: theme('fontSize.base'),
+            fontSize: theme('fontSize.lg'),
           },
         },
 
@@ -158,11 +164,15 @@ export default function typographyStyles({ theme }: PluginUtils) {
           listStyleType: 'decimal',
         },
         'ul, ol': {
-          marginTop: theme('spacing.2'),
-          marginBottom: theme('spacing.2'),
+          marginTop: theme('spacing.1'),
+          marginBottom: theme('spacing.1'),
           paddingLeft: theme('spacing.4'),
+          lineHeight: 1.7,
+          letterSpacing: theme('letterSpacing.tighter'),
           '@screen sm': {
             paddingLeft: theme('spacing.6'),
+            lineHeight: 2,
+            letterSpacing: theme('letterSpacing.tight'),
           },
         },
         li: {
@@ -183,12 +193,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
           color: 'var(--tw-prose-bullets)',
         },
         'li :is(ol, ul)': {
-          marginTop: theme('spacing.4'),
-          marginBottom: theme('spacing.4'),
+          marginTop: theme('spacing.0'),
+          marginBottom: theme('spacing.0'),
         },
         'li :is(li, p)': {
-          marginTop: theme('spacing.3'),
-          marginBottom: theme('spacing.3'),
+          marginTop: theme('spacing.0'),
+          marginBottom: theme('spacing.0'),
         },
         // Code blocks
         pre: {

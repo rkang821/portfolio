@@ -23,11 +23,6 @@ export default function ConceptsSection() {
       content: <DFIRPost />,
     },
     {
-      id: 'styled-Cloud',
-      label: 'Cloud IR',
-      content: <CloudIRPost />,
-    },
-    {
       id: 'styled-IT',
       label: 'Incident Types',
       content: <ITPost />,

@@ -103,8 +103,8 @@ export default function HomePage() {
             <span className="font-semibold">privacy incidents</span>.
           </p>
           <p>
-            With a keen interest in cloud forensics, particularly within the{' '}
-            <span className="font-semibold">Microsoft </span>ecosystem, I&apos;m
+            With a keen interest in cloud forensics, particularly within{' '}
+            <span className="font-semibold">Microsoft&apos;s Azure </span>ecosystem, I specialize in managing complex incidents, often navigating high-stakes environments such as APT incidents or breaches within cloud platforms. I&apos;m
             fascinated by the intricacies and complexities emerging within cloud
             forensics and the evolving challenges posed by cloud-based threats.
           </p>
