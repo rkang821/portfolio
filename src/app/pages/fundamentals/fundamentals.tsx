@@ -3,7 +3,7 @@
 import { type Metadata } from 'next'
 import { Container } from '@/components/container'
 import { useState } from 'react'
-import { DFIRPost, CloudIRPost, ITPost, TKPost } from './posts'
+import { DFIRPost, ITPost, TKPost } from './posts'
 
 export const metadata: Metadata = {
   title: 'Fundamentals',
@@ -39,7 +39,7 @@ export default function FundamentalsSection() {
   }
 
   return (
-    <Container className="pt-14 max-sm:pt-24 ">
+    <Container className="pb-14 pt-14 max-sm:pt-24">
       {/* Top Level Heading */}
       <header className="prose dark:prose-invert">
         <h2>
@@ -48,7 +48,11 @@ export default function FundamentalsSection() {
         </h2>
         <h3>
           {' '}
-          I frequently get asked what it takes to get into incident response, or the typical activities involved in this role. I&apos;ve compiled a thorough introduction to DFIR, highlighting the types of incidents typically encountered, the strategic approaches to managing these incidents, the essential tools utilized by professionals.{' '}
+          I frequently get asked what it takes to get into incident response, or
+          the typical activities involved in this role. I&apos;ve compiled a
+          thorough introduction to DFIR, highlighting the types of incidents
+          typically encountered, the strategic approaches to managing these
+          incidents, the essential tools utilized by professionals.{' '}
         </h3>
       </header>
 

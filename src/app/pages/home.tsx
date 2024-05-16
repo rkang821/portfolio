@@ -104,10 +104,12 @@ export default function HomePage() {
           </p>
           <p>
             With a keen interest in cloud forensics, particularly within{' '}
-            <span className="font-semibold">Microsoft&apos;s Azure </span>ecosystem, I 
-            specialize in managing complex incidents and navigating high-stakes environments breaches within cloud platforms. I&apos;m
+            <span className="font-semibold">Microsoft&apos;s Azure </span>
+            ecosystem, I specialize in managing complex incidents and navigating
+            high-stakes environments breaches within cloud platforms. I&apos;m
             fascinated by the intricacies and complexities emerging within cloud
-            forensics and the evolving challenges posed by such emerging threats.
+            forensics and the evolving challenges posed by such emerging
+            threats.
           </p>
         </div>
       </div>

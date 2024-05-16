@@ -27,8 +27,8 @@ export default function Footer() {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/#about">About</NavLink>
           <NavLink href="/#experience">Experience</NavLink>
+          <NavLink href="/#blogs">Blog Posts</NavLink>
           <NavLink href="/#fundamentals">Fundamentals</NavLink>
-          <NavLink href="/#blog">Blog Posts</NavLink>
         </div>
         <div className="text-right text-sm text-zinc-400 dark:text-zinc-500 max-sm:text-center">
           <p>

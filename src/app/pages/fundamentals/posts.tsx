@@ -22,14 +22,13 @@ export function DFIRPost() {
       </h4>
       <p>
         <strong>Digital Forensics and Incident Response</strong> (DFIR) is a
-        specialized branch of cybersecurity that combines the
-        investigative and analytical aspects of digital forensics with the
-        reactive measures of incident response. It aims to provide
-        a comprehensive approach to incident response, enabling organizations to
-        effectively detect, investigate, and respond to cyber threats and
-        incidents. Both DF and IR play crucial roles in cybersecurity,
-        complementing each other to ensure effective incident management and
-        response.
+        specialized branch of cybersecurity that combines the investigative and
+        analytical aspects of digital forensics with the reactive measures of
+        incident response. It aims to provide a comprehensive approach to
+        incident response, enabling organizations to effectively detect,
+        investigate, and respond to cyber threats and incidents. Both DF and IR
+        play crucial roles in cybersecurity, complementing each other to ensure
+        effective incident management and response.
       </p>
       <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1 max-sm:gap-0">
         <div>
@@ -180,7 +179,9 @@ export function DFIRPost() {
         Proliferation of cyberattacks and data breaches make DFIR more essential
         than ever. While success in cybersecurity requires a certain level of
         technical prowess, the strongest incident responders possess a diverse
-        skill set that goes beyond textbook knowledge. Below are some soft skills I&apos;ve developed throughout my journey that&apos;s helped me in my role today.
+        skill set that goes beyond textbook knowledge. Below are some soft
+        skills I&apos;ve developed throughout my journey that&apos;s helped me
+        in my role today.
       </p>
       <ul>
         <li>
@@ -213,183 +214,19 @@ export function DFIRPost() {
         <li>
           <strong>Continuous Learning and Improvement Initiatives</strong>: In a
           constantly evolving threat landscape, staying vigilant and proactive
-          is essential. I invest in ongoing training (<a href="https://www.sans.org/cyber-security-courses/" target="_blank" rel="noreferrer noopener">SANS</a>, Cloud Provider certifications, etc.), adopt emerging
-          technologies, and implement best practices to stay ahead of cyber
-          adversaries and maintain a resilient security posture.{' '}
+          is essential. I invest in ongoing training (
+          <a
+            href="https://www.sans.org/cyber-security-courses/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            SANS
+          </a>
+          , Cloud Provider certifications, etc.), adopt emerging technologies,
+          and implement best practices to stay ahead of cyber adversaries and
+          maintain a resilient security posture.{' '}
         </li>
       </ul>
-    </div>
-  )
-}
-
-export function CloudIRPost() {
-  return (
-    <div className="prose dark:prose-invert">
-      {/* <h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
-        {'Case Studies'}
-      </h4>
-      <p> Below are several examples of real-world investigations I&apos;ve undertaken in my experience with incident response in cloud platforms. </p>
-      <div>
-        <h5>
-          Cloud Storage Misconfiguration and Compromise <AWSTag />
-        </h5>
-        <ul>
-        <p><strong>Incident</strong>: In a critical incident involving an improperly configured <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">Amazon S3 bucket</a>, sensitive data was inadvertently exposed to unauthorized access. The bucket, intended for internal use, was misconfigured to allow public read access, leading to potential data leakage. The exposure was detected during a routine security audit. </p>
-        <p><strong>Detection and Initial Response</strong>:
-        The incident was initially detected through an alert from AWS CloudTrail, which indicated unexpected access patterns to the S3 bucket. Immediate actions were taken to restrict access by modifying the bucket&apos;s permissions settings to private. This quick response prevented further unauthorized access.</p>
-        <p>
-        <strong>Investigation and Analysis</strong>:
-        A thorough investigation was conducted using detailed logs from AWS CloudTrail and AWS Access Logs. These logs were instrumental in tracing the source and extent of the access. By analyzing the access patterns and IP addresses involved, we could confirm that the exposed data was accessed by external entities.</p>
-        <p>
-        <strong>Mitigation Strategies</strong>:
-        Post-detection, the primary focus was on damage control and preventing future incidents. The following steps were undertaken:</p>
-        <ul> 
-            <li>Immediate Revocation of Public Access: The S3 bucket permissions were corrected to ensure that only authenticated users with specific roles had access.</li>
-            <li>Audit and Review of All S3 Buckets: A comprehensive audit of all S3 buckets under our management was conducted to ensure proper configurations were in place and to rectify any other potential misconfigurations.</li>
-            <li>Enhanced Monitoring Setup: Implementation of additional monitoring tools to detect and alert any improper modification of permission settings on all storage resources.</li>
-            <li>Policy Updates and Training: Updated the security policies regarding cloud storage and conducted training sessions for the team to prevent similar incidents in the future.</li>
-        </ul>
-        <p>
-        <strong>Resolution and Lessons Learned</strong>:
-        The incident was resolved with no evidence of malicious exploitation of the exposed data, though the potential for data leakage had been high. This incident highlighted the critical need for rigorous monitoring and validation of cloud storage configurations. Lessons learned from this incident have led to strengthened security practices and policies around cloud resource management to ensure such exposures do not recur.</p>
-        <p>
-        <strong>Technologies Used</strong>:
-        <ul>
-        <li>AWS CloudTrail</li>
-        <li>AWS S3 Access Logs</li>
-        <li>Custom monitoring tools for real-time security alerts</li>
-        </ul>
-        </p>
-        <p>
-        <strong>Outcome</strong>:
-        This incident served as a pivotal learning experience, reinforcing the importance of secure cloud storage configurations and proactive security practices. By rapidly addressing the issue and implementing strategic changes, we ensured the integrity and security of our cloud environments against future vulnerabilities.</p>
-        </ul>
-
-        <h5>
-        Azure Incident Response: Unauthorized Cryptomining Operation <MicrosoftTag />
-        </h5>
-        <ul>
-        <p><strong>Incident</strong>: In this high-impact security incident, a threat actor compromised an Azure environment and illicitly spun up approximately 1200 Virtual Machines (VMs) for cryptomining activities. This unauthorized activity led to substantial resource consumption and increased operational costs. </p>
-        <p><strong>Detection and Initial Response</strong>:
-        The anomalous activity was initially detected by Azure Monitor, which flagged an unusual spike in resource usage and network traffic inconsistent with the typical organizational patterns. Immediate steps were taken to isolate the affected VMs and halt all suspicious processes. This rapid containment helped prevent further exploitation of resources.</p>
-        <p>
-        <strong>Investigation and Analysis</strong>:
-        A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we identified the entry point of the attack—a set of compromised user credentials that allowed the attacker to access our Azure management portal.</p>
-        <p>
-        <strong>Mitigation Strategies</strong>:
-        To address the incident and fortify our systems against future attacks, we implemented several key measures:</p>
-        <ul> 
-        <li>Credential Reset and Role Re-assignment: All compromised credentials were immediately reset. We reviewed and tightened the role-based access controls (RBAC) for Azure resources, ensuring that only necessary permissions were granted to users.</li>
-        <li>Enhanced Monitoring and Alerts: We enhanced our monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.</li>
-        <li> Security Hardening of VMs: All virtual machines were subjected to a security hardening process, including the application of the latest security patches and strict firewall rules.</li>
-        <li>Education and Policy Updates: Conducted an organization-wide security awareness training focusing on phishing defense and safe credential management. Updated the security policies to include stricter controls on resource provisioning and management.</li>
-        </ul>
-        <p>
-        <strong>Resolution and Lessons Learned</strong>:
-        The quick response and comprehensive investigation allowed us to terminate the unauthorized cryptomining operation without significant damage or data loss. Key lessons learned included the necessity of continuous monitoring for unusual resource usage, the importance of employing strong, multi-factor authentication for all cloud-based accounts, and the need for regular security audits of cloud environments.</p>
-        <p>
-        <strong>Technologies Used</strong>:
-        <ul>
-        <li>Azure Security Center</li>
-        <li>Azure Monitor</li>
-        <li>Azure Log Analytics</li>
-        <li>Custom scripts for automated response</li>
-        </ul>
-        </p>
-        <p>
-        <strong>Outcome</strong>:
-        This incident underscored the critical importance of robust security protocols in cloud environments. By swiftly addressing the unauthorized activity and enhancing our defensive measures, we reinforced our cloud infrastructure&apos;s security and resilience against similar threats.</p>
-        </ul>
-
-        <h5>
-         API Security Breach Leading to Kubernetes Compromise <GCPTag />
-        </h5>
-        <ul>
-        <p><strong>Incident</strong>: This incident involved a significant security breach where exposed APIs on Google Cloud Platform (GCP) were exploited by attackers to compromise a Kubernetes pod. The vulnerability in the API configuration allowed unauthorized access, which extended to the Kubernetes node and cluster, affecting multiple systems. </p>
-        <p><strong>Detection and Initial Response</strong>:
-        The breach was detected when abnormal activity was noted in the Kubernetes environment, including unusual pod behavior and unexpected external communications. Our immediate response involved isolating the compromised pod and conducting a rapid assessment of the Kubernetes cluster to prevent further unauthorized activities.</p>
-        <p>
-        <strong>Investigation and Analysis</strong>:
-        Utilizing GCP&apos;s Log Explorer, we conducted a deep dive into the system logs of the affected Kubernetes node and other related resources. The investigation revealed that the exposed API was accessed multiple times by unauthorized external IP addresses. By tracing these accesses and mapping the attack vectors, we identified additional compromised systems within the cluster.</p>
-        <p>
-        <strong>Mitigation Strategies</strong>:
-        To address the breach and secure our infrastructure, we implemented the following key actions:</p>
-        <ul> 
-        <li>Immediate API Restriction: Temporarily disabled the exposed APIs until proper security measures, like API Gateway controls and OAuth scopes, were implemented.</li>
-        <li>Enhanced Security for Kubernetes Clusters: Applied stricter security configurations, including network policies and role-based access controls (RBAC), to all Kubernetes clusters. This also involved updating Kubernetes to the latest stable version with patched vulnerabilities.</li>
-        <li> Comprehensive System Audits: Initiated a full audit of all GCP resources using GCP Security Command Center to identify and remediate any other potential vulnerabilities or misconfigurations.</li>
-        <li>Forensic Analysis: Continued detailed forensic analysis using GCP&apos;s security tools to understand the depth of the compromise and to ensure that all malicious footholds were removed.</li>
-        </ul>
-        <p>
-        <strong>Resolution and Lessons Learned</strong>:
-        The incident was resolved with the containment and eradication of all threats from our systems. Key lessons included the importance of securing APIs with appropriate authentication and authorization checks, the necessity of regular security reviews for cloud-native environments, and the value of proactive monitoring and logging to detect and respond to incidents swiftly.</p>
-        <p>
-        <strong>Technologies Used</strong>:
-        <ul>
-        <li>GCP Log Explorer</li>
-        <li>GCP Security Command Center</li>
-        <li>GCP API Gateway</li>
-        <li>Kubernetes Engine</li>
-        </ul>
-        </p>
-        <p>
-        <strong>Outcome</strong>:
-        The breach highlighted critical security considerations for cloud environments, particularly in relation to API exposure and Kubernetes security. Our prompt and effective response not only mitigated the incident without significant damage but also strengthened our security posture against future cyber threats.</p>
-        </ul>
-
-      </div> */}
-    </div>
-  )
-}
-
-export function IncidentDetails() {
-  return (
-    <div> 
-<div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <div className="flex flex-col">
-          <h5>{'Platforms Involved'}</h5>
-          <ul>
-            <li>
-              <strong>Incident Detection and Triage:</strong> Incident
-              responders are responsible for monitoring and detecting security
-              incidents through various means, such as security monitoring
-              tools, intrusion detection systems, and log analysis. They assess
-              the severity and potential impact of incidents, prioritize them
-              based on risk, and initiate appropriate response actions.
-            </li>
-          </ul>
-        </div>
-        {/* Tools Leveraged Section */}
-        <div className="flex flex-col">
-          <h5>{'Tools Leveraged'}</h5>
-          <ul>
-            <li>
-              {' '}
-              <strong>Incident Response Leadership:</strong> Leading a team of
-              skilled professionals, I orchestrate the response to security
-              incidents with precision and efficiency. From identifying and
-              containing threats to implementing remediation measures, I ensure
-              that every incident is swiftly addressed to minimize damage and
-              maintain operational continuity.
-            </li>
-          </ul>
-        </div>
-        {/* Players in the game Section */}
-        <div className="flex flex-col">
-          <h5>{'Familiar Players'}</h5>
-          <ul>
-            <li>
-              {' '}
-              <strong>Incident Response Leadership:</strong> Leading a team of
-              skilled professionals, I orchestrate the response to security
-              incidents with precision and efficiency. From identifying and
-              containing threats to implementing remediation measures, I ensure
-              that every incident is swiftly addressed to minimize damage and
-              maintain operational continuity.
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   )
 }
@@ -402,7 +239,10 @@ export function ITPost() {
         {'Incident Types'}
       </h4>
       <p>
-        While I have experience tackling a broad spectrum of cases, recently I&apos;ve focused on leading intricate IR cases, particularly those involving a cloud platform compromise. Here&apos;s an overview the types of incidents I&apos;ve responded to.
+        While I have experience tackling a broad spectrum of cases, recently
+        I&apos;ve focused on leading intricate IR cases, particularly those
+        involving a cloud platform compromise. Here&apos;s an overview the types
+        of incidents I&apos;ve responded to.
       </p>
       <h5>{'Types of Digital Forensics Cases'}</h5>
       <ul>
@@ -500,31 +340,40 @@ export function ITPost() {
       <p>
         Cloud Incident Response is an emerging and booming subset of IR that
         refers to responding to security incidents that occur within cloud
-        environments, such as across cloud infrastructure or
-        services across platforms such as Microsoft&apos;s Azure, Amazon Web Services (AWS), or Google Cloud Platform (GCP).
+        environments, such as across cloud infrastructure or services across
+        platforms such as Microsoft&apos;s Azure, Amazon Web Services (AWS), or
+        Google Cloud Platform (GCP).
       </p>
       <h5>What&apos;s new in Cloud IR? </h5>
       <p>
         {' '}
-        Cloud-based incidents are reshaping traditional DFIR work
-        with a shift in commonly accepted investigative practices, tools, and expertise
-        to effectively address the complexities of cloud environments. Incident responders should adapt and
-        evolve their approaches to keep pace with the changing landscape of
-        cybersecurity in the cloud. A few of major changes I&pos;ve noticed:
+        Cloud-based incidents are reshaping traditional DFIR work with a shift
+        in commonly accepted investigative practices, tools, and expertise to
+        effectively address the complexities of cloud environments. Incident
+        responders should adapt and evolve their approaches to keep pace with
+        the changing landscape of cybersecurity in the cloud. A few of major
+        changes I&apos;ve noticed:
       </p>
       <ol>
         <li>
           {' '}
-          <strong>Shift in Data Sources</strong>: In 2024, around 87% of Fortune 500 companies have adopted at least one public cloud platform. Incident responders typically collected data from on-premises systems, such as servers, workstations, and network (firewall) logs - the physical access parameters.
-          As more organizations utilize services from a variety of cloud platforms, working with the access parameters of each cloud provider requires a deeper level of expertise - such as taking logical storage snapshots, understanding log retention, etc. 
+          <strong>Shift in Data Sources</strong>: In 2024, around 87% of Fortune
+          500 companies have adopted at least one public cloud platform.
+          Incident responders typically collected data from on-premises systems,
+          such as servers, workstations, and network (firewall) logs - the
+          physical access parameters. As more organizations utilize services
+          from a variety of cloud platforms, working with the access parameters
+          of each cloud provider requires a deeper level of expertise - such as
+          taking logical storage snapshots, understanding log retention, etc.
         </li>
         <li>
           <strong>Complexity of Investigations</strong>: Cloud-based incidents
-          introduce additional complexity to DFIR investigations because of its efficient, but distributed nature, including shared responsibility
+          introduce additional complexity to DFIR investigations because of its
+          efficient, but distributed nature, including shared responsibility
           models and multi-tenant architectures. Investigating incidents
           involving cloud services requires coordination and collaboration
           between the cloud customer, CSPs, and potentially other third-party
-          service providers. In my experience, 
+          service providers. In my experience,
         </li>
         <li>
           <strong>Challenges in Data Collection and Preservation</strong>:
@@ -534,16 +383,18 @@ export function ITPost() {
           regions, stored in shared storage systems, or subject to automated
           data lifecycle management by CSPs. Ensuring the integrity and
           admissibility of digital evidence collected from cloud environments
-          requires specialized techniques and tools tailored to cloud forensics. Also requires expertise in a variety of cloud platforms.
+          requires specialized techniques and tools tailored to cloud forensics.
+          Also requires expertise in a variety of cloud platforms.
         </li>
         <li>
           <strong>Adaptation of Investigative Techniques</strong>: Investigators
-          should adapt their techniques and methodologies to
-          address cloud-specific artifacts, including logging mechanisms, encryption
+          should adapt their techniques and methodologies to address
+          cloud-specific artifacts, including logging mechanisms, encryption
           practices, and access controls implemented by CSPs. Traditional DFIR
           methodologies may need to be modified or supplemented with
           cloud-specific approaches to effectively investigate incidents in
-          cloud environments (i.e., lateral movement across cloud resources, data exfiltration from cloud storage, etc.)
+          cloud environments (i.e., lateral movement across cloud resources,
+          data exfiltration from cloud storage, etc.)
         </li>
         <li>
           <strong>Integration with Cloud Security Tools</strong>: Cloud-based
@@ -552,7 +403,9 @@ export function ITPost() {
           leveraging CSP-provided security services, such as cloud monitoring,
           threat detection, and incident response automation. Integrating these
           tools into DFIR workflows enables faster detection, analysis, and
-          response to cloud-based threats and security incidents. See <a href="#fundamentals">DFIR Toolkit</a> tab for several cloud-native tools across major cloud providers.
+          response to cloud-based threats and security incidents. See{' '}
+          <a href="#fundamentals">DFIR Toolkit</a> tab for several cloud-native
+          tools across major cloud providers.
         </li>
       </ol>
       <p>
@@ -563,37 +416,6 @@ export function ITPost() {
         rapid incident triage, and coordinated response efforts between cloud
         customers, cloud service providers (CSPs), and other stakeholders.
       </p>
-      {/* <h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
-        {'Case Studies'}
-      </h4>
-      <div>
-        <h5>
-          Advanced Persistent Threat (APT) <APTTag />
-        </h5>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="flex flex-col">
-            <h6>Familiar Players</h6>
-            <p>Oktapus</p>
-          </div> 
-          <div className="flex flex-col">
-            <h6>Platforms</h6>
-          </div> 
-          <div className="flex flex-col">
-            <h6>Platforms</h6>
-          </div>
-        </div>
-        <h5>
-          Ransomware <RWTag />
-        </h5>
-        <p></p>
-        <h5>
-          Business Email Compromise <BECTag /> <PhishingTag />
-        </h5>
-        <p></p>
-        <h5>
-          Insider Threat <ITTag />
-        </h5>
-      </div> */}
     </div>
   )
 }
@@ -622,7 +444,8 @@ export function TKPost() {
             Logicube Forensic Falcon{' '}
           </a>{' '}
           <StarIcon /> – A standalone forensics device offering various
-          functions such as data acquisition, secure encryption, data verification, and disk formatting tailored for forensic applications.{' '}
+          functions such as data acquisition, secure encryption, data
+          verification, and disk formatting tailored for forensic applications.{' '}
         </li>
         <li>
           <a
@@ -633,7 +456,9 @@ export function TKPost() {
             {' '}
             AccessData FTK Imager{' '}
           </a>{' '}
-          <StarIcon /> – A free forensic tool used for capturing live data and creating forensic images of files, folders, and disk images, while supporting live memory acquisition on both 32-bit and 64-bit systems.{' '}
+          <StarIcon /> – A free forensic tool used for capturing live data and
+          creating forensic images of files, folders, and disk images, while
+          supporting live memory acquisition on both 32-bit and 64-bit systems.{' '}
         </li>
         <li>
           <a
@@ -644,7 +469,8 @@ export function TKPost() {
             {' '}
             Guymager{' '}
           </a>{' '}
-          – Free Linux-based imager for forensic acquisition of media drives, optimized for full-drive data captures.
+          – Free Linux-based imager for forensic acquisition of media drives,
+          optimized for full-drive data captures.
         </li>
         <li>
           <a
@@ -655,7 +481,8 @@ export function TKPost() {
             {' '}
             Magnet ACQUIRE{' '}
           </a>{' '}
-          – Acquires forensic images from a variety of platforms including Windows, macOS, Linux, and mobile devices.
+          – Acquires forensic images from a variety of platforms including
+          Windows, macOS, Linux, and mobile devices.
         </li>
         <li>
           <a
@@ -681,7 +508,9 @@ export function TKPost() {
             {' '}
             F-Response{' '}
           </a>{' '}
-          – Enables remote, secure, and read-only access to target systems for real-time data analysis and incident response, ensuring data integrity.{' '}
+          – Enables remote, secure, and read-only access to target systems for
+          real-time data analysis and incident response, ensuring data
+          integrity.{' '}
         </li>
         <li>
           <a
@@ -692,7 +521,9 @@ export function TKPost() {
             {' '}
             PSRecon{' '}
           </a>{' '}
-          – Utilizes PowerShell (v2+) to remotely collect and organize data from Windows systems, ensuring data integrity through comprehensive hashing.{' '}
+          – Utilizes PowerShell (v2+) to remotely collect and organize data from
+          Windows systems, ensuring data integrity through comprehensive
+          hashing.{' '}
         </li>
         <li>
           <a
@@ -703,7 +534,9 @@ export function TKPost() {
             {' '}
             bulk_extractor{' '}
           </a>{' '}
-          – Scans digital media to extract critical information quickly without requiring file system parsing, enhancing the efficiency of forensic examinations.
+          – Scans digital media to extract critical information quickly without
+          requiring file system parsing, enhancing the efficiency of forensic
+          examinations.
         </li>
         <li>
           <a
@@ -714,12 +547,13 @@ export function TKPost() {
             {' '}
             X1 Social Discovery{' '}
           </a>{' '}
-          – Specializes in collecting data from social media and websites, particularly for digital investigations and legal discovery{' '}
+          – Specializes in collecting data from social media and websites,
+          particularly for digital investigations and legal discovery{' '}
         </li>
       </ul>
       <h5>{'Memory Tools'}</h5>
       <ul>
-      <li>
+        <li>
           <a
             href="https://belkasoft.com/ram-capturer"
             target="_blank"
@@ -728,7 +562,9 @@ export function TKPost() {
             {' '}
             Belkasoft RAM Capturer{' '}
           </a>{' '}
-          – Forensic tool that reliably acquires volatile memory of a running computer. Designed to be fail-safe and easy to use, it captures system RAM with minimal risk of data corruption.{' '}
+          – Forensic tool that reliably acquires volatile memory of a running
+          computer. Designed to be fail-safe and easy to use, it captures system
+          RAM with minimal risk of data corruption.{' '}
         </li>
         <li>
           <a
@@ -739,8 +575,8 @@ export function TKPost() {
             {' '}
             Live Response Collection{' '}
           </a>{' '}
-          – Automates the collection of volatile data from Windows, OS, and
-          *nix based operating systems.
+          – Automates the collection of volatile data from Windows, OS, and *nix
+          based operating systems.
         </li>
         <li>
           <a
@@ -751,7 +587,8 @@ export function TKPost() {
             {' '}
             Volatility 3 <StarIcon />
           </a>{' '}
-          - Specializes in extracting artifacts from volatile memory, providing crucial insights into the runtime state of systems.{' '}
+          - Specializes in extracting artifacts from volatile memory, providing
+          crucial insights into the runtime state of systems.{' '}
         </li>
         <li>
           <a
@@ -762,9 +599,10 @@ export function TKPost() {
             {' '}
             ReKall <StarIcon />
           </a>{' '}
-          - Open-source tool + library for extraction of digital artifacts from volatile memory (RAM) samples.{' '}
+          - Open-source tool + library for extraction of digital artifacts from
+          volatile memory (RAM) samples.{' '}
         </li>
-        </ul>
+      </ul>
       <h5>{'All-In-One Tools'}</h5>
       <ul>
         <li>
@@ -776,7 +614,9 @@ export function TKPost() {
             {' '}
             X-Ways Forensics{' '}
           </a>{' '}
-          <StarIcon /> - A versatile tool for disk cloning, imaging, file recovery, and detailed analysis of data, serving as a cornerstone for forensic investigations.{' '}
+          <StarIcon /> - A versatile tool for disk cloning, imaging, file
+          recovery, and detailed analysis of data, serving as a cornerstone for
+          forensic investigations.{' '}
         </li>
         <li>
           <a
@@ -787,7 +627,9 @@ export function TKPost() {
             {' '}
             OSquery{' '}
           </a>{' '}
-          - Open-source endpoint visibility tool developed by Meta, transforming device states into queryable databases, enabling real-time visibility and analysis across multiple operating systems.{' '}
+          - Open-source endpoint visibility tool developed by Meta, transforming
+          device states into queryable databases, enabling real-time visibility
+          and analysis across multiple operating systems.{' '}
         </li>
         <li>
           <a
@@ -798,7 +640,9 @@ export function TKPost() {
             {' '}
             Velociraptor{' '}
           </a>{' '}
-          <StarIcon /> - An advanced tool providing deep endpoint visibility and data collection capabilities to enhance investigative and monitoring activities. Uses Velocidex Query Language (VQL).{' '}
+          <StarIcon /> - An advanced tool providing deep endpoint visibility and
+          data collection capabilities to enhance investigative and monitoring
+          activities. Uses Velocidex Query Language (VQL).{' '}
         </li>
       </ul>
       <h5>{'Host-Based Analysis'}</h5>
@@ -823,7 +667,8 @@ export function TKPost() {
             {' '}
             RegRipper{' '}
           </a>{' '}
-          - Open source tool written in Perl for extracting/parsing (keys, values, data) from registry hives for values of interest.{' '}
+          - Open source tool written in Perl for extracting/parsing (keys,
+          values, data) from registry hives for values of interest.{' '}
         </li>
         <li>
           <a
@@ -834,7 +679,9 @@ export function TKPost() {
             {' '}
             Event Log Explorer{' '}
           </a>{' '}
-          - Viewing, analyzing, and monitoring events recorded in Microsoft Windows event logs. It provides powerful features to aggregate, analyze, and export logs.{' '}
+          - Viewing, analyzing, and monitoring events recorded in Microsoft
+          Windows event logs. It provides powerful features to aggregate,
+          analyze, and export logs.{' '}
         </li>
         <li>
           <a
@@ -845,7 +692,8 @@ export function TKPost() {
             {' '}
             Loki{' '}
           </a>{' '}
-          - Python-based scanner leveraging indicators of compromise and YARA rules for comprehensive endpoint scanning{' '}
+          - Python-based scanner leveraging indicators of compromise and YARA
+          rules for comprehensive endpoint scanning{' '}
         </li>
         <li>
           <a
@@ -856,7 +704,9 @@ export function TKPost() {
             {' '}
             Thor Lite <StarIcon />
           </a>{' '}
-          - Extensive IOC and YARA scanning capabilities, equipped with advanced modules and signature sets for detailed threat detection. Built upon Loki.
+          - Extensive IOC and YARA scanning capabilities, equipped with advanced
+          modules and signature sets for detailed threat detection. Built upon
+          Loki.
         </li>
         <li>
           <a
@@ -867,7 +717,8 @@ export function TKPost() {
             {' '}
             Intella Pro{' '}
           </a>{' '}
-          - Focuses on email investigation and eDiscovery, offering powerful tools for processing and analyzing email data.{' '}
+          - Focuses on email investigation and eDiscovery, offering powerful
+          tools for processing and analyzing email data.{' '}
         </li>
         <li>
           <a
@@ -878,7 +729,8 @@ export function TKPost() {
             {' '}
             Eric Zimmerman Tools{' '}
           </a>{' '}
-          - A suite of open-source forensic tools that provide deep insights and cross-validation capabilities in digital investigations.{' '}
+          - A suite of open-source forensic tools that provide deep insights and
+          cross-validation capabilities in digital investigations.{' '}
         </li>
         <li>
           <a
@@ -889,7 +741,8 @@ export function TKPost() {
             {' '}
             Magnet AXIOM{' '}
           </a>{' '}
-          - Integrates evidence from mobile, cloud, and computer sources into a single case file, streamlining the investigation process.{' '}
+          - Integrates evidence from mobile, cloud, and computer sources into a
+          single case file, streamlining the investigation process.{' '}
         </li>
         <li>
           <a
@@ -900,7 +753,8 @@ export function TKPost() {
             {' '}
             Exiftool{' '}
           </a>{' '}
-          - A powerful tool for manipulating metadata in a wide array of file types, critical for forensic and investigative purposes.{' '}
+          - A powerful tool for manipulating metadata in a wide array of file
+          types, critical for forensic and investigative purposes.{' '}
         </li>
         <li>
           <a
@@ -911,7 +765,8 @@ export function TKPost() {
             {' '}
             John the Ripper{' '}
           </a>{' '}
-          - Fast password cracker, widely used for its ability to automatically detect password hash types and support numerous cracking modes. {' '}
+          - Fast password cracker, widely used for its ability to automatically
+          detect password hash types and support numerous cracking modes.{' '}
         </li>
       </ul>
       <h5>{'Log Analysis Platforms + Tools'}</h5>
@@ -925,7 +780,9 @@ export function TKPost() {
             {' '}
             Splunk Enterprise{' '}
           </a>{' '}
-          - A robust platform that captures, indexes, and correlates real-time data in a searchable repository, enabling complex querying, analysis, visualization, and monitoring.{' '}
+          - A robust platform that captures, indexes, and correlates real-time
+          data in a searchable repository, enabling complex querying, analysis,
+          visualization, and monitoring.{' '}
         </li>
         <li>
           <a
@@ -936,7 +793,9 @@ export function TKPost() {
             {' '}
             Elastic’s ELK Stack{' '}
           </a>{' '}
-          <StarIcon /> - Combines Elasticsearch, Logstash, and Kibana to process, search, and visualize large volumes of data in real time, providing an integrated solution for log and time-series analytics{' '}
+          <StarIcon /> - Combines Elasticsearch, Logstash, and Kibana to
+          process, search, and visualize large volumes of data in real time,
+          providing an integrated solution for log and time-series analytics{' '}
         </li>
         <li>
           <a
@@ -947,7 +806,9 @@ export function TKPost() {
             {' '}
             LogRhythm{' '}
           </a>{' '}
-          - Security information and event management (SIEM) solution that combines log management, machine learning, and advanced analytics to help identify and respond to threats quickly. {' '}
+          - Security information and event management (SIEM) solution that
+          combines log management, machine learning, and advanced analytics to
+          help identify and respond to threats quickly.{' '}
         </li>
         <li>
           <a
@@ -958,7 +819,9 @@ export function TKPost() {
             {' '}
             Sumo Logic{' '}
           </a>{' '}
-          - A cloud-based log management and analytics service that transforms big data into sources for security and operational intelligence. It is designed to help with real-time forensics and incident response.{' '}
+          - A cloud-based log management and analytics service that transforms
+          big data into sources for security and operational intelligence. It is
+          designed to help with real-time forensics and incident response.{' '}
         </li>
         <li>
           <a
@@ -969,7 +832,9 @@ export function TKPost() {
             {' '}
             IBM Security QRadar{' '}
           </a>{' '}
-          - SIEM solution that consolidates log events and network flow data from thousands of devices, endpoints, and applications across a network.{' '}
+          - SIEM solution that consolidates log events and network flow data
+          from thousands of devices, endpoints, and applications across a
+          network.{' '}
         </li>
         <li>Other great tools for loose log analysis</li>
         <ul>
@@ -982,7 +847,9 @@ export function TKPost() {
               {' '}
               Jupyter Notebook{' '}
             </a>{' '}
-            - Provides an interactive computing environment where you can combine code execution, rich text, mathematics, plots, and rich media.{' '}
+            - Provides an interactive computing environment where you can
+            combine code execution, rich text, mathematics, plots, and rich
+            media.{' '}
           </li>
           <li>
             <a
@@ -993,7 +860,8 @@ export function TKPost() {
               {' '}
               PostgreSQL’s pgAdmin{' '}
             </a>{' '}
-            - A comprehensive administration tool for PostgreSQL, offering GUI for database management, query tooling, and monitoring{' '}
+            - A comprehensive administration tool for PostgreSQL, offering GUI
+            for database management, query tooling, and monitoring{' '}
           </li>
           <li>
             <a
@@ -1004,7 +872,9 @@ export function TKPost() {
               {' '}
               Cygwin{' '}
             </a>
-            <StarIcon /> - A POSIX-compatible environment that runs natively on Microsoft Windows, allowing the running of Linux-based applications and tools. An essential tool in my opinion.
+            <StarIcon /> - A POSIX-compatible environment that runs natively on
+            Microsoft Windows, allowing the running of Linux-based applications
+            and tools. An essential tool in my opinion.
           </li>
         </ul>
       </ul>
@@ -1028,7 +898,7 @@ export function TKPost() {
         </a>{' '}
         for all the support through my journey here.{' '}
       </p>
-      
+
       <h5>{'Network Analysis'}</h5>
       <ul>
         <li>
@@ -1040,7 +910,9 @@ export function TKPost() {
             {' '}
             NetWitness Investigator{' '}
           </a>{' '}
-          - Facilitates advanced network forensics with real-time visibility into network traffic, aiding in the detection and investigation of security threats.{' '}
+          - Facilitates advanced network forensics with real-time visibility
+          into network traffic, aiding in the detection and investigation of
+          security threats.{' '}
         </li>
         <li>
           <a
@@ -1075,7 +947,9 @@ export function TKPost() {
             {' '}
             TCPDump{' '}
           </a>
-          <StarIcon /> - Command-line packet analyzer used for network diagnostics and network traffic monitoring by capturing packet data. Isolate packets, sessions, and events of interest for deeper review.{' '}
+          <StarIcon /> - Command-line packet analyzer used for network
+          diagnostics and network traffic monitoring by capturing packet data.
+          Isolate packets, sessions, and events of interest for deeper review.{' '}
         </li>
       </ul>
 
@@ -1090,7 +964,8 @@ export function TKPost() {
             {' '}
             Shodan.io{' '}
           </a>{' '}
-          <StarIcon /> - A specialized search engine for finding specific types of internet-connected devices and systems.{' '}
+          <StarIcon /> - A specialized search engine for finding specific types
+          of internet-connected devices and systems.{' '}
         </li>
         <li>
           <a
@@ -1101,7 +976,8 @@ export function TKPost() {
             {' '}
             MaxMind{' '}
           </a>{' '}
-          <StarIcon /> - Provides IP geolocation and online fraud prevention tools.{' '}
+          <StarIcon /> - Provides IP geolocation and online fraud prevention
+          tools.{' '}
         </li>
         <li>
           <a
@@ -1123,7 +999,9 @@ export function TKPost() {
             {' '}
             CyberChef{' '}
           </a>{' '}
-          <StarIcon /> - Versatile web application for encoding, decoding, ciphering, hashing, and data analysis, with numerous operations and chainable tools{' '}
+          <StarIcon /> - Versatile web application for encoding, decoding,
+          ciphering, hashing, and data analysis, with numerous operations and
+          chainable tools{' '}
         </li>
         <li>
           <a
@@ -1134,7 +1012,8 @@ export function TKPost() {
             {' '}
             OpenPhish{' '}
           </a>{' '}
-          - Repository of active phishing sites, offering free phishing intelligence feeds.{' '}
+          - Repository of active phishing sites, offering free phishing
+          intelligence feeds.{' '}
         </li>
         <li>
           <a
@@ -1145,7 +1024,8 @@ export function TKPost() {
             {' '}
             VirusTotal{' '}
           </a>{' '}
-          - Analyzes suspicious files and URLs to detect malware and other threats using multiple antivirus engines and website scanners{' '}
+          - Analyzes suspicious files and URLs to detect malware and other
+          threats using multiple antivirus engines and website scanners{' '}
         </li>
         <li>
           <a
@@ -1156,7 +1036,9 @@ export function TKPost() {
             {' '}
             JOE Security{' '}
           </a>{' '}
-          - A sandboxing solution that analyzes suspicious files, malware, and URLs across multiple operating systems, providing detailed security reports. {' '}
+          - A sandboxing solution that analyzes suspicious files, malware, and
+          URLs across multiple operating systems, providing detailed security
+          reports.{' '}
         </li>
         <li>
           <a
@@ -1167,7 +1049,9 @@ export function TKPost() {
             {' '}
             AlientVault OTX (Open Threat Exchange){' '}
           </a>{' '}
-          - Global open threat intelligence community that shares in real-time, aiding in the response to emerging threats, promoting faster incident response. {' '}
+          - Global open threat intelligence community that shares in real-time,
+          aiding in the response to emerging threats, promoting faster incident
+          response.{' '}
         </li>
         <li>
           <a
@@ -1178,7 +1062,9 @@ export function TKPost() {
             {' '}
             SpiderFoot{' '}
           </a>{' '}
-          - Open-source intelligence automation tool, automating the process of gathering intelligence about a given target (ex. IP address, domain name, hostname, network subnet, etc.) {' '}
+          - Open-source intelligence automation tool, automating the process of
+          gathering intelligence about a given target (ex. IP address, domain
+          name, hostname, network subnet, etc.){' '}
         </li>
       </ul>
 
@@ -1193,7 +1079,8 @@ export function TKPost() {
             {' '}
             Timesketch{' '}
           </a>{' '}
-          <StarIcon /> - An open-source collaborative forensic timeline analysis tool designed to help teams work together on digital investigations.
+          <StarIcon /> - An open-source collaborative forensic timeline analysis
+          tool designed to help teams work together on digital investigations.
         </li>
         <li>
           <a
@@ -1204,7 +1091,9 @@ export function TKPost() {
             {' '}
             Plaso{' '}
           </a>{' '}
-          <StarIcon /> - Python-based backend that extracts timestamps from various files found on a system and aggregates them into a single timeline.
+          <StarIcon /> - Python-based backend that extracts timestamps from
+          various files found on a system and aggregates them into a single
+          timeline.
         </li>
         <li>
           <a
@@ -1215,7 +1104,9 @@ export function TKPost() {
             {' '}
             Maltego by Paterva{' '}
           </a>{' '}
-          <StarIcon /> - A powerful visualization tool for understanding and displaying the relationships and real-world links between digital entities.
+          <StarIcon /> - A powerful visualization tool for understanding and
+          displaying the relationships and real-world links between digital
+          entities.
         </li>
         <li>
           <a
@@ -1226,97 +1117,199 @@ export function TKPost() {
             {' '}
             XMind{' '}
           </a>{' '}
-          - A full-featured mind-mapping and brainstorming tool, enabling the structuring of thoughts, complex information, and ideas for projects and research.{' '}
+          - A full-featured mind-mapping and brainstorming tool, enabling the
+          structuring of thoughts, complex information, and ideas for projects
+          and research.{' '}
         </li>
         <li>
-            <a
-              href="https://www.metabase.com/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              {' '}
-              Metabase{' '}
-            </a>{' '}
-            - Interface for creating visualizations and dashboards from various databases without requiring extensive technical knowledge{' '}
-          </li>
+          <a
+            href="https://www.metabase.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {' '}
+            Metabase{' '}
+          </a>{' '}
+          - Interface for creating visualizations and dashboards from various
+          databases without requiring extensive technical knowledge{' '}
+        </li>
       </ul>
-      <h4 id="cloudtools" className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
+      <h4
+        id="cloudtools"
+        className="border-l-2 border-zinc-600 border-opacity-50 pl-3"
+      >
         {'Cloud Platform tools'}
       </h4>
-      <p> Unlike traditional DFIR tools, which focus on on-premises infrastructure, cloud-native tools are tailored for the scalable, dynamic nature of cloud environments. The tools range from real-time monitoring to automated security for cloud architectures like serverless and containers. </p>
-      <h5><strong>Amazon Web Services </strong><AWSTag /></h5>
-        <ul>
-          <li><a
+      <p>
+        {' '}
+        Unlike traditional DFIR tools, which focus on on-premises
+        infrastructure, cloud-native tools are tailored for the scalable,
+        dynamic nature of cloud environments. The tools range from real-time
+        monitoring to automated security for cloud architectures like serverless
+        and containers.{' '}
+      </p>
+      <h5>
+        <strong>Amazon Web Services </strong>
+        <AWSTag />
+      </h5>
+      <ul>
+        <li>
+          <a
             href="https://aws.amazon.com/cloudtrail/"
             target="_blank"
             rel="noreferrer noopener"
-          >AWS CloudTrail</a> - Provides governance, compliance, operational auditing, and risk auditing of your AWS account by logging all account activity.</li>
-          <li><a
+          >
+            AWS CloudTrail
+          </a>{' '}
+          - Provides governance, compliance, operational auditing, and risk
+          auditing of your AWS account by logging all account activity.
+        </li>
+        <li>
+          <a
             href="https://aws.amazon.com/guardduty/"
             target="_blank"
             rel="noreferrer noopener"
-          >Amazon GuardDuty</a> - Offers intelligent threat detection that monitors your AWS environment for malicious activity and unauthorized behavior.</li>
-          <li><a
+          >
+            Amazon GuardDuty
+          </a>{' '}
+          - Offers intelligent threat detection that monitors your AWS
+          environment for malicious activity and unauthorized behavior.
+        </li>
+        <li>
+          <a
             href="https://aws.amazon.com/security-hub/"
             target="_blank"
             rel="noreferrer noopener"
-          >AWS Security Hub</a> - Aggregates security alerts and findings from various AWS services and third-party tools to provide a comprehensive view of your security posture.</li>
-          <li><a
+          >
+            AWS Security Hub
+          </a>{' '}
+          - Aggregates security alerts and findings from various AWS services
+          and third-party tools to provide a comprehensive view of your security
+          posture.
+        </li>
+        <li>
+          <a
             href="https://aws.amazon.com/inspector/"
             target="_blank"
             rel="noreferrer noopener"
-          >Amazon Inspector</a> - Automatically assesses applications for vulnerabilities or deviations from best practices, including those deployed on EC2 instances.</li>
-          <li>Splunk - Integrating Splunk with AWS services can provide deeper insights into the data and more advanced analytics capabilities for threat detection and response.</li>
-        </ul>
-        <h5><strong>Microsoft&apos;s Azure </strong> <MicrosoftTag /></h5>
-        <ul>
-          <li><a
+          >
+            Amazon Inspector
+          </a>{' '}
+          - Automatically assesses applications for vulnerabilities or
+          deviations from best practices, including those deployed on EC2
+          instances.
+        </li>
+        <li>
+          Splunk - Integrating Splunk with AWS services can provide deeper
+          insights into the data and more advanced analytics capabilities for
+          threat detection and response.
+        </li>
+      </ul>
+      <h5>
+        <strong>Microsoft&apos;s Azure </strong> <MicrosoftTag />
+      </h5>
+      <ul>
+        <li>
+          <a
             href="https://azure.microsoft.com/en-us/products/defender-for-cloud/"
             target="_blank"
             rel="noreferrer noopener"
-          >Azure Security Center</a> - Provides unified security management and advanced threat protection across hybrid cloud workloads. It includes continuous monitoring and policy enforcement.</li>
-          <li><a
+          >
+            Azure Security Center
+          </a>{' '}
+          - Provides unified security management and advanced threat protection
+          across hybrid cloud workloads. It includes continuous monitoring and
+          policy enforcement.
+        </li>
+        <li>
+          <a
             href="https://azure.microsoft.com/en-us/products/microsoft-sentinel/"
             target="_blank"
             rel="noreferrer noopener"
-          >Azure Sentinel</a> - This is Microsoft’s cloud-native SIEM that provides intelligent security analytics at cloud scale for enterprises of all sizes and workloads.</li>
-          <li><a
+          >
+            Azure Sentinel
+          </a>{' '}
+          - This is Microsoft’s cloud-native SIEM that provides intelligent
+          security analytics at cloud scale for enterprises of all sizes and
+          workloads.
+        </li>
+        <li>
+          <a
             href="https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id-protection"
             target="_blank"
             rel="noreferrer noopener"
-          >Azure AD Identity Protection</a> - Helps detect potential vulnerabilities affecting your organization’s identities, configure automated responses, and investigate incidents.</li>
-          <li><a
+          >
+            Azure AD Identity Protection
+          </a>{' '}
+          - Helps detect potential vulnerabilities affecting your organization’s
+          identities, configure automated responses, and investigate incidents.
+        </li>
+        <li>
+          <a
             href="https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud"
             target="_blank"
             rel="noreferrer noopener"
-          >Microsoft Defender for Cloud</a> - Offers tools for navigating to the root cause of a breach or verifying that alerts are false positives.</li>
-        </ul>
-        <h5><strong>Google Cloud Platform </strong> <GCPTag /></h5>
-        <ul>
-          <li><a
+          >
+            Microsoft Defender for Cloud
+          </a>{' '}
+          - Offers tools for navigating to the root cause of a breach or
+          verifying that alerts are false positives.
+        </li>
+      </ul>
+      <h5>
+        <strong>Google Cloud Platform </strong> <GCPTag />
+      </h5>
+      <ul>
+        <li>
+          <a
             href="https://chronicle.security/"
             target="_blank"
             rel="noreferrer noopener"
-          >Google Chronicle</a> <StarIcon /> -  As part of Google Cloud, Chronicle provides a powerful analytics engine to help enterprises manage their security data at scale, including threat hunting and incident investigation.</li>
-          <li><a
+          >
+            Google Chronicle
+          </a>{' '}
+          <StarIcon /> - As part of Google Cloud, Chronicle provides a powerful
+          analytics engine to help enterprises manage their security data at
+          scale, including threat hunting and incident investigation.
+        </li>
+        <li>
+          <a
             href="https://cloud.google.com/security/products/security-command-center/"
             target="_blank"
             rel="noreferrer noopener"
-          >Google Cloud Security Command Center</a> - Provides risk assessment and threat identification across your Google Cloud data, assets, and services.</li>
-          <li><a
+          >
+            Google Cloud Security Command Center
+          </a>{' '}
+          - Provides risk assessment and threat identification across your
+          Google Cloud data, assets, and services.
+        </li>
+        <li>
+          <a
             href="https://cloud.google.com/products/operations"
             target="_blank"
             rel="noreferrer noopener"
-          >Google Cloud’s operations suite (formerly Stackdriver)</a> -  Monitors, logs, and diagnoses cloud applications’ issues on GCP in real time</li>
-          <li><a
+          >
+            Google Cloud’s operations suite (formerly Stackdriver)
+          </a>{' '}
+          - Monitors, logs, and diagnoses cloud applications’ issues on GCP in
+          real time
+        </li>
+        <li>
+          <a
             href="https://sysdig.com/products/platform/"
             target="_blank"
             rel="noreferrer noopener"
-          >Sysdig Secure</a> <StarIcon /> -  Used for securing containerized environments and can be integrated with GCP for monitoring, security, and forensics in a Kubernetes environment.</li>
-        </ul>
+          >
+            Sysdig Secure
+          </a>{' '}
+          <StarIcon /> - Used for securing containerized environments and can be
+          integrated with GCP for monitoring, security, and forensics in a
+          Kubernetes environment.
+        </li>
+      </ul>
       <h5>{'Additional Cloud Security Tools (EDR, SIEMs)'}</h5>
       <ul>
-      <li>
+        <li>
           <a
             href="https://www.sophos.com/en-us/products/endpoint-antivirus"
             target="_blank"
@@ -1325,7 +1318,10 @@ export function TKPost() {
             {' '}
             Orca Security{' '}
           </a>{' '}
-          <StarIcon /> - Provides agentless cloud security for AWS, Azure, and GCP, utilizing SideScanning technology to assess vulnerabilities, malware, misconfigurations, and compliance risks in cloud assets without the use of agents.{' '}
+          <StarIcon /> - Provides agentless cloud security for AWS, Azure, and
+          GCP, utilizing SideScanning technology to assess vulnerabilities,
+          malware, misconfigurations, and compliance risks in cloud assets
+          without the use of agents.{' '}
         </li>
         <li>
           <a
@@ -1336,7 +1332,9 @@ export function TKPost() {
             {' '}
             CrowdStrike Falcon Insight XDR{' '}
           </a>{' '}
-          <StarIcon /> - Delivers endpoint protection through advanced analysis of threat data, offering real-time visibility and proactive threat hunting capabilities.{' '}
+          <StarIcon /> - Delivers endpoint protection through advanced analysis
+          of threat data, offering real-time visibility and proactive threat
+          hunting capabilities.{' '}
         </li>
         <li>
           <a
@@ -1347,7 +1345,9 @@ export function TKPost() {
             {' '}
             Palo Alto Networks Prisma Cloud{' '}
           </a>{' '}
-          <StarIcon /> - Offers visibility and control over data across all cloud environments, providing continuous threat detection, compliance monitoring, secure access, and data protection.{' '}
+          <StarIcon /> - Offers visibility and control over data across all
+          cloud environments, providing continuous threat detection, compliance
+          monitoring, secure access, and data protection.{' '}
         </li>
         <li>
           <a
@@ -1358,7 +1358,8 @@ export function TKPost() {
             {' '}
             VMWare Carbon Black EDR{' '}
           </a>{' '}
-          - Provides advanced threat detection and response by analyzing endpoint data and offering tools for incident response and defense.{' '}
+          - Provides advanced threat detection and response by analyzing
+          endpoint data and offering tools for incident response and defense.{' '}
         </li>
         <li>
           <a
@@ -1369,7 +1370,9 @@ export function TKPost() {
             {' '}
             SentinelOne Singularity{' '}
           </a>{' '}
-          <StarIcon /> - A unified, AI-powered platform providing prevention, detection, response, and hunting across endpoints, containers, cloud workloads, and IoT devices.{' '}
+          <StarIcon /> - A unified, AI-powered platform providing prevention,
+          detection, response, and hunting across endpoints, containers, cloud
+          workloads, and IoT devices.{' '}
         </li>
         <li>
           <a
@@ -1380,7 +1383,8 @@ export function TKPost() {
             {' '}
             Sophos Intercept X{' '}
           </a>{' '}
-          - Offers next-gen endpoint protection using deep learning technology to block malware, exploits, and ransomware attacks.{' '}
+          - Offers next-gen endpoint protection using deep learning technology
+          to block malware, exploits, and ransomware attacks.{' '}
         </li>
       </ul>
     </div>

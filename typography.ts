@@ -57,7 +57,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         p: {
           fontSize: theme('fontSize.sm'),
-          letterSpacing: theme('letterSpacing.tighter'),
           lineHeight: 1.7,
           '@screen sm': {
             fontSize: theme('fontSize.base'),
@@ -66,7 +65,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
           },
           overflowWrap: 'break-word',
         },
-
         // Headings
         h2: {
           color: 'var(--tw-prose-headings)',
@@ -81,7 +79,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
             textAlign: 'left',
           },
         },
-
         h3: {
           color: 'var(--tw-prose-subheadings)',
           fontStyle: 'italic',
@@ -96,7 +93,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
             textAlign: 'left',
           },
         },
-
         h4: {
           color: 'var(--tw-prose-colorheadings)',
           fontWeight: theme('fontWeight.bold'),
@@ -108,7 +104,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
             fontSize: theme('fontSize.xl'),
           },
         },
-
         h5: {
           color: 'var(--tw-prose-subheadings)',
           fontWeight: theme('fontWeight.semibold'),
@@ -166,11 +161,10 @@ export default function typographyStyles({ theme }: PluginUtils) {
           listStyleType: 'decimal',
         },
         'ul, ol': {
-          marginTop: theme('spacing.1'),
-          marginBottom: theme('spacing.1'),
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.3'),
           paddingLeft: theme('spacing.4'),
           lineHeight: 1.7,
-          letterSpacing: theme('letterSpacing.tighter'),
           '@screen sm': {
             paddingLeft: theme('spacing.6'),
             lineHeight: 2,
