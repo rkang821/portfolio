@@ -1,9 +1,9 @@
 'use client'
 
 import { type Metadata } from 'next'
-import { Container } from '@/components/container'
+import { Container } from '@/components/shared/container'
 import { useState } from 'react'
-import { DFIRPost, ITPost, TKPost } from './posts'
+import { DFIRPost, ITPost, TKPost } from '@/components/shared/posts'
 
 export const metadata: Metadata = {
   title: 'Fundamentals',

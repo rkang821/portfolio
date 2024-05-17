@@ -1,15 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { Container } from '@/components/container'
+import { Container } from '@/components/shared/container'
 import { ReactTyped } from 'react-typed'
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/shared/buttons'
 import {
   LinkedInIcon,
   GitHubIcon,
   MailIcon,
   ArrowDownTray,
-} from '@/components/icons'
+} from '@/components/shared/icons'
 
 function SocialLink({
   icon: Icon,

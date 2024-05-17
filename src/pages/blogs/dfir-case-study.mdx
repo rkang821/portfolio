@@ -1,4 +1,5 @@
-import { GCPTag } from '@/components/tags'
+import { Container } from "@/components/shared/container"
+import { GCPTag } from '@/components/shared/tags'
 
 export const blog = {
   author: 'Rachel Kang',
@@ -6,6 +7,7 @@ export const blog = {
   title: 'DFIR Case Studies',
   description:
     'What other types of matters exist?',
+  slug: 'dfir-case-study',
 }
 
 export const metadata = {
@@ -13,11 +15,19 @@ export const metadata = {
   description: blog.description,
 }
 
-export default (props) => <div blog={blog} {...props} />
+export default (props) => <div blog={blog} {...props} />;
 
-#Case Studies
+<Container>
+    # Case Studies
 
-{/* <h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
+    <GCPTag />
+
+
+    ## DFIR Case Study
+</Container>
+
+{/* <h1>Case Studies</h1>
+<h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
 {'Case Studies'}
 </h4>
 <div>
@@ -47,4 +57,4 @@ export default (props) => <div blog={blog} {...props} />
 <h5>
     Insider Threat <ITTag />
 </h5>
-</div> */}
+</div>  */}

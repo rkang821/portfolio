@@ -3,7 +3,7 @@ import typographyPlugin from '@tailwindcss/typography'
 import typographyStyles from './typography'
 
 const config: Config = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
   darkMode: 'class',
   plugins: [typographyPlugin],
   theme: {

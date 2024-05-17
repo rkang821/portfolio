@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import clsx from 'clsx'
-import { Container } from '@/components/container'
+import { Container } from '@/components/shared/container'
 import { ComponentType } from 'react'
 import { type Metadata } from 'next'
 import image1 from '/public/images/photos/image1.png'
@@ -14,7 +14,7 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   BuildingIcon,
-} from '@/components/icons'
+} from '@/components/shared/icons'
 
 export function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2', 'rotate-2']

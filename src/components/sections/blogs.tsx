@@ -1,35 +1,47 @@
 import { type Metadata } from 'next'
-import { Container } from '@/components/container'
-import Card from '@/components/card'
-import Section from '@/components/section'
-import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/tags'
-import { type BlogWithSlug, getAllBlogs } from '@/lib/blogs'
+import { Container } from '@/components/shared/container'
+import Card from '@/components/shared/card'
+// import Section from '@/components/shared/section'
+// import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
+// import { type BlogWithSlug, getAllBlogs } from '@/lib/blogs'
 import { formatDate } from '@/lib/config'
+import { blog as cloudCaseStudy } from '@/pages/blogs/cloud-case-study.mdx';
+import { blog as dfirCaseStudy } from '@/pages/blogs/dfir-case-study.mdx';
 
-function Blog({ blog }: { blog: BlogWithSlug }) {
+interface BlogPost {
+  title: string
+  description: string
+  author: string
+  date: string,
+  slug: string,
+}
+
+const blogPosts: BlogPost[] = [ cloudCaseStudy, dfirCaseStudy ];
+
+function Blog({ post }: { post: BlogPost}) {
   return (
     <div className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/blogs/${blog.slug}`}>{blog.title}</Card.Title>
+        <Card.Title href={`/blogs/${post.slug}`}>{post.title}</Card.Title>
         <Card.Eyebrow
           as="time"
-          dateTime={blog.date}
+          dateTime={post.date}
           className="md:hidden"
           decorate
         >
-          {formatDate(blog.date)}
+          {formatDate(post.date)}
         </Card.Eyebrow>
-        <Card.Description>{blog.description}</Card.Description>
-        <Card.LinkDescription href={`/blogs/${blog.slug}`}>
+        <Card.Description>{post.description}</Card.Description>
+        <Card.LinkDescription href={`/blogs/${encodeURIComponent(post.slug)}`} target="_self">
           Read post
         </Card.LinkDescription>
       </Card>
       <Card.Eyebrow
         as="time"
-        dateTime={blog.date}
+        dateTime={post.date}
         className="mt-1 hidden md:block"
       >
-        {formatDate(blog.date)}
+        {formatDate(post.date)}
       </Card.Eyebrow>
     </div>
   )
@@ -40,8 +52,8 @@ export const metadata: Metadata = {
   description: 'My thoughts',
 }
 
-export default async function BlogSection() {
-  let blogs = await getAllBlogs()
+
+export default function BlogSection() {
   return (
     <>
       <Container className="pb-14 pt-14 max-sm:pt-24">
@@ -65,8 +77,8 @@ export default async function BlogSection() {
       <Container>
         <div className="md:ml-5 md:border-l-[0.125rem] md:border-blue-500/40 md:pl-5 md:dark:border-blue-300/40">
           <div className="flex max-w-3xl flex-col space-y-10">
-            {blogs.map((blog) => (
-              <Blog key={blog.slug} blog={blog} />
+            {blogPosts.map((post) => (
+              <Blog key={post.slug} post={post} />
             ))}
           </div>
         </div>

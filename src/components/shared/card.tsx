@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import { ChevronRightIcon } from '@/components/icons'
+import { ChevronRightIcon } from '@/components/shared/icons'
 
 export default function Card<T extends React.ElementType = 'div'>({
   as,
@@ -59,13 +59,15 @@ Card.Description = function CardDescription({
 
 Card.LinkDescription = function CardLinkDescription({
   href,
+  target,
   children,
 }: {
-  href: string
-  children: React.ReactNode
+  href: string;
+  target: string;
+  children: React.ReactNode;
 }) {
   return (
-    <Card.Link href={href} target="_blank" rel="noreferrer noopener">
+    <Card.Link href={href} target={target ?? "_blank"} rel="noreferrer noopener">
       <div
         aria-hidden="true"
         className="mt-2 flex items-center text-sm font-medium text-blue-500 dark:text-blue-300"

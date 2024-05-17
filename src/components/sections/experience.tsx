@@ -1,15 +1,15 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import { Container } from '@/components/container'
-import Section from '@/components/section'
-import Card from '@/components/card'
-import { Button } from '@/components/buttons'
+import { Container } from '@/components/shared/container'
+import Section from '@/components/shared/section'
+import Card from '@/components/shared/card'
+import { Button } from '@/components/shared/buttons'
 import { StaticImageData } from 'next/image'
-import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/tags'
+import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
 import SANSIcon from '/public/images/certs/giaccert.png'
 import MicrosoftCertIcon from '/public/images/certs/microsoftcert.png'
 import SplunkCert from '/public/images/certs/splunkcert.png'
-import { AcademicCapIcon, ArrowDownTray } from '@/components/icons'
+import { AcademicCapIcon, ArrowDownTray } from '@/components/shared/icons'
 
 //Publications and Speaking Engagements (aka "Event")
 function EventLayout({

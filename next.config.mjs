@@ -1,6 +1,7 @@
-import nextMDX from '@next/mdx'
+// import nextMDX from '@next/mdx'
+import createMDX from '@next/mdx';
 
-const withMDX = nextMDX({
+const withMDX = createMDX({
   extension: /\.mdx?$/,
 })
 

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { ThemeSwitcherButton } from './themeswitcherbutton'
-import { Container } from '@/components/container'
+import { Container } from '@/components/shared/container'
 import {
   ChevronDownIcon,
   CloseIcon,
@@ -12,7 +12,7 @@ import {
   ExperienceIcon,
   FundamentalsIcon,
   BlogIcon,
-} from '@/components/icons'
+} from '@/components/shared/icons'
 
 function MobileNavItem({
   href,
@@ -23,7 +23,7 @@ function MobileNavItem({
 }) {
   return (
     <li>
-      <Popover.Button as={Link} href={href} className="block py-2">
+      <Popover.Button as={Link} href={href} className="block py-2" replace={true}>
         {children}
       </Popover.Button>
     </li>
@@ -105,6 +105,7 @@ function NavItem({
           'relative block px-3 py-2 transition',
           'hover:text-blue-500 dark:hover:text-blue-300',
         )}
+        replace={true}
       >
         {children}
       </Link>
