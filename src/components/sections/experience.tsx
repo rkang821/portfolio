@@ -239,10 +239,10 @@ function CertSection() {
 export default function ExperienceSection() {
   return (
     <>
-      <SEO
+      {/* <SEO
         title="My Experience"
         description="Certifications, Publications, Speaking Engagements."
-      />
+      /> */}
       <Container className="pb-14 pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center  gap-6 dark:prose-invert">
           <header>

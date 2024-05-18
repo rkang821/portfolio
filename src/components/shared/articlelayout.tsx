@@ -23,7 +23,7 @@ export default function ArticleLayout({
               dateTime={post.date}
               className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
             >
-              <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
+              <span className="h-6 w-0.5 rounded-full bg-blue-500/40 dark:bg-blue-300/40" />
               <span className="ml-3">{formatDate(post.date)}</span>
             </time>
           </header>

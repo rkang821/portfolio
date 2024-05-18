@@ -16,6 +16,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-quote-borders': 'var(--tw-prose-invert-quote-borders)',
         '--tw-prose-counters': 'var(--tw-prose-invert-counters)',
         '--tw-prose-bullets': 'var(--tw-prose-invert-bullets)',
+        '--tw-prose-hr': 'var(--tw-prose-invert-hr)',
+        '--tw-prose-code': 'var(--tw-prose-invert-code)',
+        '--tw-prose-code-bg': 'var(--tw-prose-invert-code-bg)',
+        '--tw-prose-pre-code': 'var(--tw-prose-invert-pre-code)',
+        '--tw-prose-pre-bg': 'var(--tw-prose-invert-pre-bg)',
+        '--tw-prose-pre-border': 'var(--tw-prose-invert-pre-border)',
       },
     },
     DEFAULT: {
@@ -29,9 +35,13 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-underline': theme('colors.blue.500'),
         '--tw-prose-underline-hover': theme('colors.blue.300'),
         '--tw-prose-bold': theme('colors.zinc.600'),
-        '--tw-prose-quote-borders': theme('colors.blue.300'),
+        '--tw-prose-quote-borders': theme('colors.blue.500 / 0.4'),
         '--tw-prose-counters': theme('colors.blue.500'),
         '--tw-prose-bullets': theme('colors.blue.500'),
+        '--tw-prose-hr': theme('colors.zinc.400 / 0.4'),
+        '--tw-prose-pre-code': theme('colors.zinc.100'),
+        '--tw-prose-pre-bg': theme('colors.zinc.900'),
+        '--tw-prose-pre-border': 'transparent',
 
         '--tw-prose-invert-body': theme('colors.zinc.400'),
         '--tw-prose-invert-headings': theme('colors.zinc.200'),
@@ -42,9 +52,13 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-invert-underline': theme('colors.blue.300'),
         '--tw-prose-invert-underline-hover': theme('colors.blue.500'),
         '--tw-prose-invert-bold': theme('colors.zinc.300'),
-        '--tw-prose-invert-quote-borders': theme('colors.blue.100'),
+        '--tw-prose-invert-quote-borders': theme('colors.blue.300 / 0.4'),
         '--tw-prose-invert-counters': theme('colors.blue.300'),
         '--tw-prose-invert-bullets': theme('colors.blue.300'),
+        '--tw-prose-invert-hr': theme('colors.zinc.700 / 0.4'),
+        '--tw-prose-invert-pre-code': theme('colors.zinc.100'),
+        '--tw-prose-invert-pre-bg': theme('colors.zinc.700'),
+        '--tw-prose-invert-pre-border': theme('colors.zinc.200 / 0.1'),
 
         // Base
         color: 'var(--tw-prose-body)',
@@ -159,12 +173,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
           fontStyle: 'italic',
           fontWeight: '500',
         },
-        'blockquote p:first-of-type::before': {
-          content: 'open-quote',
-        },
-        'blockquote p:last-of-type::after': {
-          content: 'close-quote',
-        },
 
         // Lists
         ul: {
@@ -217,10 +225,15 @@ export default function typographyStyles({ theme }: PluginUtils) {
           fontWeight: theme('fontWeight.medium'),
           backgroundColor: 'var(--tw-prose-pre-bg)',
           borderRadius: theme('borderRadius.3xl'),
+          lineHeight: 1.3,
           padding: theme('spacing.5'),
+          overflowWrap: 'break-word',
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-word',
           border: '1px solid',
           borderColor: 'var(--tw-prose-pre-border)',
           '@screen sm': {
+            lineHeight: 1.8,
             fontSize: theme('fontSize.sm'),
             padding: theme('spacing.8'),
           },

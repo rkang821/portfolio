@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <SEO />
+      <SEO title="Home" description="" />
       <div
         lang="en"
         className="min-h-screen antialiased"

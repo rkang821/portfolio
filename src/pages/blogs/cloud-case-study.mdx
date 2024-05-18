@@ -55,14 +55,12 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 **Investigation and Analysis**: A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we identified the entry point of the attack—a set of compromised user credentials that allowed the attacker to access our Azure management portal. See below for a sample Azure Log Analytics record for how the entry point of the attack was identified.
 
 <br />
-<blockquote> Records have been modified from its original form per NDA restrictions.</blockquote>
-<br />
 ```python
-"TimeGenerated": "2024-05-18T14:30:00Z",
+"TimeGenerated": "2024-05-01T14:30:00Z",
 "ResourceType": "Microsoft.Compute/virtualMachines",
 "OperationName": "Create or Update Virtual Machine",
 "ActivityStatus": "Succeeded",
-"CallerIpAddress": "198.51.100.5",
+"CallerIpAddress": "185.220.100.242",
 "ResourceGroupName": "RG-Production",
 "SubscriptionId": "abcd1234-5678-90ab-cdef-1234567890ab",
 "Identity": {
@@ -71,7 +69,7 @@ The incident was resolved with no evidence of malicious exploitation of the expo
         "scope": "/subscriptions/abcd1234-5678-90ab-cdef-1234567890ab/resourceGroups/RG-Production/providers/Microsoft.Compute/virtualMachines/HackedVM01"
     },
     "Claims": {
-        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "john.doe@example.com",
+        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "john.doe@company.com",
         "http://schemas.microsoft.com/identity/claims/scope": "user_impersonation",
         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name": "John Doe",
         "http://schemas.microsoft.com/identity/claims/tenantid": "9876efab-c123-4567-89ab-cdef12345678",
@@ -83,10 +81,23 @@ The incident was resolved with no evidence of malicious exploitation of the expo
     "serviceRequestId": "9abc1234-def5-6789-ghij-0123456789ab",
     "statusMessage": "{\"status\":\"Succeeded\"}"
 },
-"Caller": "john.doe@example.com",
+"Caller": "john.doe@company.com",
 "Region": "East US"
 ```
 <br />
+<blockquote> 
+**Explanation of Key Fields**
+* **TimeGenerated**: The UTC timestamp when the VM creation operation was logged.
+* **OperationName**: Indicates the operation type (creation or updating of a virtual machine).
+* **CallerIpAddress**: The IP address from which the operation was initiated, critical for identifying potential external unauthorized access.
+* **ResourceGroupName** and **SubscriptionId**: Identify the scope within the organization’s Azure infrastructure.
+* **Identity.Claims**: Contains claims about the user who performed the operation. (john.doe@company.com is identified as the user, with the operation being authenticated via a password).
+* **Properties.statusCode** and **Properties.statusMessage**: Provide additional details about the operation’s execution status.
+* **Records have been modified from its original form per NDA restrictions.**
+
+</blockquote>
+<br />
+
 **Mitigation Strategies**: To address the incident and fortify our systems against future attacks, we implemented several key measures:
 * **Credential Reset and Role Re-assignment**: All compromised credentials were immediately reset. We reviewed and tightened the role-based access controls (RBAC) for Azure resources, ensuring that only necessary permissions were granted to users.
 * **Enhanced Monitoring and Alerts**: We enhanced our monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.
@@ -113,11 +124,10 @@ The quick response and comprehensive investigation allowed us to terminate the u
 
 **Detection and Initial Response**: The breach was detected when abnormal activity was noted in the Kubernetes environment, including unusual pod behavior and unexpected external communications. Our immediate response involved isolating the compromised pod and conducting a rapid assessment of the Kubernetes cluster to prevent further unauthorized activities.
 
-**Investigation and Analysis**: Utilizing GCP&apos;s Log Explorer, we conducted a deep dive into the system logs of the affected Kubernetes node and other related resources. The investigation revealed that the exposed API was accessed multiple times by unauthorized external IP addresses. By tracing these accesses and mapping the attack vectors, we identified additional compromised systems within the cluster. See below for a sample record that helped us indentify the accesses:
+**Investigation and Analysis**: Utilizing GCP&apos;s Log Explorer, we conducted a deep dive into the system logs of the affected Kubernetes node and other related resources. The investigation revealed that the exposed API was accessed multiple times by unauthorized external IP addresses. By tracing these accesses and mapping the attack vectors, we identified additional compromised systems within the cluster. See below for a sample record that helped identify the accesses:
 
 <br />
-<blockquote> Records have been modified from its original form per NDA restrictions.</blockquote>
-<br />
+
 ```python
 "logName": "projects/example-project/logs/cloudaudit.googleapis.com%2Factivity",
 "resource": {
@@ -128,7 +138,7 @@ The quick response and comprehensive investigation allowed us to terminate the u
     }
 },
 "severity": "ERROR",
-"timestamp": "2024-05-18T15:20:00Z",
+"timestamp": "2024-05-01T15:20:00Z",
 "jsonPayload": {
     "actor": {
         "user": "anonymous"
@@ -153,13 +163,28 @@ The quick response and comprehensive investigation allowed us to terminate the u
         "message": "OK"
     },
     "requestMetadata": {
-        "callerIp": "203.0.113.45",
+        "callerIp": "185.220.100.242",
         "callerSuppliedUserAgent": "curl/7.58.0",
         "requestId": "abcdef1234567890"
     }
 },
 "insertId": "1abcd2efgh34ijkl"
 ```
+<br />
+<blockquote> 
+**Explanation of Key Fields**
+* **logName**: Specifies the type of log recorded in GCP, here indicating an activity log.
+* **resource.type**: Identifies the type of resource, a Kubernetes cluster in this instance.
+* **severity**: The level of the log, marked as “ERROR” due to unauthorized access.
+* **timestamp**: The date and UTC timestamp when the log was recorded.
+* **jsonPayload.actor.user**: Shows that the actor was anonymous, indicating unauthorized or unauthenticated access.
+* **jsonPayload.metadata**: Shows that the actor was anonymous, indicating unauthorized or unauthenticated access.
+* **jsonPayload.authorizationInfo**: Details whether the request was authorized; here, it shows that authorization was not granted, yet the request still succeeded.
+* **jsonPayload.responseStatus**: Provides the HTTP status code of the request, indicating success despite being unauthorized.
+* **jsonPayload.requestMetadata**: Contains the IP address of the caller and the user agent, crucial for identifying the unauthorized access source.
+* **Records have been modified from its original form per NDA restrictions.**
+
+</blockquote>
 <br />
 **Mitigation Strategies**: To address the breach and secure our infrastructure, we implemented the following key actions:
 * **Immediate API Restriction**: Temporarily disabled the exposed APIs until proper security measures, like API Gateway controls and OAuth scopes, were implemented.

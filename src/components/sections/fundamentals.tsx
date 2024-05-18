@@ -35,10 +35,10 @@ export default function FundamentalsSection() {
 
   return (
     <>
-      <SEO
+      {/* <SEO
         title="Fundamentals"
         description="DFIR + Cloud Concepts, Incident Types, Toolkit"
-      />
+      /> */}
       <Container className="pb-14 pt-14 max-sm:pt-24">
         {/* Top Level Heading */}
         <header className="prose dark:prose-invert">
