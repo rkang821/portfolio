@@ -144,12 +144,12 @@ export default function AboutSection() {
                 >
                   Middlebury College
                 </a>{' '}
-                in 2019 with a B.A. in <strong>Computer Science</strong> and{' '}
-                <strong>Political Science</strong>. This interdisciplinary
+                in 2019 with a B.A. in <span className="font-semibold">Computer Science</span> and{' '}
+                <span className="font-semibold">Political Science</span>. This interdisciplinary
                 background laid the foundation for my career, providing me with
                 a deep understanding of both{' '}
-                <strong>technical intricacies</strong> and the broader{' '}
-                <strong>socio-political landscape</strong> in which they
+                <span className="font-semibold">technical intricacies</span> and the broader{' '}
+                <span className="font-semibold">socio-political landscape</span> in which they
                 operate.
               </p>
               <p>
@@ -162,24 +162,24 @@ export default function AboutSection() {
                   Stroz Friedberg
                 </a>
                 , I&apos;m on the frontline of the cyber battlefield, leading
-                responses to complex <strong>security incidents</strong>,
-                conducting <strong>forensics investigations</strong>, and
-                implementing proactive <strong>risk mitigation</strong>{' '}
+                responses to complex <span className="font-semibold">security incidents</span>,
+                conducting <span className="font-semibold">forensics investigations</span>, and
+                implementing proactive <span className="font-semibold">risk mitigation</span>{' '}
                 measures. When I’m not actively fending off the bad guys, I also
                 specialize in preserving, collecting, and analyzing{' '}
-                <strong>digital evidence</strong>.
+                <span className="font-semibold">digital evidence</span>.
               </p>
               <p className="border-b border-dashed border-blue-500 border-opacity-50 pb-3 dark:border-blue-300">
                 Outside of the office, you can find me indulging in my other
                 passions that keep me energized and inspired. Whether{' '}
-                <strong>building</strong> the latest LEGO set,{' '}
-                <strong>training</strong> my Aussie companion Archer, or{' '}
-                <strong>coding</strong> very amateur things, a balanced
+                <span className="font-semibold">building</span> the latest LEGO set,{' '}
+                <span className="font-semibold">training</span> my Aussie companion Archer, or{' '}
+                <span className="font-semibold">coding</span> very amateur things, a balanced
                 lifestyle fuels both my personal and professional success.
               </p>
               <p>
                 I&apos;m constantly seeking to deepen my understanding of the{' '}
-                <strong>ever-evolving</strong> cybersecurity landscape and eager
+                <span className="font-semibold">ever-evolving</span> cybersecurity landscape and eager
                 to connect with like-minded individuals who share my interests.
                 Whether it&apos;s delving into the latest cybersecurity trends
                 or swapping LEGO-building tips, connect with me to chat more!
