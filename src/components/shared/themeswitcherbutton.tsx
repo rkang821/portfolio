@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { SunIcon, MoonIcon } from '@/components/shared/icons'
+import { SunIcon, MoonIcon } from './icons'
 import { useTheme } from 'next-themes'
 
 export function ThemeSwitcherButton() {

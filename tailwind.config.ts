@@ -16,6 +16,9 @@ const config: Config = {
     },
     typography: typographyStyles,
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       animation: {
         popup: 'popup 0.15s ease',
         fadein: 'fadein 0.15s',

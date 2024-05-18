@@ -1,8 +1,8 @@
-import HomePage from '@/components/sections/home'
-import AboutSection from '@/components/sections/about'
-import ExperienceSection from '@/components/sections/experience'
-import BlogSection from '@/components/sections/blogs'
-import FundamentalsSection from '@/components/sections/fundamentals'
+import HomePage from '../components/sections/home'
+import AboutSection from '../components/sections/about'
+import ExperienceSection from '../components/sections/experience'
+import BlogSection from '../components/sections/blogs'
+import FundamentalsSection from '../components/sections/fundamentals'
 
 export default function Page() {
   return (

@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import clsx from 'clsx'
-import { Container } from '@/components/shared/container'
+import { Container } from '../shared/container'
 import { ComponentType } from 'react'
-import { type Metadata } from 'next'
 import image1 from '/public/images/photos/image1.png'
 import image2 from '/public/images/photos/image2.png'
 import image3 from '/public/images/photos/image3.png'
@@ -14,7 +13,8 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   BuildingIcon,
-} from '@/components/shared/icons'
+} from '../shared/icons'
+import SEO from '@/components/shared/SEO'
 
 export function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2', 'rotate-2']
@@ -40,11 +40,6 @@ export function Photos() {
       </div>
     </div>
   )
-}
-
-export const metadata: Metadata = {
-  title: 'About Me',
-  description: 'Background on my journey to DFIR',
 }
 
 export default function AboutSection() {
@@ -88,7 +83,7 @@ export default function AboutSection() {
   ]
 
   const BulletList: React.FC<BulletListProps> = ({ title, data }) => (
-    <li className="mb-10 ms-5 w-full max-sm:mb-5">
+    <li className="mb-5 ms-5 w-full max-sm:mb-5">
       <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-zinc-200 bg-blue-500 dark:border-zinc-100 dark:bg-blue-300"></div>
       <h2 className="text-base font-semibold text-zinc-600 dark:text-zinc-200 max-lg:mb-2 max-lg:mt-0 max-sm:ml-1 max-sm:text-left sm:text-lg lg:my-2">
         {title}
@@ -111,6 +106,7 @@ export default function AboutSection() {
 
   return (
     <>
+      <SEO title="About Me" description="Background on my journey to DFIR." />
       <Container className="pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center gap-6 dark:prose-invert">
           {/* Top Level Heading */}

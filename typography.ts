@@ -117,6 +117,19 @@ export default function typographyStyles({ theme }: PluginUtils) {
             textAlign: 'left',
           },
         },
+        h6: {
+          color: 'var(--tw-prose-headings)',
+          fontWeight: theme('fontWeight.semibold'),
+          fontSize: theme('fontSize.xl'),
+          textAlign: 'center',
+          lineHeight: theme('lineHeight.7'),
+          letterSpacing: theme('letterSpacing.tight'),
+          margin: `${theme('spacing.6')} ${theme('spacing.0')}`,
+          '@screen sm': {
+            fontSize: theme('fontSize.2xl'),
+            textAlign: 'left',
+          },
+        },
 
         // Inline elements
         a: {
@@ -200,14 +213,17 @@ export default function typographyStyles({ theme }: PluginUtils) {
         // Code blocks
         pre: {
           color: 'var(--tw-prose-pre-code)',
-          fontSize: theme('fontSize.sm')[0],
+          fontSize: theme('fontSize.xs')[0],
           fontWeight: theme('fontWeight.medium'),
           backgroundColor: 'var(--tw-prose-pre-bg)',
           borderRadius: theme('borderRadius.3xl'),
-          padding: theme('spacing.8'),
-          overflowX: 'auto',
+          padding: theme('spacing.5'),
           border: '1px solid',
           borderColor: 'var(--tw-prose-pre-border)',
+          '@screen sm': {
+            fontSize: theme('fontSize.sm'),
+            padding: theme('spacing.8'),
+          },
         },
         'pre code': {
           display: 'inline',
@@ -221,13 +237,13 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
         // Horizontal rules
         hr: {
-          marginTop: theme('spacing.20'),
-          marginBottom: theme('spacing.20'),
+          marginTop: theme('spacing.16'),
+          marginBottom: theme('spacing.16'),
           borderTopWidth: '1px',
           borderColor: 'var(--tw-prose-hr)',
           '@screen lg': {
-            marginLeft: `calc(${theme('spacing.12')} * -1)`,
-            marginRight: `calc(${theme('spacing.12')} * -1)`,
+            marginLeft: `calc(${theme('spacing.12')} * -0.5)`,
+            marginRight: `calc(${theme('spacing.12')} * -0.5)`,
           },
         },
 

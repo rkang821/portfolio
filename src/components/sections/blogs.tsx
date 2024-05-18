@@ -1,24 +1,21 @@
-import { type Metadata } from 'next'
-import { Container } from '@/components/shared/container'
-import Card from '@/components/shared/card'
-// import Section from '@/components/shared/section'
-// import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
-// import { type BlogWithSlug, getAllBlogs } from '@/lib/blogs'
-import { formatDate } from '@/lib/config'
-import { blog as cloudCaseStudy } from '@/pages/blogs/cloud-case-study.mdx';
-import { blog as dfirCaseStudy } from '@/pages/blogs/dfir-case-study.mdx';
+import { Container } from '../shared/container'
+import Card from '../shared/card'
+import { formatDate } from '../../lib/config'
+import SEO from '@/components/shared/SEO'
+import { blog as cloudCaseStudy } from '@/pages/blogs/cloud-case-study.mdx'
+import { blog as dfirCaseStudy } from '@/pages/blogs/dfir-case-study.mdx'
 
-interface BlogPost {
+export interface BlogPost {
   title: string
   description: string
   author: string
-  date: string,
-  slug: string,
+  date: string
+  slug: string
 }
 
-const blogPosts: BlogPost[] = [ cloudCaseStudy, dfirCaseStudy ];
+export const blogPosts: BlogPost[] = [cloudCaseStudy, dfirCaseStudy]
 
-function Blog({ post }: { post: BlogPost}) {
+export function Blog({ post }: { post: BlogPost }) {
   return (
     <div className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
@@ -32,7 +29,10 @@ function Blog({ post }: { post: BlogPost}) {
           {formatDate(post.date)}
         </Card.Eyebrow>
         <Card.Description>{post.description}</Card.Description>
-        <Card.LinkDescription href={`/blogs/${encodeURIComponent(post.slug)}`} target="_self">
+        <Card.LinkDescription
+          href={`/blogs/${encodeURIComponent(post.slug)}`}
+          target="_self"
+        >
           Read post
         </Card.LinkDescription>
       </Card>
@@ -47,15 +47,10 @@ function Blog({ post }: { post: BlogPost}) {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'My Blog',
-  description: 'My thoughts',
-}
-
-
 export default function BlogSection() {
   return (
     <>
+      <SEO title="My Blogs" description="My thoughts" />
       <Container className="pb-14 pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center  gap-6 dark:prose-invert">
           <header>

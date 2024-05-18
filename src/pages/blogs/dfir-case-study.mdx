@@ -1,60 +1,45 @@
-import { Container } from "@/components/shared/container"
+import { Container } from '@/components/shared/container'
 import { GCPTag } from '@/components/shared/tags'
+import ArticleLayout from '@/components/shared/articlelayout'
+import SEO from '@/components/shared/SEO'
+import {
+  APTTag,
+  RWTag,
+  BECTag,
+  PhishingTag,
+  ITTag,
+} from '@/components/shared/tags'
 
 export const blog = {
   author: 'Rachel Kang',
   date: '2024-05-15',
   title: 'DFIR Case Studies',
-  description:
-    'What other types of matters exist?',
+  description: 'What other types of matters exist?',
   slug: 'dfir-case-study',
 }
 
-export const metadata = {
-  title: blog.title,
-  description: blog.description,
-}
+export default (props) => <ArticleLayout post={blog} {...props} />
 
-export default (props) => <div blog={blog} {...props} />;
+<SEO title="DFIR Case Studies" description="My thoughts" />
 
-<Container>
-    # Case Studies
+###### Advanced Persistent Threat &nbsp;&nbsp; <APTTag />
 
-    <GCPTag />
+**Platforms Involved**:
 
+---
 
-    ## DFIR Case Study
-</Container>
+###### Ransomware &nbsp;&nbsp; <RWTag />
 
-{/* <h1>Case Studies</h1>
-<h4 className="border-l-2 border-zinc-600 border-opacity-50 pl-3">
-{'Case Studies'}
-</h4>
-<div>
-<h5>
-    Advanced Persistent Threat (APT) <APTTag />
-</h5>
-<div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-    <div className="flex flex-col">
-    <h6>Familiar Players</h6>
-    <p>Oktapus</p>
-    </div> 
-    <div className="flex flex-col">
-    <h6>Platforms</h6>
-    </div> 
-    <div className="flex flex-col">
-    <h6>Platforms</h6>
-    </div>
-</div>
-<h5>
-    Ransomware <RWTag />
-</h5>
-<p></p>
-<h5>
-    Business Email Compromise <BECTag /> <PhishingTag />
-</h5>
-<p></p>
-<h5>
-    Insider Threat <ITTag />
-</h5>
-</div>  */}
+**Platforms Involved**:
+
+---
+
+###### Business Email Compromise &nbsp;&nbsp; <BECTag /> <PhishingTag />
+
+**Platforms Involved**:
+
+---
+
+###### Insider Threat &nbsp;&nbsp; <ITTag />
+
+**Platforms Involved**:

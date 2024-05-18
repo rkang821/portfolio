@@ -1,5 +1,5 @@
 // import nextMDX from '@next/mdx'
-import createMDX from '@next/mdx';
+import createMDX from '@next/mdx'
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,

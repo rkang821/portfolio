@@ -1,5 +1,5 @@
-import { Button } from '@/components/shared/buttons'
-import { Container } from '@/components/shared/container'
+import { Button } from '../components/shared/buttons'
+import { Container } from '../components/shared/container'
 
 export default function NotFound() {
   return (

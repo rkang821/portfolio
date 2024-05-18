@@ -1,15 +1,15 @@
-import { type Metadata } from 'next'
+import SEO from '@/components/shared/SEO'
 import Image from 'next/image'
-import { Container } from '@/components/shared/container'
-import Section from '@/components/shared/section'
-import Card from '@/components/shared/card'
-import { Button } from '@/components/shared/buttons'
+import { Container } from '../shared/container'
+import Section from '../shared/section'
+import Card from '../shared/card'
+import { Button } from '../shared/buttons'
 import { StaticImageData } from 'next/image'
-import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
+import { MicrosoftTag, PhishingTag, BECTag, AITag } from '../shared/tags'
 import SANSIcon from '/public/images/certs/giaccert.png'
 import MicrosoftCertIcon from '/public/images/certs/microsoftcert.png'
 import SplunkCert from '/public/images/certs/splunkcert.png'
-import { AcademicCapIcon, ArrowDownTray } from '@/components/shared/icons'
+import { AcademicCapIcon, ArrowDownTray } from '../shared/icons'
 
 //Publications and Speaking Engagements (aka "Event")
 function EventLayout({
@@ -43,7 +43,9 @@ function Event({
       <Card.Title>{title}</Card.Title>
       <Card.Eyebrow decorate>{event}</Card.Eyebrow>
       <Card.Description>{description}</Card.Description>
-      <Card.LinkDescription href={href}>{linkdescription}</Card.LinkDescription>
+      <Card.LinkDescription href={href} target="_blank">
+        {linkdescription}
+      </Card.LinkDescription>
       <Card.Tags>
         {tags.map((Tag, index) => (
           <Tag key={index} />
@@ -234,14 +236,13 @@ function CertSection() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'My Experience',
-  description: 'Certifications, Blog Posts, Speaking Engagements',
-}
-
 export default function ExperienceSection() {
   return (
     <>
+      <SEO
+        title="My Experience"
+        description="Certifications, Publications, Speaking Engagements."
+      />
       <Container className="pb-14 pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center  gap-6 dark:prose-invert">
           <header>
