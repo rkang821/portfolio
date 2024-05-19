@@ -5,8 +5,8 @@ import {
   MicrosoftTag,
   AWSTag,
   GCPTag,
-} from '../../shared/tags'
-import { StarIcon } from '../../shared/icons'
+} from '@/components/shared/tags'
+import { StarIcon } from '@/components/shared/icons'
 
 //DFIR Overview
 export function DFIRPost() {

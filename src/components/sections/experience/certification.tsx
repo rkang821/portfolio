@@ -2,8 +2,8 @@ import Image from 'next/image'
 import SANSIcon from '/public/images/certs/giaccert.png'
 import MicrosoftCertIcon from '/public/images/certs/microsoftcert.png'
 import SplunkCert from '/public/images/certs/splunkcert.png'
-import { AcademicCapIcon, ArrowDownTray } from '../../shared/icons'
-import { Button } from '../../shared/buttons'
+import { AcademicCapIcon, ArrowDownTray } from '@/components/shared/icons'
+import { Button } from '@/components/shared/buttons'
 import { type CertProps } from '@/models/experience'
 
 function Cert({ role }: { role: CertProps }) {

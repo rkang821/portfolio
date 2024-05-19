@@ -1,6 +1,6 @@
 import Container from '@/components/shared/container'
-import Section from '../../shared/section'
-import { MicrosoftTag, PhishingTag, BECTag, AITag } from '../../shared/tags'
+import Section from '@/components/shared/section'
+import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
 import Event from './event'
 import CertSection from './certification'
 

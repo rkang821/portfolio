@@ -4,7 +4,7 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   BuildingIcon,
-} from '../../shared/icons'
+} from '@/components/shared/icons'
 import {
   type StatsBubbleProps,
   BubbleProps,

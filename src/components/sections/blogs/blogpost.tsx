@@ -1,4 +1,4 @@
-import Card from '../../shared/card'
+import Card from '@/components/shared/card'
 import { type BlogPostProps } from '@/models/blog'
 import { formatDate } from '@/lib/config'
 import postMetadata from '@/pages/blogs/index'

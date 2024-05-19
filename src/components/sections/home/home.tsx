@@ -2,13 +2,13 @@
 
 import { ReactTyped } from 'react-typed'
 import Container from '@/components/shared/container'
-import { Button } from '../../shared/buttons'
+import { Button } from '@/components/shared/buttons'
 import {
   LinkedInIcon,
   GitHubIcon,
   MailIcon,
   ArrowDownTray,
-} from '../../shared/icons'
+} from '@/components/shared/icons'
 import SocialLink from './socials'
 
 export default function HomePage() {
