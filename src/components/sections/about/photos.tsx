@@ -9,7 +9,7 @@ import image5 from '/public/images/photos/image5.png'
 export default function PhotoReel() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2', 'rotate-2']
   return (
-    <div className="py-5 sm:py-10">
+    <div className="py-10 max-sm:hidden">
       <div className="flex justify-center gap-2 overflow-hidden sm:gap-5">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div

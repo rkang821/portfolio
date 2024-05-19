@@ -29,7 +29,7 @@ export default function ExperienceSection() {
         <Event
           href="/documents/20240413_WiCyS_Phishing.pdf"
           title="Phishing 2.0: The Rise of Artifical Intelligence"
-          description="Discussed the evolution of phishing attacks as threat actors weaponize artificial intelligence capabilities to broaden the reaches of their phishing campaigns."
+          description="Discusses the evolution of phishing attacks as threat actors weaponize artificial intelligence capabilities to broaden the reaches of their phishing campaigns."
           event="WiCyS 2024 - Nashville, TN"
           linkdescription="View Slides"
           tags={[MicrosoftTag, PhishingTag, AITag]}
@@ -40,7 +40,7 @@ export default function ExperienceSection() {
 
   return (
     <>
-      <Container className="pb-14 pt-14 max-sm:pt-24">
+      <Container className="pb-10 pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center  gap-6 dark:prose-invert">
           <header>
             <h2>
@@ -61,7 +61,7 @@ export default function ExperienceSection() {
       <Container>
         <div className="flex max-lg:flex-col">
           <div className="flex-auto pl-5 pr-3">{eventSection}</div>
-          <div className="w-[25rem] shrink-0 max-lg:w-full ">
+          <div className="w-[22rem] shrink-0 max-lg:w-full">
             <CertSection />
           </div>
         </div>

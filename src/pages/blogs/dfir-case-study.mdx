@@ -2,7 +2,7 @@ import Container from '@/components/shared/container'
 import ArticleLayout from '@/components/shared/articlelayout'
 import SEO from '@/components/shared/SEO'
 import {
-  APTTag,
+  ThirdPartyTag,
   RWTag,
   BECTag,
   PhishingTag,
@@ -13,33 +13,188 @@ export const blog = {
   author: 'Rachel Kang',
   date: '2024-05-15',
   title: 'DFIR Case Studies',
-  description: 'What other types of matters exist?',
+  description:
+    'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, buisness email compromises, and insider threat investigations.',
   slug: 'dfir-case-study',
-  tags: [APTTag, RWTag, BECTag, PhishingTag, ITTag],
+  tags: [BECTag, PhishingTag, RWTag, ThirdPartyTag, ITTag],
 }
 
 export default (props) => <ArticleLayout post={blog} {...props} />
 
-<SEO title="DFIR Case Studies" description="My thoughts" />
+<SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
-###### Advanced Persistent Threat &nbsp;&nbsp; <APTTag />
+###### Supply Chain Attack &nbsp;&nbsp; <ThirdPartyTag />
 
-**Platforms Involved**:
+**Incident**: In mid-2022, a major telecommunications company experienced a significant security breach due to a sophisticated social engineering attack. The attackers used SMS phishing, also known as “smishing,” to deceive employees into revealing their login credentials. This attack allowed unauthorized access to information related to a limited number of the company’s customer accounts
+
+**Detection and Initial Response**: Employees received text messages that appeared to be from the company’s IT department, claiming their passwords had expired or their schedules had changed, and prompting them to log in via a URL that led to a malicious site. This site mimicked the company’s login page and captured their credentials. Upon discovery, the security team promptly revoked access to the compromised employee accounts and engaged our team to assist with the investigation.
+
+**Investigation and Analysis**: The investigation revealed that the attackers had meticulously linked employees’ phone numbers to their names, possibly using data from previous breaches. The attackers used this information to send targeted phishing messages, increasing the likelihood of success. The forensic analysis focused on tracing the origins of the phishing messages, which were found to originate from U.S. carrier networks. The company worked with these carriers and the hosting providers of the malicious URLs to shut down the attackers’ operations
+
+- SMS Phishing Tactics:
+  - Employees received convincing SMS messages containing URLs with keywords like “SSO,” tricking them into believing the messages were legitimate.
+  - The malicious URLs directed employees to fake login pages, capturing their credentials.
+- Collaboration and Mitigation:
+  - The company collaborated with U.S. carriers and hosting providers to cease the distribution of malicious messages and shut down the fake sites.
+  - Despite these efforts, attackers continued to rotate through different carriers and hosting providers to persist in their activities.
+
+**Mitigation Strategies**: To mitigate the attack and prevent future incidents, the company implemented several measures:
+
+- Strengthened employee training and awareness on recognizing social engineering attacks and phishing attempts.
+- Enhanced security protocols and monitoring to detect and respond to similar threats more quickly.
+- Instituted mandatory security advisories and additional training sessions to reinforce the importance of vigilance against social engineering attacks.
+
+**Resolution and Lessons Learned**: The company took immediate action to secure compromised accounts and began notifying affected customers individually. The incident highlighted the critical importance of continuous employee education on security best practices and the implementation of robust monitoring and response mechanisms. The breach underscored the sophisticated nature of social engineering attacks and the need for organizations to remain vigilant and proactive in their cybersecurity efforts
+
+**Technologies Used**:
+
+- Multi-Factor Authentication (MFA)
+- Security Information and Event Management (SIEM) systems
+- Advanced Threat Protection (ATP)
+
+**Outcome**: Although the breach affected a limited number of customer accounts, the company’s prompt response and collaboration with carriers and hosting providers helped mitigate the impact. The incident led to a renewed focus on employee training and the enhancement of security protocols to prevent future social engineering attacks.
+
+<br />
+
+**Other major players in the game**: Parallels emerge with tactics deployed by other notorious ransomware groups. For instance, the double-extortion tactic used in this case mirrors strategies employed by both Conti and Maze, highlighting a prevalent trend among top-tier cybercriminal entities. Furthermore, the use of tools like Mimikatz and Cobalt Strike for lateral movement and data exfiltration shares similarities with methods documented in attacks by REvil and Ryuk, underscoring the shared arsenal often employed by these actors.
+
+1. APT29 (Cozy Bear): This group, linked to Russian intelligence, is known for its sophisticated supply chain attacks, including the infamous SolarWinds attack. They infiltrate software supply chains to gain access to numerous downstream targets.
+2. APT41 (Winnti): A Chinese cyber espionage group, APT41 conducts supply chain attacks to deliver malware to specific targets. They have been linked to multiple high-profile incidents affecting various industries globally.
+3. Lazarus Group: Associated with North Korea, Lazarus uses supply chain attacks as part of their broader cyber warfare strategy. They target software updates and distribution mechanisms to infect end users.
+4. Oktapus: This group conducts mass phishing campaigns targeting employees at companies using Okta, leveraging supply chain access to infiltrate organizations and exfiltrate data.
 
 ---
 
-###### Ransomware &nbsp;&nbsp; <RWTag />
+###### LockBit 3.0 Ransomware &nbsp;&nbsp; <RWTag />
 
-**Platforms Involved**:
+**Incident**: In mid-2024, a mid-sized U.S. financial services company experienced a ransomware attack, initiated through the FortiOS SSL VPN vulnerability <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21762" target="_blank" rel="noopener noreferrer">CVE-2024-21762</a>. This critical vulnerability allowed unauthenticated attackers to execute arbitrary commands, leading to unauthorized network access. Once inside, the attackers used Mimikatz to harvest administrative credentials, followed by Cobalt Strike to exfiltrate data from the company’s file servers. The culmination of the attack involved deploying LockBit 3.0 ransomware through the domain controller, encrypting critical data and demanding a ransom.
+
+**Detection and Initial Response**: The security systems at the financial company detected unusual VPN activity indicative of CVE-2024-21762 exploitation, alongside irregular lateral movements within the network. The company’s immediate response included isolating the compromised VPN gateway and affected network segments and mobilizing the incident response team to assess the breach and mitigate its spread.
+
+**Investigation and Analysis**: Investigations were conducted using network monitoring tools, advanced threat detection systems, and forensic analysis software. These revealed that attackers had exploited the CVE-2024-21762 vulnerability to gain unauthorized access, used Mimikatz to extract administrative credentials, employed Cobalt Strike for reconnaissance and data exfiltration from sensitive file servers, and prepared LockBit 3.0 ransomware scripts on the domain controller for a network-wide encryption attack.
+
+- Network Monitoring and Traffic Analysis:
+  - Utilized network monitoring tools to trace the origin and pathway of the attack within the network.
+  - Analyzed VPN logs to confirm the exploitation of CVE-2024-21762, identifying the entry point of the attackers.
+- Forensic Analysis with Advanced Threat Detection Systems:
+  - Deployed forensic analysis software to scrutinize affected systems and uncover the methods used for credential theft.
+  - Advanced threat detection systems scanned for anomalies indicative of Mimikatz usage and Cobalt Strike activities.
+- Credential and Access Examination:
+  - Investigated system and security logs to identify the use of stolen credentials.
+  - Monitored administrative access patterns to pinpoint unusual activities and potential breaches in protocol.
+- Data Exfiltration Assessment:
+  - Reviewed network traffic data to determine the scope and scale of data exfiltration carried out using Cobalt Strike.
+  - Employed data loss pre
+    vention tools to detect sensitive information that might have been transmitted outside the company’s network.
+- Ransomware Deployment Analysis:
+  - Identified and analyzed the scripts and payloads associated with LockBit 3.0 found on the domain controller.
+  - Assessed the impact and reach of the ransomware within the network to guide the containment and eradication efforts.
+
+**Mitigation Strategies**: In response to the attack, the company patched the affected VPN software to address CVE-2024-21762 and undertook a comprehensive reset of passwords and credentials across the organization. They also enhanced network traffic surveillance and tightened firewall rules to prevent further unauthorized access. Ongoing mitigation efforts included regular vulnerability assessments focused on patch management and strengthening of perimeter security.
+
+**Resolution and Lessons Learned**:
+The company opted not to pay the ransom, instead relying on recent, secure backups for data restoration. Systems were methodically cleaned and restored to operational status, ensuring no remnants of the attack remained. The incident underscored the critical importance of maintaining up-to-date security patches and robust detection systems to quickly identify and respond to initial exploit attempts and unauthorized movements within the network.
+
+**Technologies Used**:
+
+- Endpoint Detection and Response (EDR)
+- Security Information and Event Management (SIEM) systems
+- MFA logs
+
+**Outcome**: Though the attack caused initial operational disruptions, the company managed to recover without financial loss to the attackers. The incident led to significant investments in cybersecurity improvements, including staff training and the deployment of advanced threat detection capabilities, thereby enhancing the organization’s defenses against future cyber threats.
+
+<br />
+
+**Other major players in the game**: Parallels emerge with tactics deployed by other notorious ransomware groups. For instance, the double-extortion tactic used in this case mirrors strategies employed by both Conti and Maze, highlighting a prevalent trend among top-tier cybercriminal entities. Furthermore, the use of tools like Mimikatz and Cobalt Strike for lateral movement and data exfiltration shares similarities with methods documented in attacks by REvil and Ryuk, underscoring the shared arsenal often employed by these actors.
+
+1. Conti - Known for its fast encryption speed and double-extortion tactics, where they not only encrypt the victim’s files but also threaten to release stolen data if the ransom isn’t paid.
+2. REvil (Sodinokibi) - Famous for high-profile attacks and demanding large ransoms, REvil has targeted a range of organizations from small businesses to large enterprises.
+3. DarkSide - Gained notoriety for the Colonial Pipeline attack, causing major fuel supply disruptions on the East Coast of the USA.
+4. Ryuk - Often targets large, public-entity networks such as hospitals, schools, and government institutions, with a focus on organizations that can afford to pay large ransoms to quickly restore services.
+5. Maze - One of the first groups to combine data encryption with data theft, threatening to leak the information publicly if the ransom is not paid.
 
 ---
 
 ###### Business Email Compromise &nbsp;&nbsp; <BECTag /> <PhishingTag />
 
-**Platforms Involved**:
+**Incident**: In early 2024, a mid-sized U.S. manufacturing company fell victim to a Business Email Compromise (BEC) attack. The incident began when a high-ranking executive’s email account was compromised through a sophisticated phishing attack. The attackers used social engineering tactics to gain access to the executive’s credentials, allowing them to infiltrate the company’s email system.
+
+**Detection and Initial Response**: The company detected the breach when several employees received unusual email requests from the executive’s account, asking for urgent wire transfers to unfamiliar accounts. The immediate response included locking the compromised email account, notifying the IT department, and mobilizing the incident response team to assess the extent of the breach.
+
+**Investigation and Analysis**: The investigation involved email system audits, forensic analysis, and network monitoring to trace the attackers’ activities and understand the scope of the compromise.
+
+- Email System Audit:
+  - Reviewed email logs to identify unauthorized access and suspicious email forwarding rules.
+  - Analyzed the executive’s email account for signs of phishing and other malicious activities.
+- Forensic Analysis:
+  - Utilized forensic tools to examine the compromised account and identify the methods used to harvest credentials.
+  - Deployed advanced threat detection systems to scan for anomalies indicative of unauthorized access.
+- Network Monitoring:
+  - Monitored network traffic for unusual patterns and potential data exfiltration.
+  - Investigated system logs to trace the attackers’ movements within the network.
+
+**Mitigation Strategies**: The company implemented several measures to mitigate the attack and prevent future incidents.
+
+- Email Security Enhancements:
+  - Enforced multi-factor authentication (MFA) for all email accounts.
+  - Implemented advanced email filtering and threat detection systems.
+- User Training and Awareness:
+  - Conducted mandatory cybersecurity training for all employees, focusing on phishing and social engineering awareness.
+  - Regularly tested employees with simulated phishing attacks to improve vigilance.
+- Incident Response Improvements:
+  - Developed and tested incident response plans specific to BEC scenarios.
+  - Enhanced communication protocols to ensure swift reporting and response to suspicious activities.
+
+**Resolution and Lessons Learned**:
+The company managed to block all fraudulent transactions, minimizing financial losses. The compromised email account was secured, and affected systems were thoroughly cleaned. This incident highlighted the critical need for robust email security measures and employee training to detect and respond to phishing attempts quickly.
+
+**Technologies Used**:
+
+- Endpoint Detection and Response (EDR)
+- Security Information and Event Management (SIEM) systems
+- MFA logs
+
+**Outcome**: Despite the initial disruption, the company successfully mitigated the attack and avoided significant financial losses. The incident led to significant investments in email security and employee training, strengthening the organization’s defenses against future BEC threats.
+
+<br />
+
+**Other major players in the game**: Similar tactics have been observed in attacks by other notorious cybercriminal groups. The use of social engineering and phishing mirrors strategies employed by groups such as: 1. Anthropoid Spider/EmpireMonkey: Conducts phishing campaigns spoofing financial regulators in France, Norway, and Belize. 2. Royal Ransomware: Utilizes callback phishing attacks to initiate ransomware infections. 3. Scattered Spider: Employs credential phishing and social engineering attacks to capture OTPs, avoiding malware by using living-off-the-land binaries (LOLBins) to maintain persistent access. 4. Scatter Swine: Engages in various forms of phishing and social engineering attacks. 5. UNC3944: A threat actor cluster known for phone-based social engineering and SMS phishing to gain access to organizations.
 
 ---
 
 ###### Insider Threat &nbsp;&nbsp; <ITTag />
 
-**Platforms Involved**:
+**Incident**: Over a six-month period in 2023-2024, a Fortune 500 company suspected a whistleblowing employee was exfiltrating sensitive data. The company’s internal security team initiated an extensive investigation to identify the rogue insider and prevent further data breaches.
+
+**Detection and Initial Response**: Initial suspicions arose when confidential information appeared in public forums and news outlets. The company’s security team observed unusual data access patterns and immediately initiated an internal investigation, which included reviewing firewall logs and browser artifact logs for indicators of data exfiltration.
+
+**Investigation and Analysis**: The investigation involved a thorough review of network traffic, forensic analysis of browser artifacts, and close monitoring of user activity to identify the source of the data leaks.
+
+- Firewall Log Analysis:
+  - Analyzed firewall logs to track outbound data traffic and identify any unauthorized data transfers.
+  - Reviewed connection logs for unusual or unauthorized access attempts.
+- Browser Artifact Examination:
+  - Conducted forensic analysis of browser history and cache to identify visits to suspicious websites.
+  - Identified repeated access to sites commonly associated with data exfiltration and whistleblowing activities.
+- User Activity Monitoring:
+  - Monitored the activity of employees with access to sensitive information.
+  - Employed advanced threat detection systems to scan for anomalies and suspicious behavior.
+- Network Traffic Analysis:
+  - Utilized network monitoring tools to trace data flow within the network and detect unauthorized data movement.
+  - Investigated email logs and file transfer activities for signs of data exfiltration.
+
+**Identification of the Whistleblower**: The investigation successfully identified the whistleblowing employee through browser logs, which revealed access to suspicious websites known for data exfiltration activities. The identified employee had visited these sites frequently and had engaged in unauthorized data transfers.
+
+**Mitigation Strategies**: In response to the incident, the company implemented several measures to enhance internal security and prevent future breaches. These included strengthening monitoring of network traffic and user activity, deploying data loss prevention (DLP) tools, revising data access and handling policies, conducting training sessions for employees on data security, implementing stricter access controls, and utilizing multi-factor authentication (MFA) to secure access to critical systems.
+
+**Resolution and Lessons Learned**:
+The company took immediate action against the identified employee, revoking access and pursuing legal measures. Systems were thoroughly audited and secured to prevent further leaks. The incident highlighted the importance of robust internal monitoring and the need for regular audits to detect insider threats early.
+
+**Technologies Used**:
+
+- Security Information and Event Management (SIEM) systems
+- Data Loss Prevention (DLP) tools
+- Multi-Factor Authentication (MFA)
+- Network Monitoring Tools
+
+**Outcome**: The company successfully identified and mitigated the insider threat, preventing further data exfiltration. The incident led to significant improvements in internal security protocols and employee training, strengthening the organization’s defenses against insider threats.

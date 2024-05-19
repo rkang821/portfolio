@@ -40,7 +40,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-bullets': theme('colors.blue.500'),
         '--tw-prose-hr': theme('colors.zinc.400 / 0.4'),
         '--tw-prose-pre-code': theme('colors.zinc.100'),
-        '--tw-prose-pre-bg': theme('colors.zinc.900'),
+        '--tw-prose-pre-bg': theme('colors.zinc.600'),
         '--tw-prose-pre-border': 'transparent',
 
         '--tw-prose-invert-body': theme('colors.zinc.400'),
@@ -57,7 +57,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-invert-bullets': theme('colors.blue.300'),
         '--tw-prose-invert-hr': theme('colors.zinc.700 / 0.4'),
         '--tw-prose-invert-pre-code': theme('colors.zinc.100'),
-        '--tw-prose-invert-pre-bg': theme('colors.zinc.700'),
+        '--tw-prose-invert-pre-bg': theme('colors.zinc.500'),
         '--tw-prose-invert-pre-border': theme('colors.zinc.200 / 0.1'),
 
         // Base
@@ -185,6 +185,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
           marginTop: theme('spacing.2'),
           marginBottom: theme('spacing.3'),
           paddingLeft: theme('spacing.4'),
+          letterSpacing: theme('letterSpacing.tight'),
           lineHeight: 1.7,
           '@screen sm': {
             paddingLeft: theme('spacing.6'),
@@ -193,30 +194,27 @@ export default function typographyStyles({ theme }: PluginUtils) {
           },
         },
         li: {
-          paddingLeft: theme('spacing[3.5]'),
-          marginBottom: theme('spacing.0'),
+          paddingLeft: theme('spacing[2.5]'),
           fontSize: theme('fontSize.sm'),
+          lineHeight: 1.7,
           '@screen sm': {
+            lineHeight: 2,
+            paddingLeft: theme('spacing[3.5]'),
             fontSize: theme('fontSize.base'),
           },
         },
         'li::marker': {
-          fontSize: theme('fontSize.base')[0],
+          fontSize: theme('fontSize.sm'),
           fontWeight: theme('fontWeight.semibold'),
+          '@screen sm': {
+            fontSize: theme('fontSize.base'),
+          },
         },
         'ol > li::marker': {
           color: 'var(--tw-prose-counters)',
         },
         'ul > li::marker': {
           color: 'var(--tw-prose-bullets)',
-        },
-        'li :is(ol, ul)': {
-          marginTop: theme('spacing.0'),
-          marginBottom: theme('spacing.0'),
-        },
-        'li :is(li, p)': {
-          marginTop: theme('spacing.0'),
-          marginBottom: theme('spacing.0'),
         },
         // Code blocks
         pre: {

@@ -5,11 +5,6 @@ import {
   MicrosoftTag,
   AWSTag,
   GCPTag,
-  PhishingTag,
-  BECTag,
-  APTTag,
-  RWTag,
-  ITTag,
 } from '../../shared/tags'
 import { StarIcon } from '../../shared/icons'
 
@@ -21,14 +16,14 @@ export function DFIRPost() {
         {'DF vs IR'}
       </h4>
       <p>
-        <strong>Digital Forensics and Incident Response</strong> (DFIR) is a
-        specialized branch of cybersecurity that combines the investigative and
-        analytical aspects of digital forensics with the reactive measures of
-        incident response. It aims to provide a comprehensive approach to
-        incident response, enabling organizations to effectively detect,
-        investigate, and respond to cyber threats and incidents. Both DF and IR
-        play crucial roles in cybersecurity, complementing each other to ensure
-        effective incident management and response.
+        Digital Forensics and Incident Response (DFIR) is a specialized branch
+        of cybersecurity that combines the investigative and analytical aspects
+        of digital forensics with the reactive measures of incident response. It
+        aims to provide a comprehensive approach to incident response, enabling
+        organizations to effectively detect, investigate, and respond to cyber
+        threats and incidents. Both DF and IR play crucial roles in
+        cybersecurity, complementing each other to ensure effective incident
+        management and response.
       </p>
       <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1 max-sm:gap-0">
         <div>
@@ -241,8 +236,10 @@ export function ITPost() {
       <p>
         While I have experience tackling a broad spectrum of cases, recently
         I&apos;ve focused on leading intricate IR cases, particularly those
-        involving a cloud platform compromise. Here&apos;s an overview the types
-        of incidents I&apos;ve responded to.
+        involving a cloud platform compromise. Here&apos;s an overview of the
+        types of incidents I&apos;ve responded to. To read more about real-world
+        case studies, see my <a href="/blogs/dfir-case-study"> blog post</a>{' '}
+        here!
       </p>
       <h5>{'Types of Digital Forensics Cases'}</h5>
       <ul>
@@ -342,7 +339,9 @@ export function ITPost() {
         refers to responding to security incidents that occur within cloud
         environments, such as across cloud infrastructure or services across
         platforms such as Microsoft&apos;s Azure, Amazon Web Services (AWS), or
-        Google Cloud Platform (GCP).
+        Google Cloud Platform (GCP). See my{' '}
+        <a href="/blogs/cloud-case-study">blog post</a> here for examples of
+        real-world cloud compromises across major cloud provider platforms.
       </p>
       <h5>What&apos;s new in Cloud IR? </h5>
       <p>
@@ -430,7 +429,8 @@ export function TKPost() {
       <p>
         DFIR is a massive industry with new tools and platforms emerging as the
         needs change and evolve. While there are many out there, here’s some
-        that I use regularly through my investigations.
+        that I use regularly through my investigations. My preferred tools are
+        marked with a <StarIcon />.
       </p>
       <h5>{'Forensic Preservation Tools'}</h5>
       <ul>

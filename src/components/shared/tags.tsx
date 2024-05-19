@@ -54,10 +54,10 @@ export function RWTag(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function APTTag(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function ThirdPartyTag(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <span className="me-2 rounded border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400">
-      APT
+      Third Party
     </span>
   )
 }

@@ -7,17 +7,14 @@ export const blog = {
   date: '2024-05-01',
   title: 'Cloud Case Studies',
   description:
-    'Several examples of real-world investigations across cloud platform compromises in AWS, Azure, and GCP.',
+    'Case studies for real-world investigations for cloud platform compromises across AWS, Azure, and GCP. Includes unauthorized accesses to cloud storage buckets and kubernetes clusters, as well as cryptomining incidents.',
   slug: 'cloud-case-study',
   tags: [AWSTag, MicrosoftTag, GCPTag],
 }
 
 export default (props) => <ArticleLayout post={blog} {...props} />
 
-<SEO
-  title="Cloud Case Studies"
-  description="Several examples of real-world investigations across cloud platform compromises in AWS, Azure, and GCP."
-/>
+<SEO title="Cloud Case Studies" description="Cloud Investigations" />
 
 ###### Cloud Storage Misconfiguration and Compromise &nbsp;&nbsp; <AWSTag />
 

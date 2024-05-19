@@ -6,7 +6,7 @@ import SubTabSection from './subtabs'
 export default function FundamentalsSection() {
   return (
     <>
-      <Container className="pb-14 pt-14 max-sm:pt-24">
+      <Container className="pb-3 pt-14 max-sm:pt-24">
         {/* Top Level Heading */}
         <header className="prose dark:prose-invert">
           <h2>
@@ -23,7 +23,7 @@ export default function FundamentalsSection() {
           </h3>
         </header>
       </Container>
-      <Container>
+      <Container className="pb-14">
         <SubTabSection />
       </Container>
     </>

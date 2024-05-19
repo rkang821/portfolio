@@ -85,9 +85,9 @@ Card.LinkDescription = function CardLinkDescription({
 
 Card.Tags = function CardTags({ children }: { children: JSX.Element[] }) {
   return (
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <p className="my-2 flex flex-wrap text-sm text-zinc-600 dark:text-zinc-400">
       {children.map((child, index) => (
-        <span key={index} className="mr-2">
+        <span key={index} className="mb-1 mr-2">
           {child}
         </span>
       ))}
