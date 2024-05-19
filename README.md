@@ -1,6 +1,6 @@
 # Rachel's Portfolio
 
-<h1 align="center"> Welcome to my portfolio! </h1>
+<h2 align="center"> Welcome to my portfolio! </h2>
 <div align="center">
   <img src="public/images/ReadMe_home.png" alt="Home"/>
 </div>

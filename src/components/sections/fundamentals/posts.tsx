@@ -10,8 +10,8 @@ import {
   APTTag,
   RWTag,
   ITTag,
-} from './tags'
-import { StarIcon } from './icons'
+} from '../../shared/tags'
+import { StarIcon } from '../../shared/icons'
 
 //DFIR Overview
 export function DFIRPost() {

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { ThemeSwitcherButton } from './themeswitcherbutton'
-import { Container } from './container'
+import Container from './container'
 import {
   ChevronDownIcon,
   CloseIcon,

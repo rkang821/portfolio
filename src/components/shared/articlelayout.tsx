@@ -1,14 +1,14 @@
 'use client'
 
-import { Container } from '@/components/shared/container'
-import { BlogPost } from '@/components/sections/blogs'
+import Container from '@/components/shared/container'
+import { BlogPostProps } from '@/models/blog'
 import { formatDate } from '@/lib/config'
 
 export default function ArticleLayout({
   post,
   children,
 }: {
-  post: BlogPost
+  post: BlogPostProps
   children: React.ReactNode
 }) {
   return (

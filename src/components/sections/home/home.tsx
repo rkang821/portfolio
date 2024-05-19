@@ -1,34 +1,15 @@
 'use client'
 
-import Link from 'next/link'
 import { ReactTyped } from 'react-typed'
-
-import { Container } from '../shared/container'
-import { Button } from '../shared/buttons'
+import Container from '@/components/shared/container'
+import { Button } from '../../shared/buttons'
 import {
   LinkedInIcon,
   GitHubIcon,
   MailIcon,
   ArrowDownTray,
-} from '../shared/icons'
-
-function SocialLink({
-  icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
-}) {
-  return (
-    <Link
-      className="group -m-1 p-1"
-      {...props}
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      <Icon className="h-7 w-7 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
-  )
-}
+} from '../../shared/icons'
+import SocialLink from './socials'
 
 export default function HomePage() {
   return (
@@ -57,7 +38,6 @@ export default function HomePage() {
             />
           </div>
         </header>
-
         {/*  --- Resume/Contact Links -- */}
         <div className="flex items-center justify-start py-7 pl-3 max-sm:flex-col max-sm:justify-center max-sm:space-y-5 max-sm:pl-0">
           <div className="space-x-3 border-r-[0.15rem] border-blue-500/90 pr-5 max-sm:border-none">

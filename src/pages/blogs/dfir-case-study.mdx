@@ -1,5 +1,4 @@
-import { Container } from '@/components/shared/container'
-import { GCPTag } from '@/components/shared/tags'
+import Container from '@/components/shared/container'
 import ArticleLayout from '@/components/shared/articlelayout'
 import SEO from '@/components/shared/SEO'
 import {
@@ -16,6 +15,7 @@ export const blog = {
   title: 'DFIR Case Studies',
   description: 'What other types of matters exist?',
   slug: 'dfir-case-study',
+  tags: [APTTag, RWTag, BECTag, PhishingTag, ITTag],
 }
 
 export default (props) => <ArticleLayout post={blog} {...props} />

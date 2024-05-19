@@ -9,6 +9,7 @@ export const blog = {
   description:
     'Several examples of real-world investigations across cloud platform compromises in AWS, Azure, and GCP.',
   slug: 'cloud-case-study',
+  tags: [AWSTag, MicrosoftTag, GCPTag],
 }
 
 export default (props) => <ArticleLayout post={blog} {...props} />
@@ -99,10 +100,11 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 <br />
 
 **Mitigation Strategies**: To address the incident and fortify our systems against future attacks, we implemented several key measures:
-* **Credential Reset and Role Re-assignment**: All compromised credentials were immediately reset. We reviewed and tightened the role-based access controls (RBAC) for Azure resources, ensuring that only necessary permissions were granted to users.
-* **Enhanced Monitoring and Alerts**: We enhanced our monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.
-* **Security Hardening of VMs**: All virtual machines were subjected to a security hardening process, including the application of the latest security patches and strict firewall rules.
-* **Education and Policy Updates**: Conducted an organization-wide security awareness training focusing on phishing defense and safe credential management. Updated the security policies to include stricter controls on resource provisioning and management.
+
+- **Credential Reset and Role Re-assignment**: All compromised credentials were immediately reset. We reviewed and tightened the role-based access controls (RBAC) for Azure resources, ensuring that only necessary permissions were granted to users.
+- **Enhanced Monitoring and Alerts**: We enhanced our monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.
+- **Security Hardening of VMs**: All virtual machines were subjected to a security hardening process, including the application of the latest security patches and strict firewall rules.
+- **Education and Policy Updates**: Conducted an organization-wide security awareness training focusing on phishing defense and safe credential management. Updated the security policies to include stricter controls on resource provisioning and management.
 
 **Resolution and Lessons Learned**:
 The quick response and comprehensive investigation allowed us to terminate the unauthorized cryptomining operation without significant damage or data loss. Key lessons learned included the necessity of continuous monitoring for unusual resource usage, the importance of employing strong, multi-factor authentication for all cloud-based accounts, and the need for regular security audits of cloud environments.
@@ -170,6 +172,7 @@ The quick response and comprehensive investigation allowed us to terminate the u
 },
 "insertId": "1abcd2efgh34ijkl"
 ```
+
 <br />
 <blockquote> 
 **Explanation of Key Fields**
