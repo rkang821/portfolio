@@ -1,18 +1,9 @@
 import SEO from '@/components/shared/SEO'
 import ArticleLayout from '@/components/shared/articlelayout'
+import { CloudPostMetadata } from '@/models/blog'
 import { AWSTag, MicrosoftTag, GCPTag } from '@/components/shared/tags'
 
-export const cloudCaseStudyMetadata = {
-  author: 'Rachel Kang',
-  date: '2024-05-01',
-  title: 'Cloud Case Studies',
-  description:
-    'Case studies for real-world investigations for cloud platform compromises across AWS, Azure, and GCP. Includes unauthorized accesses to cloud storage buckets and kubernetes clusters, as well as cryptomining incidents.',
-  slug: 'cloud-case-study',
-  tags: [AWSTag, MicrosoftTag, GCPTag],
-}
-
-export default (props) => <ArticleLayout post={cloudCaseStudyMetadata} {...props} />
+export default (props) => <ArticleLayout post={CloudPostMetadata} {...props} />
 
 <SEO title="Cloud Case Studies" description="Cloud Investigations" />
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">

@@ -1,10 +1,9 @@
 import { type BlogPostProps } from '@/models/blog'
-import { cloudCaseStudyMetadata } from './cloud-case-study.mdx'
-import { dfirCaseStudyMetadata } from './dfir-case-study.mdx'
+import { DFIRPostMetadata, CloudPostMetadata } from '@/models/blog'
 
 const postMetadata: BlogPostProps[] = [
-  cloudCaseStudyMetadata,
-  dfirCaseStudyMetadata,
+  DFIRPostMetadata,
+  CloudPostMetadata,
 ]
 
 export default postMetadata

@@ -1,25 +1,10 @@
 import Container from '@/components/shared/container'
 import ArticleLayout from '@/components/shared/articlelayout'
 import SEO from '@/components/shared/SEO'
-import {
-  ThirdPartyTag,
-  RWTag,
-  BECTag,
-  PhishingTag,
-  ITTag,
-} from '@/components/shared/tags'
+import { DFIRPostMetadata } from '@/models/blog'
+import { ThirdPartyTag, RWTag, ITTag, BECTag, PhishingTag } from '@/components/shared/tags'
 
-export const dfirCaseStudyMetadata = {
-  author: 'Rachel Kang',
-  date: '2024-05-15',
-  title: 'DFIR Case Studies',
-  description:
-    'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
-  slug: 'dfir-case-study',
-  tags: [BECTag, PhishingTag, RWTag, ThirdPartyTag, ITTag],
-}
-
-export default (props) => <ArticleLayout post={dfirCaseStudyMetadata} {...props} />
+export default (props) => <ArticleLayout post={DFIRPostMetadata} {...props} />
 
 <SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
