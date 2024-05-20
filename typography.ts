@@ -253,8 +253,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
           borderTopWidth: '1px',
           borderColor: 'var(--tw-prose-hr)',
           '@screen lg': {
-            marginLeft: `calc(${theme('spacing.12')} * -0.5)`,
-            marginRight: `calc(${theme('spacing.12')} * -0.5)`,
+            marginLeft: `calc(${theme('spacing.15')})`,
+            marginRight: `calc(${theme('spacing.15')})`,
           },
         },
 

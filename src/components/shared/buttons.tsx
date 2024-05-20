@@ -75,7 +75,7 @@ export function ScrollButton(props: React.ComponentPropsWithoutRef<'svg'>) {
       onClick={scrollToTop}
     >
       <DoubleChevronUp
-        className="h-4 w-4 stroke-blue-500 transition group-hover:stroke-zinc-900 dark:stroke-blue-300  dark:group-hover:stroke-zinc-200 sm:h-5  sm:w-5"
+        className="h-5 w-5 stroke-blue-500 transition group-hover:stroke-zinc-900 dark:stroke-blue-300  dark:group-hover:stroke-zinc-200"
         {...props}
       />
     </button>

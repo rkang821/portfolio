@@ -30,7 +30,7 @@ export default function ArticleLayout({
           <p className="italic text-zinc-600 dark:text-zinc-200">
             {post.description}
           </p>
-          <div className="prose dark:prose-invert" data-mdx-content>
+          <div className="rounded-lg bg-gray-50 p-5 my-2 mt-9 dark:bg-gray-800 prose dark:prose-invert" data-mdx-content>
             {children}
           </div>
         </div>

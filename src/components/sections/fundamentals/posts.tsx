@@ -795,7 +795,7 @@ export function TKPost() {
           </a>{' '}
           <StarIcon /> - Combines Elasticsearch, Logstash, and Kibana to
           process, search, and visualize large volumes of data in real time,
-          providing an integrated solution for log and time-series analytics{' '}
+          providing an integrated solution for log and time-series analytics.{' '}
         </li>
         <li>
           <a

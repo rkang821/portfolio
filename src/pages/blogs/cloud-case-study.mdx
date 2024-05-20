@@ -7,25 +7,25 @@ export default (props) => <ArticleLayout post={CloudPostMetadata} {...props} />
 
 <SEO title="Cloud Case Studies" description="Cloud Investigations" />
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
-    ###### Cloud Storage Misconfiguration and Compromise
+    ###### AWS S3 Bucket Cloud Storage Compromise
     <div><AWSTag /></div>
 </div>
 
-**Incident**: In a critical incident involving an improperly configured <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">Amazon S3 bucket</a>, sensitive data was inadvertently exposed to unauthorized access. The bucket, intended for internal use, was misconfigured to allow public read access, leading to potential data leakage. The exposure was detected during a routine security audit.
+**Incident**: In an incident involving an improperly configured cloud storage or an <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">Amazon S3 bucket</a>, a threat actor accessed a company's cloud storage, containing sensitive data. Intended for internal, DevOps usage, the bucket was misconfigured to allow for public, read access, leading to a two week period where the company's sensitive GitHub API keys were publicly available.
 
-**Detection and Initial Response**: The incident was initially detected through an alert from AWS CloudTrail, which indicated unexpected access patterns to the S3 bucket. Immediate actions were taken to restrict access by modifying the bucket&apos;s permissions settings to private. This quick response prevented further unauthorized access.
+**Detection and Initial Response**: The incident was initially detected during a routine security audit via an alert from AWS CloudTrail, which indicated unexpected access patterns to an S3 bucket. Immediate actions were taken to restrict access by modifying the bucket's permissions settings to private, preventing further unauthorized access. Additionally, our team conducted a Deep & Dark Web (DDW) Search for any usages or indicators of any stolen API keys.
 
-**Investigation and Analysis**: A thorough investigation was conducted using detailed logs from AWS CloudTrail and AWS Access Logs. These logs were instrumental in tracing the source and extent of the access. By analyzing the access patterns and IP addresses involved, we could confirm that the exposed data was accessed by external entities.
+**Investigation and Analysis**: Using AWS CloudTrail and AWS S3 Access Logs, our team conducted a thorough investigation across the timeframe of S3 bucket exposure. These logs were instrumental in tracing the source and extent of the access. By analyzing the access patterns and IP addresses involved, we confirmed that the exposed data was repeatedly accessed by external entities.
 
 **Mitigation Strategies**: Post-detection, the primary focus was on damage control and preventing future incidents. The following steps were undertaken:
 
 - **Immediate Revocation of Public Access**: The S3 bucket permissions were corrected to ensure that only authenticated users with specific roles had access.
-- **Audit and Review of All S3 Buckets**: A comprehensive audit of all S3 buckets under our management was conducted to ensure proper configurations were in place and to rectify any other potential misconfigurations.
+- **Audit and Review of All S3 Buckets**: A comprehensive audit of all S3 buckets was conducted to ensure proper configurations were in place and to rectify any other potential misconfigurations. All existing and exposed API keys were changed out.
 - **Enhanced Monitoring Setup**: Implementation of additional monitoring tools to detect and alert any improper modification of permission settings on all storage resources.
-- **Policy Updates and Training**: Updated the security policies regarding cloud storage and conducted training sessions for the team to prevent similar incidents in the future.
+- **Policy Updates and Training**: Updated the security policies regarding cloud storage and recommended internal user trainings to prevent similar incidents in the future.
 
 **Resolution and Lessons Learned**:
-The incident was resolved with no evidence of malicious exploitation of the exposed data, though the potential for data leakage had been high. This incident highlighted the critical need for rigorous monitoring and validation of cloud storage configurations. Lessons learned from this incident have led to strengthened security practices and policies around cloud resource management to ensure such exposures do not recur.
+Though the potential for data leakage was high, the incident was resolved with no evidence of malicious exploitation of the exposed data. This incident highlighted the critical need for rigorous monitoring and validation of cloud storage configurations.
 
 **Technologies Used**:
 
@@ -33,7 +33,6 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 - AWS S3 Access Logs
 - Custom monitoring tools for real-time security alerts
 
-**Outcome**: This incident served as a pivotal learning experience, reinforcing the importance of secure cloud storage configurations and proactive security practices. By rapidly addressing the issue and implementing strategic changes, we ensured the integrity and security of our cloud environments against future vulnerabilities.
 
 ---
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
@@ -41,11 +40,11 @@ The incident was resolved with no evidence of malicious exploitation of the expo
     <div><MicrosoftTag /></div>
 </div>
 
-**Incident**: In this high-impact security incident, a threat actor compromised an Azure environment and illicitly spun up approximately 1200 Virtual Machines (VMs) for cryptomining activities. This unauthorized activity led to substantial resource consumption and increased operational costs.
+**Incident**: In this high-impact security incident, a threat actor compromised a company's Azure environment and illicitly spun up approximately 1200 Virtual Machines (VMs) for cryptomining activities. This unauthorized activity led to substantial resource consumption and increased operational costs.
 
-**Detection and Initial Response**: The anomalous activity was initially detected by Azure Monitor, which flagged an unusual spike in resource usage and network traffic inconsistent with the typical organizational patterns. Immediate steps were taken to isolate the affected VMs and halt all suspicious processes. This rapid containment helped prevent further exploitation of resources.
+**Detection and Initial Response**: The anomalous activity was initially detected by Azure Monitor, which flagged an unusual spike in resource usage and network traffic inconsistent with expected activities. Immediate steps were taken to isolate the affected VMs and halt all suspicious processes. This rapid containment helped prevent further exploitation of resources.
 
-**Investigation and Analysis**: A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we identified the entry point of the attack—a set of compromised user credentials that allowed the attacker to access our Azure management portal. See below for a sample Azure Log Analytics record for how the entry point of the attack was identified.
+**Investigation and Analysis**: A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we determined the entry point to be a set of compromised user credentials allowing for the attacker to access Azure's management portal. See below for a sample Azure Log Analytics record reflecting this activity:
 
 <br />
 ```python
@@ -86,15 +85,15 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 * **ResourceGroupName** and **SubscriptionId**: Identify the scope within the organization’s Azure infrastructure.
 * **Identity.Claims**: Contains claims about the user who performed the operation. (john.doe@company.com is identified as the user, with the operation being authenticated via a password).
 * **Properties.statusCode** and **Properties.statusMessage**: Provide additional details about the operation’s execution status.
-* **Records have been modified from their original form per NDA restrictions.**
+* **Records have been modified from their original form per compliance restrictions.**
 
 </blockquote>
 <br />
 
-**Mitigation Strategies**: To address the incident and fortify our systems against future attacks, we implemented several key measures:
+**Mitigation Strategies**: To address the incident and fortify systems against future attacks, we implemented several key measures:
 
 - **Credential Reset and Role Re-assignment**: All compromised credentials were immediately reset. We reviewed and tightened the role-based access controls (RBAC) for Azure resources, ensuring that only necessary permissions were granted to users.
-- **Enhanced Monitoring and Alerts**: We enhanced our monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.
+- **Enhanced Monitoring and Alerts**: Enhanced monitoring capabilities by configuring more granular alert rules in Azure Monitor to detect any unusual activity quickly.
 - **Security Hardening of VMs**: All virtual machines were subjected to a security hardening process, including the application of the latest security patches and strict firewall rules.
 - **Education and Policy Updates**: Conducted an organization-wide security awareness training focusing on phishing defense and safe credential management. Updated the security policies to include stricter controls on resource provisioning and management.
 
@@ -108,8 +107,6 @@ The quick response and comprehensive investigation allowed us to terminate the u
 - Azure Log Analytics
 - Custom scripts for automated response
 
-**Outcome**: This incident underscored the critical importance of robust security protocols in cloud environments. By swiftly addressing the unauthorized activity and enhancing our defensive measures, we reinforced our cloud infrastructure’s security and resilience against similar threats.
-
 ---
 
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
@@ -117,9 +114,9 @@ The quick response and comprehensive investigation allowed us to terminate the u
     <div><GCPTag /></div>
 </div>
 
-**Incident**: This incident involved a significant security breach where exposed APIs on Google Cloud Platform (GCP) were exploited by attackers to compromise a Kubernetes pod. The vulnerability in the API configuration allowed unauthorized access, which extended to the Kubernetes node and cluster, affecting multiple systems.
+**Incident**: A threat actor compromised a company's Kubernetes pods using exposed API keys within their Google Cloud Platform (GCP) environment. A vulnerability in the API configuration allowed for unauthorized access, which extended to the Kubernetes node and cluster, affecting multiple systems.
 
-**Detection and Initial Response**: The breach was detected when abnormal activity was noted in the Kubernetes environment, including unusual pod behavior and unexpected external communications. Our immediate response involved isolating the compromised pod and conducting a rapid assessment of the Kubernetes cluster to prevent further unauthorized activities.
+**Detection and Initial Response**: The breach was detected when abnormal activity was noted in the Kubernetes environment, including unexpected external communications and unusual pod behaviors. Immediate responses involved isolating the compromised pod and conducting an assessment of the Kubernetes cluster (including its nodes and pods) to prevent further unauthorized activities.
 
 **Investigation and Analysis**: Utilizing GCP’s Log Explorer, we conducted a deep dive into the system logs of the affected Kubernetes node and other related resources. The investigation revealed that the exposed API was accessed multiple times by unauthorized external IP addresses. By tracing these accesses and mapping the attack vectors, we identified additional compromised systems within the cluster. See below for a sample record that helped identify the accesses:
 
@@ -185,13 +182,13 @@ The quick response and comprehensive investigation allowed us to terminate the u
 </blockquote>
 <br />
 **Mitigation Strategies**: To address the breach and secure our infrastructure, we implemented the following key actions:
-* **Immediate API Restriction**: Temporarily disabled the exposed APIs until proper security measures, like API Gateway controls and OAuth scopes, were implemented.
-* **Enhanced Security for Kubernetes Clusters**: Applied stricter security configurations, including network policies and role-based access controls (RBAC), to all Kubernetes clusters. This also involved updating Kubernetes to the latest stable version with patched vulnerabilities.
+* **Immediate API Restriction**: Temporarily disabled the exposed APIs until proper security measures were implemented, such as <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/apigateway-controls.html" target="_blank" rel="noopener noreferrer">API Gateway controls</a> and <a href="https://developers.google.com/identity/protocols/oauth2/scopes" target="_blank" rel="noopener noreferrer">OAuth scopes</a>.
+* **Enhanced Security for Kubernetes Clusters**: Applied stricter security configurations to all Kubernetes clusters, including network policies and role-based access controls (RBAC). This also involved updating Kubernetes to the latest stable version with patched vulnerabilities.
 * **Comprehensive System Audits**: Initiated a full audit of all GCP resources using GCP Security Command Center to identify and remediate any other potential vulnerabilities or misconfigurations.
 * **Forensic Analysis**: Continued detailed forensic analysis using GCP&apos;s security tools to understand the depth of the compromise and to ensure that all malicious footholds were removed.
 
 **Resolution and Lessons Learned**:
-The incident was resolved with the containment and eradication of all threats from our systems. Key lessons included the importance of securing APIs with appropriate authentication and authorization checks, the necessity of regular security reviews for cloud-native environments, and the value of proactive monitoring and logging to detect and respond to incidents swiftly.
+The incident was resolved with the containment and eradication of all threats from the company's systems. Key lessons included the importance of securing APIs with appropriate authentication and authorization checks, the necessity of regular security reviews for cloud-native environments, and the value of proactive monitoring and logging to detect and respond to incidents swiftly.
 
 **Technologies Used**:
 
@@ -199,5 +196,3 @@ The incident was resolved with the containment and eradication of all threats fr
 - GCP Security Command Center
 - GCP API Gateway
 - Kubernetes Engine
-
-**Outcome**: The breach highlighted critical security considerations for cloud environments, particularly in relation to API exposure and Kubernetes security. Our prompt and effective response not only mitigated the incident without significant damage but also strengthened our security posture against future cyber threats.
