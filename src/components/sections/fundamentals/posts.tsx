@@ -293,7 +293,7 @@ export function ITPost() {
           data on infected devices and demanding payment, usually in
           cryptocurrency, in exchange for a decryption key to restore access.
           Some groups operate shame sites to leak exfiltrated data for victims
-          who don&apos;t pay within an alotted timeframe. Ransomwares can affect
+          who don&apos;t pay within an allotted timeframe. Ransomwares can affect
           industries and companies of all shapes and sizes, ranging from
           enterprise organizations to even local mom-and-pop shops.{' '}
         </li>

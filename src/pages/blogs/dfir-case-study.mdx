@@ -14,7 +14,7 @@ export const blog = {
   date: '2024-05-15',
   title: 'DFIR Case Studies',
   description:
-    'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, buisness email compromises, and insider threat investigations.',
+    'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
   slug: 'dfir-case-study',
   tags: [BECTag, PhishingTag, RWTag, ThirdPartyTag, ITTag],
 }
@@ -23,13 +23,16 @@ export default (props) => <ArticleLayout post={blog} {...props} />
 
 <SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
-###### Supply Chain Attack &nbsp;&nbsp; <ThirdPartyTag />
+<div class="flex items-center space-x-2 py-6">
+  ###### Supply Chain Attack
+  <div><ThirdPartyTag /></div>
+</div>
 
-**Incident**: In mid-2022, a major telecommunications company experienced a significant security breach due to a sophisticated social engineering attack. The attackers used SMS phishing, also known as “smishing,” to deceive employees into revealing their login credentials. This attack allowed unauthorized access to information related to a limited number of the company’s customer accounts
+**Incident**: In mid-2022, a major telecommunications company experienced a significant security breach due to a sophisticated social engineering attack. The attackers used SMS phishing, also known as “smishing,” to deceive employees into revealing their login credentials. This attack allowed unauthorized access to information related to a limited number of the company’s customer accounts.
 
 **Detection and Initial Response**: Employees received text messages that appeared to be from the company’s IT department, claiming their passwords had expired or their schedules had changed, and prompting them to log in via a URL that led to a malicious site. This site mimicked the company’s login page and captured their credentials. Upon discovery, the security team promptly revoked access to the compromised employee accounts and engaged our team to assist with the investigation.
 
-**Investigation and Analysis**: The investigation revealed that the attackers had meticulously linked employees’ phone numbers to their names, possibly using data from previous breaches. The attackers used this information to send targeted phishing messages, increasing the likelihood of success. The forensic analysis focused on tracing the origins of the phishing messages, which were found to originate from U.S. carrier networks. The company worked with these carriers and the hosting providers of the malicious URLs to shut down the attackers’ operations
+**Investigation and Analysis**: The investigation revealed that the attackers had meticulously linked employees’ phone numbers to their names, possibly using data from previous breaches. The attackers used this information to send targeted phishing messages, increasing the likelihood of success. The forensic analysis focused on tracing the origins of the phishing messages, which were found to originate from U.S. carrier networks. The company worked with these carriers and the hosting providers of the malicious URLs to shut down the attackers’ operations.
 
 - SMS Phishing Tactics:
   - Employees received convincing SMS messages containing URLs with keywords like “SSO,” tricking them into believing the messages were legitimate.
@@ -44,7 +47,7 @@ export default (props) => <ArticleLayout post={blog} {...props} />
 - Enhanced security protocols and monitoring to detect and respond to similar threats more quickly.
 - Instituted mandatory security advisories and additional training sessions to reinforce the importance of vigilance against social engineering attacks.
 
-**Resolution and Lessons Learned**: The company took immediate action to secure compromised accounts and began notifying affected customers individually. The incident highlighted the critical importance of continuous employee education on security best practices and the implementation of robust monitoring and response mechanisms. The breach underscored the sophisticated nature of social engineering attacks and the need for organizations to remain vigilant and proactive in their cybersecurity efforts
+**Resolution and Lessons Learned**: The company took immediate action to secure compromised accounts and began notifying affected customers individually. The incident highlighted the critical importance of continuous employee education on security best practices and the implementation of robust monitoring and response mechanisms. The breach underscored the sophisticated nature of social engineering attacks and the need for organizations to remain vigilant and proactive in their cybersecurity efforts.
 
 **Technologies Used**:
 
@@ -64,8 +67,10 @@ export default (props) => <ArticleLayout post={blog} {...props} />
 4. Oktapus: This group conducts mass phishing campaigns targeting employees at companies using Okta, leveraging supply chain access to infiltrate organizations and exfiltrate data.
 
 ---
-
-###### LockBit 3.0 Ransomware &nbsp;&nbsp; <RWTag />
+<div class="flex items-center space-x-2 pb-6">
+  ###### LockBit 3.0 Ransomware
+  <div><RWTag /></div>
+</div>
 
 **Incident**: In mid-2024, a mid-sized U.S. financial services company experienced a ransomware attack, initiated through the FortiOS SSL VPN vulnerability <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21762" target="_blank" rel="noopener noreferrer">CVE-2024-21762</a>. This critical vulnerability allowed unauthenticated attackers to execute arbitrary commands, leading to unauthorized network access. Once inside, the attackers used Mimikatz to harvest administrative credentials, followed by Cobalt Strike to exfiltrate data from the company’s file servers. The culmination of the attack involved deploying LockBit 3.0 ransomware through the domain controller, encrypting critical data and demanding a ransom.
 
@@ -84,8 +89,7 @@ export default (props) => <ArticleLayout post={blog} {...props} />
   - Monitored administrative access patterns to pinpoint unusual activities and potential breaches in protocol.
 - Data Exfiltration Assessment:
   - Reviewed network traffic data to determine the scope and scale of data exfiltration carried out using Cobalt Strike.
-  - Employed data loss pre
-    vention tools to detect sensitive information that might have been transmitted outside the company’s network.
+  - Employed data loss prevention tools to detect sensitive information that might have been transmitted outside the company’s network.
 - Ransomware Deployment Analysis:
   - Identified and analyzed the scripts and payloads associated with LockBit 3.0 found on the domain controller.
   - Assessed the impact and reach of the ransomware within the network to guide the containment and eradication efforts.
@@ -115,7 +119,11 @@ The company opted not to pay the ransom, instead relying on recent, secure backu
 
 ---
 
-###### Business Email Compromise &nbsp;&nbsp; <BECTag /> <PhishingTag />
+<div class="flex items-center space-x-2 pb-6">
+  ###### Business Email Compromise
+  <div><BECTag /></div> 
+  <div><PhishingTag /></div>
+</div>
 
 **Incident**: In early 2024, a mid-sized U.S. manufacturing company fell victim to a Business Email Compromise (BEC) attack. The incident began when a high-ranking executive’s email account was compromised through a sophisticated phishing attack. The attackers used social engineering tactics to gain access to the executive’s credentials, allowing them to infiltrate the company’s email system.
 
@@ -158,11 +166,21 @@ The company managed to block all fraudulent transactions, minimizing financial l
 
 <br />
 
-**Other major players in the game**: Similar tactics have been observed in attacks by other notorious cybercriminal groups. The use of social engineering and phishing mirrors strategies employed by groups such as: 1. Anthropoid Spider/EmpireMonkey: Conducts phishing campaigns spoofing financial regulators in France, Norway, and Belize. 2. Royal Ransomware: Utilizes callback phishing attacks to initiate ransomware infections. 3. Scattered Spider: Employs credential phishing and social engineering attacks to capture OTPs, avoiding malware by using living-off-the-land binaries (LOLBins) to maintain persistent access. 4. Scatter Swine: Engages in various forms of phishing and social engineering attacks. 5. UNC3944: A threat actor cluster known for phone-based social engineering and SMS phishing to gain access to organizations.
+**Other major players in the game**: Similar tactics have been observed in attacks by other notorious cybercriminal groups. The use of social engineering and phishing mirrors strategies employed by groups such as: 
+
+1. Anthropoid Spider/EmpireMonkey: Conducts phishing campaigns spoofing financial regulators in France, Norway, and Belize. 
+2. Royal Ransomware: Utilizes callback phishing attacks to initiate ransomware infections. 
+3. Scattered Spider: Employs credential phishing and social engineering attacks to capture OTPs, avoiding malware by using living-off-the-land binaries (LOLBins) to maintain persistent access. 
+4. Scatter Swine: Engages in various forms of phishing and social engineering attacks. 
+5. UNC3944: A threat actor cluster known for phone-based social engineering and SMS phishing to gain access to organizations.
 
 ---
 
-###### Insider Threat &nbsp;&nbsp; <ITTag />
+<div class="flex items-center space-x-2 pb-6">
+  ###### Insider Threat
+  <div><ITTag /></div> 
+</div>
+
 
 **Incident**: Over a six-month period in 2023-2024, a Fortune 500 company suspected a whistleblowing employee was exfiltrating sensitive data. The company’s internal security team initiated an extensive investigation to identify the rogue insider and prevent further data breaches.
 

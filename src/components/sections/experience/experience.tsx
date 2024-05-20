@@ -28,7 +28,7 @@ export default function ExperienceSection() {
       <Section className="space-y-2" title="Speaking Engagements">
         <Event
           href="/documents/20240413_WiCyS_Phishing.pdf"
-          title="Phishing 2.0: The Rise of Artifical Intelligence"
+          title="Phishing 2.0: The Rise of Artificial Intelligence"
           description="Discusses the evolution of phishing attacks as threat actors weaponize artificial intelligence capabilities to broaden the reaches of their phishing campaigns."
           event="WiCyS 2024 - Nashville, TN"
           linkdescription="View Slides"

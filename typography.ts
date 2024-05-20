@@ -138,7 +138,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
           textAlign: 'center',
           lineHeight: theme('lineHeight.7'),
           letterSpacing: theme('letterSpacing.tight'),
-          margin: `${theme('spacing.6')} ${theme('spacing.0')}`,
+          margin: `${theme('spacing.0')} ${theme('spacing.0')}`,
           '@screen sm': {
             fontSize: theme('fontSize.2xl'),
             textAlign: 'left',
