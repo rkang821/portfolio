@@ -23,7 +23,7 @@ export default (props) => <ArticleLayout post={blog} {...props} />
 
 <SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
-<div class="flex items-center space-x-2 py-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
   ###### Supply Chain Attack
   <div><ThirdPartyTag /></div>
 </div>
@@ -67,7 +67,7 @@ export default (props) => <ArticleLayout post={blog} {...props} />
 4. Oktapus: This group conducts mass phishing campaigns targeting employees at companies using Okta, leveraging supply chain access to infiltrate organizations and exfiltrate data.
 
 ---
-<div class="flex items-center space-x-2 pb-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
   ###### LockBit 3.0 Ransomware
   <div><RWTag /></div>
 </div>
@@ -119,10 +119,12 @@ The company opted not to pay the ransom, instead relying on recent, secure backu
 
 ---
 
-<div class="flex items-center space-x-2 pb-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
   ###### Business Email Compromise
-  <div><BECTag /></div> 
-  <div><PhishingTag /></div>
+  <div class="sm:first:mr-2">
+    <BECTag />
+    <PhishingTag />
+  </div>
 </div>
 
 **Incident**: In early 2024, a mid-sized U.S. manufacturing company fell victim to a Business Email Compromise (BEC) attack. The incident began when a high-ranking executive’s email account was compromised through a sophisticated phishing attack. The attackers used social engineering tactics to gain access to the executive’s credentials, allowing them to infiltrate the company’s email system.
@@ -176,7 +178,7 @@ The company managed to block all fraudulent transactions, minimizing financial l
 
 ---
 
-<div class="flex items-center space-x-2 pb-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
   ###### Insider Threat
   <div><ITTag /></div> 
 </div>

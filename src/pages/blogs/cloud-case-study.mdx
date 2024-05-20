@@ -15,7 +15,7 @@ export const blog = {
 export default (props) => <ArticleLayout post={blog} {...props} />
 
 <SEO title="Cloud Case Studies" description="Cloud Investigations" />
-<div class="flex items-center space-x-2 py-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
     ###### Cloud Storage Misconfiguration and Compromise
     <div><AWSTag /></div>
 </div>
@@ -45,7 +45,7 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 **Outcome**: This incident served as a pivotal learning experience, reinforcing the importance of secure cloud storage configurations and proactive security practices. By rapidly addressing the issue and implementing strategic changes, we ensured the integrity and security of our cloud environments against future vulnerabilities.
 
 ---
-<div class="flex items-center space-x-2 pb-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
 ###### Unauthorized Cryptomining Operation
     <div><MicrosoftTag /></div>
 </div>
@@ -95,7 +95,7 @@ The incident was resolved with no evidence of malicious exploitation of the expo
 * **ResourceGroupName** and **SubscriptionId**: Identify the scope within the organization’s Azure infrastructure.
 * **Identity.Claims**: Contains claims about the user who performed the operation. (john.doe@company.com is identified as the user, with the operation being authenticated via a password).
 * **Properties.statusCode** and **Properties.statusMessage**: Provide additional details about the operation’s execution status.
-* **Records have been modified from its original form per NDA restrictions.**
+* **Records have been modified from their original form per NDA restrictions.**
 
 </blockquote>
 <br />
@@ -121,7 +121,7 @@ The quick response and comprehensive investigation allowed us to terminate the u
 
 ---
 
-<div class="flex items-center space-x-2 pb-6">
+<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
     ###### API Security Breach Leading to Kubernetes Compromise
     <div><GCPTag /></div>
 </div>
@@ -189,7 +189,7 @@ The quick response and comprehensive investigation allowed us to terminate the u
 * **jsonPayload.authorizationInfo**: Details whether the request was authorized; here, it shows that authorization was not granted, yet the request still succeeded.
 * **jsonPayload.responseStatus**: Provides the HTTP status code of the request, indicating success despite being unauthorized.
 * **jsonPayload.requestMetadata**: Contains the IP address of the caller and the user agent, crucial for identifying the unauthorized access source.
-* **Records have been modified from its original form per NDA restrictions.**
+* **Records have been modified from their original form per NDA restrictions.**
 
 </blockquote>
 <br />

@@ -135,13 +135,13 @@ export default function typographyStyles({ theme }: PluginUtils) {
           color: 'var(--tw-prose-headings)',
           fontWeight: theme('fontWeight.semibold'),
           fontSize: theme('fontSize.xl'),
-          textAlign: 'center',
+          textAlign: 'left',
           lineHeight: theme('lineHeight.7'),
           letterSpacing: theme('letterSpacing.tight'),
           margin: `${theme('spacing.0')} ${theme('spacing.0')}`,
           '@screen sm': {
             fontSize: theme('fontSize.2xl'),
-            textAlign: 'left',
+            textAlign: 'center',
           },
         },
 

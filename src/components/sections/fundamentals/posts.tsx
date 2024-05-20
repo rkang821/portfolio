@@ -1148,7 +1148,7 @@ export function TKPost() {
         monitoring to automated security for cloud architectures like serverless
         and containers.{' '}
       </p>
-      <h5>
+      <h5 className="space-x-2">
         <strong>Amazon Web Services </strong>
         <AWSTag />
       </h5>
@@ -1205,7 +1205,7 @@ export function TKPost() {
           threat detection and response.
         </li>
       </ul>
-      <h5>
+      <h5 className="space-x-2">
         <strong>Microsoft&apos;s Azure </strong> <MicrosoftTag />
       </h5>
       <ul>
@@ -1256,7 +1256,7 @@ export function TKPost() {
           verifying that alerts are false positives.
         </li>
       </ul>
-      <h5>
+      <h5 className="space-x-2">
         <strong>Google Cloud Platform </strong> <GCPTag />
       </h5>
       <ul>
