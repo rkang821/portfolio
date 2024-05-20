@@ -2,7 +2,7 @@ import SEO from '@/components/shared/SEO'
 import ArticleLayout from '@/components/shared/articlelayout'
 import { AWSTag, MicrosoftTag, GCPTag } from '@/components/shared/tags'
 
-export const blog = {
+export const cloudCaseStudyMetadata = {
   author: 'Rachel Kang',
   date: '2024-05-01',
   title: 'Cloud Case Studies',
@@ -12,7 +12,7 @@ export const blog = {
   tags: [AWSTag, MicrosoftTag, GCPTag],
 }
 
-export default (props) => <ArticleLayout post={blog} {...props} />
+export default (props) => <ArticleLayout post={cloudCaseStudyMetadata} {...props} />
 
 <SEO title="Cloud Case Studies" description="Cloud Investigations" />
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
