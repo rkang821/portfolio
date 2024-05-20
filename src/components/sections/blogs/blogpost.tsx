@@ -1,7 +1,7 @@
 import Card from '@/components/shared/card'
 import { type BlogPostProps } from '@/models/blog'
 import { formatDate } from '@/lib/config'
-import postMetadata from '@/pages/blogs/index'
+import { postMetadata } from '@/models/blog'
 
 export function BlogPost({ post }: { post: BlogPostProps }) {
   return (

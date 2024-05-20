@@ -28,3 +28,5 @@ export const DFIRPostMetadata = {
   slug: 'dfir-case-study',
   tags: [BECTag, PhishingTag, RWTag, ThirdPartyTag, ITTag],
 }
+
+export const postMetadata = [CloudPostMetadata, DFIRPostMetadata];
