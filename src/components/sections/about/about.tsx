@@ -5,6 +5,7 @@ import PhotoReel from './photos'
 export default function AboutSection() {
   return (
     <>
+    <PhotoReel />
       <Container className="pt-14 max-sm:pt-24">
         <div className="prose flex flex-col items-center gap-6 dark:prose-invert">
           <header>
@@ -93,7 +94,6 @@ export default function AboutSection() {
           </div>
         </div>
       </Container>
-      <PhotoReel />
     </>
   )
 }

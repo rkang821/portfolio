@@ -2,57 +2,14 @@ import Container from '@/components/shared/container'
 import ArticleLayout from '@/components/shared/articlelayout'
 import SEO from '@/components/shared/SEO'
 import { DFIRPostMetadata } from '@/models/blog'
-import { ThirdPartyTag, RWTag, ITTag, BECTag, PhishingTag } from '@/components/shared/tags'
+import { RWTag, ITTag, BECTag, PhishingTag } from '@/components/shared/tags'
 
 export default (props) => <ArticleLayout post={DFIRPostMetadata} {...props} />
 
 <SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
+
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
-  ###### Supply Chain Attack
-  <div><ThirdPartyTag /></div>
-</div>
-
-**Incident**: In 2022, a major telecommunications company experienced a significant security breach due to a sophisticated social engineering attack. The attackers used SMS phishing, also known as “<a href="https://www.fcc.gov/avoid-temptation-smishing-scams" target="_blank" rel="noopener noreferrer">smishing</a>,” to deceive employees into revealing their credentials. This attack resulted in unauthorized access to sensitive information across a limited number of the company’s customer accounts.
-
-**Detection and Initial Response**: Employees received text messages that appeared to be from the company’s IT department, claiming their passwords had expired or their schedules had changed, and prompting them to log in via malicious phishing link. This fraudulent site mimicked the company’s login page, capturing the credentials of unsuspecting victims who fell for the phish. Upon discovery, the security team promptly revoked access to the compromised employee accounts and engaged our team to assist with the investigation.
-
-**Investigation and Analysis**: The investigation revealed that the attackers had meticulously linked employees’ phone numbers to their names to send targeted phishing messages, possibly using data from previous breaches. The forensic analysis focused on identifying the scope of the breach across the company's customer accounts, as well as tracing the origins of the phishing messages. The company worked with major US carriers and the hosting providers of the malicious URLs to shut down the attackers’ operations.
-
-- **SMS Phishing Tactics**:
-  - Employees received convincing SMS messages containing URLs with keywords like “SSO,” tricking them into believing the messages were legitimate.
-  - The malicious URLs directed employees to fake login pages mimicking the company's original login page, further convincing employees to enter their credentials.
-- **Collaboration and Mitigation**:
-  - The company collaborated with U.S. carriers and hosting providers to cease the distribution of malicious messages and shut down the fake sites.
-  - Despite these efforts, attackers continued to rotate through different carriers and hosting providers to persist in their activities.
-
-**Mitigation Strategies**: To mitigate the attack and prevent future incidents, the company implemented several measures:
-
-- Strengthened employee training and awareness on recognizing social engineering attacks and phishing attempts.
-- Enhanced security protocols and monitoring to detect and respond to similar threats more quickly.
-- Instituted mandatory security advisories and additional training sessions to reinforce the importance of vigilance against social engineering attacks.
-
-**Resolution and Lessons Learned**: The company took immediate action to secure compromised accounts and began notifying affected customers individually. The incident highlighted the critical importance of continuous employee education on security best practices and the implementation of robust monitoring and response mechanisms. The breach underscored the sophisticated nature of social engineering attacks and the need for organizations to remain vigilant and proactive in their cybersecurity efforts.
-
-**Technologies Used**:
-
-- Okta Multi-Factor Authentication (MFA) logs
-- CrowdStrike Falcon Insight XDR SIEM
-
-**Outcome**: Although the breach affected a limited number of customer accounts, the company’s prompt response and collaboration with carriers and hosting providers helped mitigate the impact. The incident led to a renewed focus on employee training and the enhancement of security protocols to prevent future social engineering attacks.
-
-<br />
-
-**Other major players in the game**: Several cyber threat groups leverage supply chain attacks as a primary method of compromise, infiltrating software and service providers to gain access to their customers and downstream targets. These attacks exploit the trust and access granted to third-party vendors, making them highly effective and difficult to detect.
-
-1. **Oktapus**: This group conducts mass phishing campaigns targeting employees at companies using Okta, leveraging supply chain access to infiltrate organizations and exfiltrate data.
-2. **APT29 (Cozy Bear)**: This group is linked to Russian intelligence and is known for its sophisticated supply chain attacks, including the infamous <a href="https://www.solarwinds.com/sa-overview/securityadvisory/faq"  target="_blank" rel="noopener noreferrer">SolarWinds attack</a>. They infiltrate software supply chains to gain access to numerous downstream targets.
-3. **APT41 (Winnti)**: A Chinese cyber espionage group, APT41 conducts supply chain attacks to deliver malware to specific targets. They have been linked to multiple high-profile incidents affecting various industries globally.
-4. **Lazarus Group**: Associated with North Korea, Lazarus uses supply chain attacks as part of their broader cyber warfare strategy. They target software updates and distribution mechanisms to infect end users. 
-
----
-
-<div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
   ###### LockBit 3.0 Ransomware
   <div><RWTag /></div>
 </div>

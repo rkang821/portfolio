@@ -26,7 +26,7 @@ export const DFIRPostMetadata = {
   description:
     'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
   slug: 'dfir-case-study',
-  tags: [BECTag, PhishingTag, RWTag, ThirdPartyTag, ITTag],
+  tags: [BECTag, PhishingTag, RWTag, ITTag],
 }
 
 export const postMetadata = [CloudPostMetadata, DFIRPostMetadata];

@@ -11,7 +11,7 @@ export default function PhotoReel() {
   return (
     <div className="py-10 max-sm:hidden">
       <div className="flex justify-center gap-2 overflow-hidden sm:gap-5">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image2, image3, image5, image4].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
