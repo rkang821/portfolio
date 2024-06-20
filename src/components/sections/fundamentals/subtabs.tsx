@@ -58,7 +58,7 @@ export default function SubTabSection() {
         {tabs.map((tab) => (
           <div
             key={tab.id}
-            className={`rounded-lg bg-gray-50 p-4 dark:bg-gray-800 ${
+            className={`rounded-lg bg-zinc-100 p-4 dark:bg-gray-800 ${
               activeTab === tab.id ? '' : 'hidden'
             }`}
             id={tab.id}

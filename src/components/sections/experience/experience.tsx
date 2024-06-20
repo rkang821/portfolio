@@ -1,6 +1,6 @@
 import Container from '@/components/shared/container'
 import Section from '@/components/shared/section'
-import { MicrosoftTag, PhishingTag, BECTag, AITag } from '@/components/shared/tags'
+import { MicrosoftTag, PhishingTag, BECTag, AITag, GCPTag, AWSTag } from '@/components/shared/tags'
 import Event from './event'
 import CertSection from './certification'
 
@@ -34,6 +34,22 @@ export default function ExperienceSection() {
           linkdescription="View Slides"
           tags={[MicrosoftTag, PhishingTag, AITag]}
         />
+        <Event
+          href="/documents/20240620_TheExchangeQ2_CloudywithaChanceofDFIR.pdf"
+          title="Cloudy with a Chance of DFIR"
+          description="Explores how the cloud forensics has impacted traditional, on premise digital forensics and incident response (DFIR) investigations."
+          event="The Exchange Q2 - Remote"
+          linkdescription="View Slides"
+          tags={[AWSTag, GCPTag, MicrosoftTag]}
+        />
+        {/* <Event
+          href=""
+          title="The New Generation of Phishing: Beyond The Mailbox"
+          description="Presentation for my publication 'The Evolution of Phishing Campaigns'"
+          event="BSides 2024 - Pittsburgh, TN"
+          linkdescription="TBD"
+          tags={[MicrosoftTag, PhishingTag, BECTag]}
+        /> */}
       </Section>
     </>
   )

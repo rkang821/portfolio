@@ -35,7 +35,7 @@ const config: Config = {
         },
       },
       colors: {
-        lightBg: '#EEEEEE',
+        lightBg: '#FBFBFB',
         darkBg: '#1C1B21',
         bannerGradientStart: '#83A3CE',
         bannerGradientEnd: '#292B66',
