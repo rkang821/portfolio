@@ -114,7 +114,7 @@ export default function CertSection() {
         ))}
       </ol>
       <Button
-        href="/documents/RK_Resume2024.pdf"
+        href="/documents/RachelK_Resume.pdf"
         target="_blank"
         rel="noreferrer noopener"
         variant="secondary"
