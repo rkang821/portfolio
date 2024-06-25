@@ -7,43 +7,6 @@
 <p align="center"> Welcome to my <a href="https://www.rachelk.xyz">portfolio</a>! </p>
 <p>This site is a side project I started in April 2024 to showcase my experiences working in the Digital Forensics and Incident Response (DFIR) industry, learn more about front end web development, and to build something from scratch that I can call my own.</p>
 
-## 🛠️ Set Up
-
-1. Clone the repo:
-
-```sh
- git clone https://github.com/rkang821/portfolio.git
-```
-
-2. Install dependencies:
-
-```sh
- npm install
-```
-
-3. Start the development server:
-
-```sh
- npm run dev
-```
-
-## 🚀 Deployment
-
-This project can be easily deployed to any platform that supports Node.js. Here are some steps to deploy on Vercel, the platform recommended for Next.js applications:
-
-1. Sign up for a Vercel account at <a href="https://vercel.com/" target="_blank" rel="noreferrer noopener"> vercel.com</a>.
-2. Install Vercel CLI:
-
-```sh
- npm install -g vercel
-```
-
-3. Deploy the project:
-
-```sh
-vercel
-```
-
 ## 💻 Technologies Used
 
 The website <a href="https://rachelkang.xyz/" target="_blank">rachelkang.xyz</a> was built using and/or including the following technologies:<br/>
