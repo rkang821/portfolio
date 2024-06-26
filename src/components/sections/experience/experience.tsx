@@ -11,7 +11,7 @@ export default function ExperienceSection() {
         <Event
           href="https://www.aon.com/cyber-solutions/aon_cyber_labs/the-evolution-of-phishing-campaigns/"
           title="The Evolution of Phishing Campaigns"
-          description="Explores emering trends observed in 2023 phishing campaigns, including advanced social engineering tactics across email platforms, a rise in 'phishing-as-a-service' (PhaaS), and shifts from attacks on email platforms to mobile phones."
+          description="Explores emerging trends observed in 2023 phishing campaigns, including advanced social engineering tactics across email platforms, a rise in 'phishing-as-a-service' (PhaaS), and shifts from attacks on email platforms to mobile phones."
           event="Aon Cyber Labs"
           linkdescription="Read Article"
           tags={[MicrosoftTag, PhishingTag, BECTag]}
