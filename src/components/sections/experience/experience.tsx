@@ -19,7 +19,7 @@ export default function ExperienceSection() {
         <Event
           href="https://www.aon.com/cyber-solutions/aon_cyber_labs/microsoft-365-identifying-mailbox-access/"
           title="Microsoft 365: Identifying Mailbox Access"
-          description="Discusses various metholodies to accurately quantify mailbox data accessed by malicious actors in the event of a business email compromise. "
+          description="Discusses various methodologies to accurately quantify mailbox data accessed by malicious actors in the event of a business email compromise. "
           event="Aon Cyber Labs"
           linkdescription="Read Article"
           tags={[MicrosoftTag, BECTag]}

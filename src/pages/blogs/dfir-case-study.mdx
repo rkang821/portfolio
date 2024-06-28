@@ -8,13 +8,12 @@ export default (props) => <ArticleLayout post={DFIRPostMetadata} {...props} />
 
 <SEO title="DFIR Case Studies" description="DFIR Investigations" />
 
-
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
   ###### LockBit 3.0 Ransomware
   <div><RWTag /></div>
 </div>
 
-**Incident**: In mid-2024, a mid-sized U.S. financial services company experienced a ransomware attack, initiated through the FortiOS SSL VPN vulnerability <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21762" target="_blank" rel="noopener noreferrer">CVE-2024-21762</a>. This critical vulnerability allowed unauthenticated attackers to execute arbitrary commands, leading to unauthorized network access. Once inside, the attackers used <a href="https://redcanary.com/threat-detection-report/threats/mimikatz/" target="_blank" rel="noopener noreferrer">Mimikatz</a> to harvest administrative credentials, followed by using <a href="https://redcanary.com/threat-detection-report/threats/cobalt-strike/" target="_blank" rel="noopener noreferrer">Cobalt Strike</a> to exfiltrate data from the company’s file servers. The culmination of the attack involved deploying LockBit 3.0 ransomware through the domain controller, encrypting critical data and demanding a ransom.
+**Incident**: In mid-2024, a mid-sized financial services company experienced a ransomware attack, initiated through the FortiOS SSL VPN vulnerability <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21762" target="_blank" rel="noopener noreferrer">CVE-2024-21762</a>. This critical vulnerability allowed unauthenticated attackers to execute arbitrary commands, leading to unauthorized network access. Once inside, the attackers used <a href="https://redcanary.com/threat-detection-report/threats/mimikatz/" target="_blank" rel="noopener noreferrer">Mimikatz</a> to harvest administrative credentials, followed by using <a href="https://redcanary.com/threat-detection-report/threats/cobalt-strike/" target="_blank" rel="noopener noreferrer">Cobalt Strike</a> to exfiltrate data from the company’s file servers. The culmination of the attack involved deploying LockBit 3.0 ransomware through the domain controller, encrypting critical data and demanding a ransom.
 
 **Detection and Initial Response**: The company’s SIEM detected unusual VPN activity indicative of CVE-2024-21762 exploitation, alongside irregular lateral movements within the network. The company’s response included isolating the compromised VPN gateway and affected network segments and mobilizing the incident response team to assess the breach and mitigate its spread.
 
@@ -115,7 +114,7 @@ The company managed to block all fraudulent transactions, minimizing financial l
 4. **Scatter Swine**: Engages in various forms of phishing and social engineering attacks. 
 5. **UNC3944**: A threat actor cluster known for phone-based social engineering and SMS phishing to gain access to organizations.
 
----
+{/* ---
 
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
   ###### Insider Threat
@@ -154,4 +153,4 @@ The company revoked access and pursued legal measures against the identified emp
 - WireShark
 - Barracuda WAF (Web Application Firewall)
 
-**Outcome**: The company successfully identified and mitigated the insider threat, preventing further data exfiltration. The incident led to significant improvements in internal security protocols and employee training, strengthening the organization’s defenses against insider threats.
+**Outcome**: The company successfully identified and mitigated the insider threat, preventing further data exfiltration. The incident led to significant improvements in internal security protocols and employee training, strengthening the organization’s defenses against insider threats. */}

@@ -1,4 +1,4 @@
-import { AWSTag, MicrosoftTag, GCPTag, ThirdPartyTag, RWTag, BECTag, PhishingTag, ITTag } from '@/components/shared/tags'
+import { AWSTag, MicrosoftTag, GCPTag, RWTag, BECTag, PhishingTag, ITTag } from '@/components/shared/tags'
 
 export interface BlogPostProps {
   title: string
@@ -16,7 +16,7 @@ export const CloudPostMetadata = {
   description:
     'Case studies for real-world investigations for cloud platform compromises across AWS, Azure, and GCP. Includes unauthorized accesses to cloud storage buckets and kubernetes clusters, as well as cryptomining incidents.',
   slug: 'cloud-case-study',
-  tags: [AWSTag, MicrosoftTag, GCPTag],
+  tags: [AWSTag],
 }
 
 export const DFIRPostMetadata = {
@@ -26,7 +26,7 @@ export const DFIRPostMetadata = {
   description:
     'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
   slug: 'dfir-case-study',
-  tags: [BECTag, PhishingTag, RWTag, ITTag],
+  tags: [RWTag, BECTag, PhishingTag],
 }
 
 export const postMetadata = [CloudPostMetadata, DFIRPostMetadata];
