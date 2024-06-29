@@ -14,9 +14,9 @@ export const CloudPostMetadata = {
   date: '2024-05-01',
   title: 'Cloud Case Studies',
   description:
-    'Case studies for real-world investigations for cloud platform compromises across AWS, Azure, and GCP. Includes unauthorized accesses to cloud storage buckets and kubernetes clusters, as well as cryptomining incidents.',
+    'Fictional case studies of cloud platform compromises across AWS, Azure, and GCP. Includes unauthorized accesses to cloud storage buckets and kubernetes clusters, as well as cryptomining incidents.',
   slug: 'cloud-case-study',
-  tags: [AWSTag],
+  tags: [AWSTag, MicrosoftTag, GCPTag],
 }
 
 export const DFIRPostMetadata = {
@@ -24,9 +24,9 @@ export const DFIRPostMetadata = {
   date: '2024-05-15',
   title: 'DFIR Case Studies',
   description:
-    'Case studies for real-world incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
+    'Fictional case studies for incident response investigations, including third-party supply-chain attacks, ransomware incidents, business email compromises, and insider threat investigations.',
   slug: 'dfir-case-study',
-  tags: [RWTag, BECTag, PhishingTag],
+  tags: [RWTag, BECTag, PhishingTag, ITTag],
 }
 
 export const postMetadata = [CloudPostMetadata, DFIRPostMetadata];

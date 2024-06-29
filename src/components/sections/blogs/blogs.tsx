@@ -14,8 +14,8 @@ export default function BlogSection() {
             <h3>
               {' '}
               Dive into my ongoing collection of reflections and narratives,
-              where I share real-world experiences, lessons learned from various
-              cases, and my evolving thoughts on the dynamic field of incident
+              where I share lessons learned from various
+              cases and my evolving thoughts on the dynamic field of incident
               response. This section serves as a living diary of my journey and
               discoveries in the realm of DFIR.
             </h3>

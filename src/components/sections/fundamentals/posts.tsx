@@ -237,7 +237,7 @@ export function ITPost() {
         While I have experience tackling a broad spectrum of cases, recently
         I&apos;ve focused on leading intricate IR cases, particularly those
         involving a cloud platform compromise. Here&apos;s an overview of the
-        types of incidents I&apos;ve responded to. To read more about real-world
+        types of incidents I&apos;ve responded to. To read more about similar
         case studies, see my <a href="/blogs/dfir-case-study"> blog post</a>{' '}
         here!
       </p>
@@ -341,7 +341,7 @@ export function ITPost() {
         platforms such as Microsoft&apos;s Azure, Amazon Web Services (AWS), or
         Google Cloud Platform (GCP). See my{' '}
         <a href="/blogs/cloud-case-study">blog post</a> here for examples of
-        real-world cloud compromises across major cloud provider platforms.
+        cloud compromises across major cloud provider platforms.
       </p>
       <h5>What&apos;s new in Cloud IR? </h5>
       <p>

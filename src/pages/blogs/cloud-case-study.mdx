@@ -6,6 +6,10 @@ import { AWSTag, MicrosoftTag, GCPTag } from '@/components/shared/tags'
 export default (props) => <ArticleLayout post={CloudPostMetadata} {...props} />
 
 <SEO title="Cloud Case Studies" description="Cloud Investigations" />
+
+<blockquote>The following case studies are purely hypothetical and do not reflect any narratives from actual client engagements.</blockquote>
+
+
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 py-6">
     ###### AWS S3 Bucket Cloud Storage Compromise
     <div><AWSTag /></div>
@@ -33,18 +37,18 @@ Though the potential for data leakage was high, the incident was resolved with n
 - AWS S3 Access Logs
 - Custom monitoring tools for real-time security alerts
 
-{/* 
+
 ---
 <div class="flex max-sm:flex-col sm:items-center max-sm:space-y-2 sm:space-x-2 pb-6">
 ###### Unauthorized Cryptomining Operation
     <div><MicrosoftTag /></div>
 </div>
 
-**Incident**: In this high-impact security incident, a threat actor compromised a company's Azure environment and illicitly spun up approximately 1200 Virtual Machines (VMs) for cryptomining activities. This unauthorized activity led to substantial resource consumption and increased operational costs.
+**Incident**: In this high-impact security incident, a threat actor compromised a company's Azure environment and illicitly spun up thousands of Virtual Machines (VMs) for cryptomining activities. This unauthorized activity led to substantial resource consumption and increased operational costs.
 
 **Detection and Initial Response**: The anomalous activity was initially detected by Azure Monitor, which flagged an unusual spike in resource usage and network traffic inconsistent with expected activities. Immediate steps were taken to isolate the affected VMs and halt all suspicious processes. This rapid containment helped prevent further exploitation of resources.
 
-**Investigation and Analysis**: A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we determined the entry point to be a set of compromised user credentials allowing for the attacker to access Azure's management portal. See below for a sample Azure Log Analytics record reflecting this activity:
+**Investigation and Analysis**: A detailed investigation was launched using Azure Security Center and Azure Log Analytics to trace the origin and scope of the breach. By examining system logs and network traffic data, we determined the entry point to be a set of compromised user credentials allowing for the attacker to access Azure's management portal. See below for a dummy sample Azure Log Analytics record reflecting similar activity:
 
 <br />
 ```python
@@ -77,7 +81,7 @@ Though the potential for data leakage was high, the incident was resolved with n
 "Region": "East US"
 ```
 <br />
-<blockquote> 
+<blockquote>
 **Explanation of Key Fields**
 * **TimeGenerated**: The UTC timestamp when the VM creation operation was logged.
 * **OperationName**: Indicates the operation type (creation or updating of a virtual machine).
@@ -85,7 +89,6 @@ Though the potential for data leakage was high, the incident was resolved with n
 * **ResourceGroupName** and **SubscriptionId**: Identify the scope within the organization’s Azure infrastructure.
 * **Identity.Claims**: Contains claims about the user who performed the operation. (john.doe@company.com is identified as the user, with the operation being authenticated via a password).
 * **Properties.statusCode** and **Properties.statusMessage**: Provide additional details about the operation’s execution status.
-* **Records have been modified from their original form per compliance restrictions.**
 
 </blockquote>
 <br />
@@ -105,7 +108,8 @@ The quick response and comprehensive investigation allowed us to terminate the u
 - Azure Security Center
 - Azure Monitor
 - Azure Log Analytics
-- Custom scripts for automated response
+- Custom scripts for automated responses
+
 
 ---
 
@@ -195,4 +199,4 @@ The incident was resolved with the containment and eradication of all threats fr
 - GCP Log Explorer
 - GCP Security Command Center
 - GCP API Gateway
-- Kubernetes Engine */}
+- Kubernetes Engine
