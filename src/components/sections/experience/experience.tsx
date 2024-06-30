@@ -42,14 +42,15 @@ export default function ExperienceSection() {
           linkdescription="View Slides"
           tags={[AWSTag, GCPTag, MicrosoftTag]}
         />
-        {/* <Event
+
+        <Event
           href=""
           title="The New Generation of Phishing: Beyond The Mailbox"
           description="Presentation for my publication 'The Evolution of Phishing Campaigns'"
           event="BSides 2024 - Pittsburgh, TN"
           linkdescription="TBD"
           tags={[MicrosoftTag, PhishingTag, BECTag]}
-        /> */}
+        />
       </Section>
     </>
   )
