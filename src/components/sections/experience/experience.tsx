@@ -27,7 +27,7 @@ export default function ExperienceSection() {
       </Section>
       <Section className="space-y-2" title="Speaking Engagements">
         <Event
-          href="/documents/20240413_WiCyS_Phishing.pdf"
+          href="/documents/20240413_WiCyS_AIPhishing.pdf"
           title="Phishing 2.0: The Rise of Artificial Intelligence"
           description="Discusses the evolution of phishing attacks as threat actors weaponize artificial intelligence capabilities to broaden the reaches of their phishing campaigns."
           event="WiCyS 2024 - Nashville, TN"
@@ -44,12 +44,12 @@ export default function ExperienceSection() {
         />
 
         <Event
-          href=""
+          href="/documents/20240712_BSidesPGH_TheNewGenerationOfPhishing.pdf"
           title="The New Generation of Phishing: Beyond The Mailbox"
           description="Presentation for my publication 'The Evolution of Phishing Campaigns'"
-          event="BSides 2024 - Pittsburgh, TN"
-          linkdescription="TBD"
-          tags={[MicrosoftTag, PhishingTag, BECTag]}
+          event="BSidesPGH 2024 - Pittsburgh, PA"
+          linkdescription="View Slides"
+          tags={[PhishingTag, MicrosoftTag, BECTag]}
         />
       </Section>
     </>
