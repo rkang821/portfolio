@@ -21,10 +21,10 @@ export default function Page() {
       <div id="experience">
         <ExperienceSection />
       </div>
-      {/*  --- Blog Section -- */}
+       {/* --- Blog Section --
       <div id="blogs">
         <BlogSection />
-      </div>
+      </div> */}
       {/*  --- Fundamentals Section -- */}
       <div id="fundamentals">
         <FundamentalsSection />
