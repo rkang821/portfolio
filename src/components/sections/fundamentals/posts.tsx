@@ -16,14 +16,7 @@ export function DFIRPost() {
         {'DF vs IR'}
       </h4>
       <p>
-        Digital Forensics and Incident Response (DFIR) is a specialized branch
-        of cybersecurity that combines the investigative and analytical aspects
-        of digital forensics with the reactive measures of incident response. It
-        aims to provide a comprehensive approach to incident response, enabling
-        organizations to effectively detect, investigate, and respond to cyber
-        threats and incidents. Both DF and IR play crucial roles in
-        cybersecurity, complementing each other to ensure effective incident
-        management and response.
+      Digital Forensics and Incident Response (DFIR) combines two key cybersecurity disciplines to create a comprehensive approach for handling cyber threats. This field integrates the investigative nature of digital forensics with the rapid response capabilities of incident management.
       </p>
       <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1 max-sm:gap-0">
         <div>
@@ -32,19 +25,16 @@ export function DFIRPost() {
           </h5>
           <ul>
             <li>
-              Digital forensics involves the collection, preservation, analysis,
-              and presentation of digital evidence to investigate cybercrimes or
-              security incidents.{' '}
+            Focuses on collecting, preserving, and analyzing digital evidence{' '}
             </li>
             <li>
-              It focuses on uncovering and understanding past events by
-              examining digital artifacts such as files, logs, metadata, and
-              network traffic.
+            Examines files, logs, metadata, and network traffic to reconstruct past events
             </li>
             <li>
-              Digital forensics techniques are used to identify evidence of
-              malicious activity, track the actions of threat actors, and
-              support legal proceedings or internal investigations.
+            Supports investigations into cybercrimes and security incidents
+            </li>
+            <li>
+            Provides crucial evidence for legal proceedings or internal inquiries
             </li>
           </ul>
         </div>
@@ -54,18 +44,13 @@ export function DFIRPost() {
           </h5>
           <ul>
             <li>
-              Incident response is the process of detecting, analyzing, and
-              responding to cybersecurity incidents in real-time to minimize
-              their impact and restore normal operations.{' '}
+             Deals with real-time detection, analysis, and mitigation of cybersecurity incidents{' '}
             </li>
             <li>
-              It involves the coordinated effort of identifying security
-              breaches, containing the incident, eradicating threats, and
-              recovering affected systems or data.
+              Involves a coordinated effort to identify breaches, contain threats, and restore normal operations
             </li>
             <li>
-              Incident response teams follow predefined procedures and use tools
-              and technologies to effectively manage security incidents,
+              Follow predefined procedures and runbooks to effectively manage security incidents,
               mitigate risks, and prevent future incidents.
             </li>
           </ul>
