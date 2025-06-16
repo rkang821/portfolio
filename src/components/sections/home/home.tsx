@@ -77,7 +77,7 @@ export default function HomePage() {
         {/*  --- Home Page Intro -- */}
         <div className="prose space-y-4 text-base dark:prose-invert max-sm:text-center max-sm:text-lg">
           <p>
-            Based out of Chicago, IL, I lead teams in response to cybersecurity
+            Based out of San Francisco, CA, I lead teams in response to cybersecurity
             incidents, ranging from{' '}
             <span className="font-semibold"> minor anomalies </span> to{' '}
             <span className="font-semibold">significant data breaches</span> and{' '}

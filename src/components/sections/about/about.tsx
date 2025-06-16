@@ -14,10 +14,9 @@ export default function AboutSection() {
             </h2>
             <h3>
               {' '}
-              I&apos;m a Digital Forensics + Incident Response Manager at Stroz
-              Friedberg, an Aon company. Here&apos;s a bit about my path to how
-              I got here today, as well as my interests both inside and outside
-              of cybersecurity.
+              I&apos;m a Security Professional. 
+              Here&apos;s a bit about my path to how I got here today, as well as my interests 
+              both inside and outside of cybersecurity.
             </h3>
           </header>
         </div>

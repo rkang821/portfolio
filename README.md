@@ -5,7 +5,9 @@
 </div>
 <br />
 <p align="center"> Welcome to my <a href="https://www.rachelk.xyz">portfolio</a>! </p>
-<p>This site is a side project I started in April 2024 to showcase my experiences working in the Digital Forensics and Incident Response (DFIR) industry, learn more about front end web development, and to build something from scratch that I can call my own.</p>
+<p>This site is a side project I started in April 2024 to showcase my experiences working in the Digital Forensics and Incident Response (DFIR) industry, learn more about front end web development, and to build something from scratch that I can call my own.
+
+Last Updated in June 2025.</p>
 
 ## 💻 Technologies Used
 
