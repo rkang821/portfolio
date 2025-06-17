@@ -6,7 +6,7 @@ export function HomeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       viewBox="0 0 24 24"
       fill="none"
       className="inline h-6 w-6 opacity-80"
-      stroke-width="1.3"
+      strokeWidth="1.3"
       stroke="currentColor"
       aria-hidden="true"
       {...props}
@@ -26,7 +26,7 @@ export function AboutIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       viewBox="0 0 24 24"
       fill="none"
       className="inline h-6 w-6 opacity-80"
-      stroke-width="1.3"
+      strokeWidth="1.3"
       stroke="currentColor"
       aria-hidden="true"
       {...props}
@@ -46,7 +46,7 @@ export function ExperienceIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       viewBox="0 0 24 24"
       fill="none"
       className="inline h-6 w-6 opacity-80"
-      stroke-width="1.3"
+      strokeWidth="1.3"
       stroke="currentColor"
       aria-hidden="true"
       {...props}
@@ -66,7 +66,7 @@ export function FundamentalsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       viewBox="0 0 24 24"
       fill="none"
       className="inline h-6 w-6 opacity-80"
-      stroke-width="1.3"
+      strokeWidth="1.3"
       stroke="currentColor"
       aria-hidden="true"
       {...props}
@@ -86,7 +86,7 @@ export function BlogIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       viewBox="0 0 24 24"
       fill="none"
       className="inline h-6 w-6 opacity-80"
-      stroke-width="1.3"
+      strokeWidth="1.3"
       stroke="currentColor"
       aria-hidden="true"
       {...props}
@@ -347,7 +347,7 @@ export function BuildingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     <svg
       viewBox="0 0 24 24"
       stroke="currentColor"
-      fill="inhereit"
+      fill="inherit"
       aria-hidden="true"
       {...props}
     >
