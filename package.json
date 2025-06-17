@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -34,9 +35,12 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "jest": "^30.0.0",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.11"
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "ts-jest": "^29.4.0"
   }
 }
