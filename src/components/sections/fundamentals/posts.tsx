@@ -1413,7 +1413,7 @@ export function SCPost() {
             </li>
           </ul>
         </div>
-        {/* Tools Leveraged Section */}
+        {/* Responsibilities Section */}
         <div className="flex flex-col">
           <h5>{'Tools Leveraged'}</h5>
           <ul>
