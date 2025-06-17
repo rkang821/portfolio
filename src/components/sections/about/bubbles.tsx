@@ -12,11 +12,11 @@ import {
 } from '@/models/about'
 
 export const statsbubblesData: StatsBubbleProps[] = [
-  { Icon: MapPin, text: 'Chicago, IL' },
-  { Icon: UserIcon, text: '26' },
-  { Icon: AcademicCapIcon, text: '6+ Certifications' },
-  { Icon: BriefcaseIcon, text: '5+ Yrs in Industry' },
-  { Icon: BuildingIcon, text: 'Hybrid + Remote' },
+  { Icon: MapPin, text: 'San Francisco, IL' },
+  { Icon: UserIcon, text: '28' },
+  { Icon: AcademicCapIcon, text: '7+ Certifications' },
+  { Icon: BriefcaseIcon, text: '6+ YOE' },
+  { Icon: BuildingIcon, text: 'In-Person + Hybrid' },
 ]
 
 export const ssbubblesData: BubbleProps[] = [
