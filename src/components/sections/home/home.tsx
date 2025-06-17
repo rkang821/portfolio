@@ -21,14 +21,14 @@ export default function HomePage() {
           I&apos;m Rachel!
           <h1 className="space-y-5 text-3xl tracking-tight text-zinc-500 dark:text-zinc-400 sm:text-4xl">
             {' '}
-            Welcome to my portfolio, with all things related to...
+            Welcome to my brain dump, with all things related to...
           </h1>
           <div>
             <ReactTyped
               className="text-blue-500 dark:text-blue-300"
               strings={[
-                'Blue Teaming',
-                'Digital Forensics',
+                'Insider Risk',
+                'Detection + Response',
                 'Incident Response',
               ]}
               typeSpeed={50}
@@ -77,19 +77,16 @@ export default function HomePage() {
         {/*  --- Home Page Intro -- */}
         <div className="prose space-y-4 text-base dark:prose-invert max-sm:text-center max-sm:text-lg">
           <p>
-            Based out of San Francisco, CA, I lead teams in response to cybersecurity
-            incidents, ranging from{' '}
-            <span className="font-semibold"> minor anomalies </span> to{' '}
-            <span className="font-semibold">significant data breaches</span> and{' '}
-            <span className="font-semibold">privacy incidents</span>.
+            Based out of San Francisco, CA, my passions currently lie in developing and refining security pipelines
+            with a focus on {' '}
+            <span className="font-semibold">developing secure and efficient </span> detection pipelines and  {' '}
+            <span className="font-semibold">automating investigative workflows</span>.
           </p>
           <p>
-            With a keen interest in cloud forensics, particularly within{' '}
-            <span className="font-semibold">Microsoft&apos;s Azure </span>
-            ecosystem, I specialize in managing complex incidents and navigating
-            high-stake environments within cloud platforms. I&apos;m fascinated
-            by the intricacies and complexities emerging within cloud forensics
-            and the evolving challenges posed by such emerging threats.
+            I build tooling that elevates signal, suppresses noise, and makes detection engineering scalable. 
+            If you’re shipping AI products and want them to be&nbsp;
+            <span className="font-semibold">robust, observable, and ethically sound</span>, 
+            let’s talk.
           </p>
         </div>
       </div>
