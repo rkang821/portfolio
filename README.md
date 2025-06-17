@@ -21,7 +21,7 @@ The website <a href="https://rachelkang.xyz/" target="_blank">rachelkang.xyz</a>
     <li> Styling with <a href="https://mdxjs.com/" target="_blank" rel="noreferrer noopener">MDX Components</a> - Markdown for the component era, allowing you to write JSX in your Markdown documents</li>
     <li> Icons by <a href="https://heroicons.com/" target="_blank" rel="noreferrer noopener">Heroicons</a> - SVG icons designed for smooth integration with Tailwind CSS</li>
     <li> Built on <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer noopener">Visual Studio Code</a> - Versatile code editor from Microsoft with support for JavaScript, TypeScript, and a wide array of other languages and tools</li>
-    <li> Deployed with <a href="https://vercel.com/" target="_blank" rel="noreferrer noopener">Vercel</a> - Cloud platform for deploying, scaling, and monitoring websites and applicationsm, optimized for Next.js frameworks.</li>
+    <li> Deployed with <a href="https://vercel.com/" target="_blank" rel="noreferrer noopener">Vercel</a> - Cloud platform for deploying, scaling, and monitoring websites and applications, optimized for Next.js frameworks.</li>
 </ul>
 
 ## 🎨 Color Reference
