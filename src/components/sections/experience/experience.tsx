@@ -9,7 +9,7 @@ export default function ExperienceSection() {
     <>
       <Section className="space-y-2" title="Publications">
         <Event
-          href="https://www.aon.com/cyber-solutions/aon_cyber_labs/the-evolution-of-phishing-campaigns/"
+          href="https://www.aon.com/en/insights/cyber-labs/the-evolution-of-phishing-campaigns"
           title="The Evolution of Phishing Campaigns"
           description="Explores emering trends observed in 2023 phishing campaigns, including advanced social engineering tactics across email platforms, a rise in 'phishing-as-a-service' (PhaaS), and shifts from attacks on email platforms to mobile phones."
           event="Aon Cyber Labs"
@@ -17,7 +17,7 @@ export default function ExperienceSection() {
           tags={[MicrosoftTag, PhishingTag, BECTag]}
         />
         <Event
-          href="https://www.aon.com/cyber-solutions/aon_cyber_labs/microsoft-365-identifying-mailbox-access/"
+          href="https://www.aon.com/en/insights/cyber-labs/microsoft-365-identifying-mailbox-access"
           title="Microsoft 365: Identifying Mailbox Access"
           description="Discusses various metholodies to accurately quantify mailbox data accessed by malicious actors in the event of a business email compromise. "
           event="Aon Cyber Labs"
