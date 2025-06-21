@@ -72,8 +72,8 @@ export default function HomePage() {
           <span className="font-semibold">scalable detections</span>.
           </p>
           <p>
-            Recently, I've been deeply involved with integrating <span className="font-semibold">LLM-driven workflows</span> into security 
-            platforms, building tailored detections for complex & highly integrated environments. I'm passionate about the potential of automation 
+            Recently, I&#39;ve been deeply involved with integrating <span className="font-semibold">LLM-driven workflows</span> into security 
+            platforms, building tailored detections for complex & highly integrated environments. I&#39;m passionate about the potential of automation 
             in security, but even more passionate about ensuring these workflows remain <span className="font-semibold">transparaent</span>, 
             <span className="font-semibold"> scalable</span>, and  <span className="font-semibold">observable</span>.
           </p>
