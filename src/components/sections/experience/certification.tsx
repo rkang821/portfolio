@@ -114,9 +114,7 @@ export default function CertSection() {
         ))}
       </ol>
       <Button
-        href="/documents/RK_Resume2024.pdf"
-        target="_blank"
-        rel="noreferrer noopener"
+        href="/404"
         variant="secondary"
         className="group w-full"
       >

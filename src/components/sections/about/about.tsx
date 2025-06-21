@@ -14,9 +14,8 @@ export default function AboutSection() {
             </h2>
             <h3>
               {' '}
-              I&apos;m a Security Professional. 
               Here&apos;s a bit about my path to how I got here today, as well as my interests 
-              both inside and outside of cybersecurity.
+              both inside and outside of the security domain.
             </h3>
           </header>
         </div>
@@ -26,7 +25,7 @@ export default function AboutSection() {
           <div className="flex items-start max-lg:flex-col-reverse">
             <div className="prose ml-10 mr-5 dark:prose-invert *:px-3 *:pt-3 max-sm:mx-2 lg:basis-2/3  lg:pr-5">
               <p>
-                My journey in cybersecurity began as a junior cyber associate,
+                My journey in in this field began as a junior cyber associate,
                 and through dedication and passion over the last five years,
                 I&apos;ve advanced to a DFIR manager.
               </p>
