@@ -49,9 +49,7 @@ export default function CertSection() {
       certcompany: 'GIAC Certifications',
       certname: 'GIAC Certified Intrusion Analyst (GCIA)',
       logo: SANSIcon,
-      issued: 'June 2024',
-      expired: '2028',
-      link: 'https://www.credly.com/badges/1a86e64b-25dc-44b2-819c-41b7e6533496',
+      issued: 'In Progress',
     },
     {
       certcompany: 'Microsoft',

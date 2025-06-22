@@ -40,8 +40,7 @@ export default function HomePage() {
         </header>
         {/*  --- Resume/Contact Links -- */}
         <div className="flex items-center justify-start py-7 pl-3 max-sm:flex-col max-sm:justify-center max-sm:space-y-5 max-sm:pl-0">
-          <div className="space-x-3 border-r-[0.15rem] border-blue-500/90 sm:pr-5 max-sm:border-none">
-
+          <div className="space-x-3 border-r-[0.15rem] border-blue-500/90 max-sm:border-none sm:pr-5">
             <Button
               href="mailto:kpxrachel@gmail.com"
               variant="secondary"
@@ -67,15 +66,22 @@ export default function HomePage() {
         {/*  --- Home Page Intro -- */}
         <div className="prose space-y-4 text-base dark:prose-invert max-sm:text-center max-sm:text-lg">
           <p>
-          Based in San Francisco, I love building and refining security pipelines
-          with an emphasis on <span className="font-semibold">automated investigative workflows</span> and&nbsp;
-          <span className="font-semibold">scalable detections</span>.
+            Based out of Chicago, IL, I lead teams in response to cybersecurity
+            incidents, ranging from{' '}
+            <span className="font-semibold"> minor anomalies </span> to{' '}
+            <span className="font-semibold">significant data breaches</span> and{' '}
+            <span className="font-semibold">privacy incidents</span>.
           </p>
           <p>
-            Recently, I&#39;ve been deeply involved with integrating <span className="font-semibold">LLM-driven workflows</span> into security 
-            platforms, building tailored detections for complex & highly integrated environments. I&#39;m passionate about the potential of automation 
-            in security, but even more passionate about ensuring these workflows remain <span className="font-semibold">transparaent</span>, 
-            <span className="font-semibold"> scalable</span>, and  <span className="font-semibold">observable</span>.
+            Recently, I&#39;ve been deeply involved with integrating{' '}
+            <span className="font-semibold">LLM-driven workflows</span> into
+            security platforms, building tailored detections for complex &
+            highly integrated environments. I&#39;m passionate about the
+            potential of automation in security, but even more passionate about
+            ensuring these workflows remain{' '}
+            <span className="font-semibold">transparaent</span>,
+            <span className="font-semibold"> scalable</span>, and{' '}
+            <span className="font-semibold">observable</span>.
           </p>
         </div>
       </div>
