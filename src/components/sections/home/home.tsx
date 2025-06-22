@@ -27,8 +27,8 @@ export default function HomePage() {
             <ReactTyped
               className="text-blue-500 dark:text-blue-300"
               strings={[
-                'Insider Risk',
-                'Detection + Response',
+                'Blue Teaming',
+                'Digital Forensics',
                 'Incident Response',
               ]}
               typeSpeed={50}
