@@ -13,25 +13,27 @@ import {
 
 export const statsbubblesData: StatsBubbleProps[] = [
   { Icon: MapPin, text: 'San Francisco, CA' },
-  { Icon: UserIcon, text: '27' },
-  { Icon: AcademicCapIcon, text: '7+ Certifications' },
-  { Icon: BriefcaseIcon, text: '6+ YOE' },
+  { Icon: UserIcon, text: '26' },
+  { Icon: AcademicCapIcon, text: '6+ Certifications' },
+  { Icon: BriefcaseIcon, text: '5+ YOE' },
   { Icon: BuildingIcon, text: 'In-Person + Hybrid' },
 ]
 
 export const ssbubblesData: BubbleProps[] = [
-  { text: 'Thrives in fast-paced, engineering-first startup environments' },
-  { text: 'Builds high-trust relationships with technical & non-technical partners' },
-  { text: 'Deeply driven and resourceful in solving complex security problems' },
-  { text: 'Experienced in leading small teams and large-scacle response efforts' },
+  { text: 'High-Stress Adaptability' },
+  { text: 'Cross-Functional Collaboration' },
+  { text: 'Creativity + Innovation' },
+  { text: 'Continuous Learning + Training' },
+  { text: 'Problem-Solving + Analytics' },
 ]
 
 export const interestbubblesData: BubbleProps[] = [
-  { text: 'Incident Response at Scale' },
-  { text: 'Cloud Security Investigations' },
-  { text: 'Detection Engineering & Automation' },
-  { text: 'GenAI & LLM Security Pipelines' },
-  { text: 'Custom IR Tooling Development' },
+  { text: 'Microsoft Azure Investigations' },
+  { text: 'Cloud Platform Forensics' },
+  { text: 'Identify + Access Management' },
+  { text: 'Operating System Security' },
+  { text: 'Vulnerability Assessment' },
+  { text: 'Data Privacy + Compliance' },
 ]
 
 export const BulletList: React.FC<BulletListProps> = ({ title, data }) => (
@@ -58,14 +60,14 @@ export const BulletList: React.FC<BulletListProps> = ({ title, data }) => (
 
 export default function BubbleSection() {
   return (
-    <ol className="prose relative mt-5 border-l border-blue-500 border-opacity-20 dark:prose-invert dark:border-blue-300 max-lg:mx-auto max-lg:flex max-lg:flex-col max-lg:items-center max-sm:mb-5 max-sm:justify-center lg:basis-1/4">
+    <ol className="prose relative mt-5 border-l border-blue-500 border-opacity-20 dark:prose-invert dark:border-blue-300 max-lg:mx-auto max-lg:flex max-lg:flex-col max-lg:items-center max-sm:mb-5 max-sm:justify-center lg:basis-1/3">
       <BulletList title="Who Am I" data={statsbubblesData} />
       <BulletList
-        title="Core Competencies"
+        title="Soft Skills"
         data={ssbubblesData.map(({ text }) => ({ text }))}
       />
       <BulletList
-        title="Current Focus Areas"
+        title="High-Level Interests"
         data={interestbubblesData.map(({ text }) => ({ text }))}
       />
     </ol>
